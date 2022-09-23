@@ -10,3 +10,21 @@
     padding-top: 5%;
     text-align: center;
 }
+
+.body_button {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bottom_box {
+    /* height:10vh; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.bottom_item {
+    text-align: center;
+}
