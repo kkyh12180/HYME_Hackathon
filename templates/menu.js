@@ -250,7 +250,7 @@ var timer = function() {
             sessionStorage.setItem('time', time);
         } else {
             excess_time++;
-            console.log(excess_time + "초가 초과되었습니다.");
+            // console.log(excess_time + "초가 초과되었습니다.");
         }
     }, 1000)
 }

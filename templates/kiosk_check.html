@@ -38,6 +38,10 @@
     <p style="text-align: center; color: white; margin-top: 10px;">주문을 확인하세요.</p>
 
     <div class="receipt-container">
+        <div class="receipt-0">
+            <span id="take-or-eat"></span> / 
+            <span id="which-service"></span>
+        </div>
         <div class="receipt-1">
             <p id="receipt-menu">
                 <span>1</span> X <span>빅맥 버거 - 세트</span>
@@ -56,6 +60,18 @@
     <script>
         getMission();
         timer();
+
+        if(localStorage.getItem('is_take_out') === "1")
+            document.getElementById("take-or-eat").innerHTML = "테이크 아웃";
+        else
+            document.getElementById("take-or-eat").innerHTML = "매장에서 식사";
+        
+        if(localStorage.getItem('is_table_service') === "1")
+            document.getElementById("which-service").innerHTML = "테이블 서비스";
+        else
+            document.getElementById("which-service").innerHTML = "셀프 서비스";
+            
+
     </script>
 </body>
 </html>

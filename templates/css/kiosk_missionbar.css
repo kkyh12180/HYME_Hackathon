@@ -185,6 +185,13 @@ span {
     margin-top: 35px;
 }
 
+.receipt-0 {
+    width: 100%;
+    display: flex;
+    border-bottom: 2px dashed #005738;
+    padding-left: 10px;
+}
+
 .receipt-1 {
     width: 100%;
     display: flex;
