@@ -163,6 +163,11 @@ var menuVar = {
     ],
 };
 
+var place = [
+    {"mis" : "매장에서 식사"},
+    {"mis" : "테이크 아웃"},
+];
+
 var sideVar = [
     {"img" : "../static/media/sidebar/mac_allday.png", "name" : "맥올데이 세트"},
     {"img" : "../static/media/sidebar/drink.png", "name" : "음료 & 커피"},
@@ -171,7 +176,7 @@ var sideVar = [
     {"img" : "../static/media/sidebar/happy_meal.png", "name" : "해피밀"},
     {"img" : "../static/media/sidebar/happy_country.png", "name" : "행복의나라 메뉴"},
     {"img" : "../static/media/sidebar/mac_allday.png", "name" : "사이드"},
-]
+];
 
 // console.log(menuVar["hamburger"][0][1]["name"]);
 
@@ -187,6 +192,7 @@ var getMission = function() {
     // console.log(mission_item1)
     var is_set = -1;
     var drink_selector = -1;
+    var place_num = Math.floor(Math.random() * 2);
     var value = Math.floor(Math.random() * 3) + 1;
     
     // If hamburger, collect set
@@ -215,7 +221,7 @@ var getMission = function() {
     } else {
         console.log("Random Value Error.");
     }
-    
+    mission = place[place_num]['mis'] + ", " + mission;
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
 }
