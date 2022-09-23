@@ -206,3 +206,26 @@ body{
   width:9.7vw;
   margin-left: 1vw;
 }
+
+
+.order_btn_container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.order_bottom{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  height:5vh;
+  margin: 0 auto;
+
+}
+
+.cancel_btn,
+.order_btn{
+  width: 45vw;
+  height: 3.5vh;
+  text-align: center;
+}
