@@ -222,12 +222,19 @@ var getMission = function() {
 
 var timer = function() {
     // 130초 (2분 10초)
-    var time = 130;
+    var time;
+    if (localStorage.getItem('time')==null){
+        time = 130;
+        localStorage.setItem('time', time);
+    } else{
+        time = localStorage.getItem('time');
+    }
     var excess_time = 0;
     setInterval(function() {
         if (time > 0) {
             time--;
             document.querySelector('.time-left').innerHTML = time + "초";
+            localStorage.setItem('time', time);
         } else {
             excess_time++;
             console.log(excess_time + "초가 초과되었습니다.");
