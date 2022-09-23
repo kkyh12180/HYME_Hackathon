@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
+    <link rel="stylesheet" href="css/side_select.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./menu.js"></script>
+    <title>SmartUs</title>
+</head>
+<body style="margin: 0;">
+    <nav class="navbar sticky-top bg-light">
+        <div class="container-fluid">
+            <div class="navbar-brand" id="logo_mission">
+                <img src="../static/media/missionLogo.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+                <span style="font-size: 20px;">미션</span>
+            </div>
+            <div class="mission-box">
+                <p id="mission"></p>
+                <div class="time-box">
+                    <img src="../static/media/sand-clock.png" alt="시계" style="width: 15px">
+                    <p class="time-left"></p>
+                </div>
+            </div>
+        </div>
+        <div class="progress-container">
+            <p class="progress-text">진행률</p>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" aria-label="Success striped example"
+                    style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu_top">
+        <img src="../static/media/mac_food/hamburger/big_mac_set.png" alt="선택메뉴">
+        <div class="text_box">
+            <div class="message">다양한 메뉴와 함께 즐겨보세요</div>
+            <div class="selected_menu">빅맥 버거 - 세트</div>
+        </div>
+    </div>
+
+    <div class="contens">
+        <div class="first_step">
+          <img src="../static/media/icon/1.png" alt="1">
+          <div class="burger_box">
+            <img src="../static/media/mac_food/hamburger/big_mac.png" alt="햄버거">
+            <div class="burger_name">빅맥버거</div>
+          </div>
+          <div class="change_text">다양한 재료를 추가/변경해보세요</div>
+          <button type="button" class="btn btn-success change_btn">재료 추가/변경</button>
+        </div>
+        <div class="second_step">
+          <img src="../static/media/icon/2.png" alt="1">
+          <div class="select_text">메뉴를 선택해주세요</div>
+        </div>
+        <div class="second_step_detail">
+          <div class="detail_box">
+            <div class="detail_menu menu-1">
+              <img src="../static/media/mac_food/side/potato.png" alt="메뉴1">
+              <div class="detail_menu_text potato">후렌치 후라이 - 미디엄</div>
+            </div>
+            <div class="detail_menu menu-2">
+              <img src="../static/media/mac_food/side/potato_set.png" alt="메뉴1">
+              <div class="detail_menu_text">후렌치 후라이  M +<br>
+                골든 모짜렐라 치즈스틱 2조각</div>
+              <div class="detail_menu_price_box">
+                <div class="detail_menu_price">+￦ 2,000</div>
+              </div>
+            </div>
+            <div class="detail_menu menu-3">
+              <img src="../static/media/mac_food/side/cheese_stick.png" alt="메뉴1">
+              <div class="detail_menu_text">골든 모짜렐라 치즈스틱<br>
+                2조각</div>
+              <div class="detail_menu_price_box">
+                <div class="detail_menu_price">+￦ 400</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="third_step">
+          <img src="../static/media/icon/3.png" alt="1">
+          <div class="select_text">메뉴를 선택해주세요</div>
+        </div>
+    </div>
+
+
+    <script>
+        getMission();
+        timer();
+        recommend_func();
+        side_func();
+    </script>
+
+</body>
+</html>

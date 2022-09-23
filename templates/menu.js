@@ -180,7 +180,7 @@ var sideVar = [
 
 // console.log(menuVar["hamburger"][0][1]["name"]);
 
-var getMission = function() {
+var setMission = function() {
     /*
      * hamburger : 0-5
      * side : 6-9
@@ -225,12 +225,18 @@ var getMission = function() {
     mission = place[place_num]['mis'] + ", " + mission;
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
+    localStorage.setItem("mission", mission);
+}
+
+var getMission = function() {
+    mission = localStorage.getItem("mission");
+    document.querySelector('#mission').innerHTML = mission;
 }
 
 var timer = function() {
     // 130초 (2분 10초)
     var time;
-    if (sessionStorage.getItem('time')==null){
+    if (sessionStorage.getItem('time') == null) {
         time = 130;
         sessionStorage.setItem('time', time);
     } else{
@@ -247,10 +253,6 @@ var timer = function() {
             console.log(excess_time + "초가 초과되었습니다.");
         }
     }, 1000)
-}
-
-var next = function() {
-
 }
 
 var recommend_func = function() {
@@ -272,8 +274,35 @@ var side_func = function() {
         document.querySelector(item_id).innerHTML = sideVar[i]['name'];
     }
 }
+
+var select_set = function(burger) {
+    var burger_num = -1;
+    if (burger == 'big_mac')
+        burger_num = 0;
+    else if (burger == '1955')
+        burger_num = 1;
+    else if (burger == 'mac_spicy')
+        burger_num = 2;
+    else if (burger == 'mac_chicken')
+        burger_num = 3;
+    else if (burger == 'supreme_shrimp')
+        burger_num = 4;
+    else 
+        burger_num = 5;
+
+    document.getElementById("menu_img_single").src = menuVar['hamburger'][burger_num][0]['img'];
+    document.querySelector("#menu_name_single").innerHTML = menuVar['hamburger'][burger_num][0]['name'];
+    document.querySelector("#menu_price_single").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][0]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][0]['price'] % 1000);
+
+    document.getElementById("menu_img_set").src = menuVar['hamburger'][burger_num][1]['img'];
+    document.querySelector("#menu_name_set").innerHTML = menuVar['hamburger'][burger_num][1]['name'];
+    document.querySelector("#menu_price_set").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][1]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][1]['price'] % 1000);
+
+    document.getElementById("menu_img_large").src = menuVar['hamburger'][burger_num][2]['img'];
+    document.querySelector("#menu_name_large").innerHTML = menuVar['hamburger'][burger_num][2]['name'];
+    document.querySelector("#menu_price_large").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][2]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][2]['price'] % 1000);
+}
 /* test
     timer();
     getMission();
 */
-getMission();
