@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="kiosk_menu.css">
+    <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
+    <link rel="stylesheet" href="burger_menu.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="burger_menu.js" defer></script>
     <title>SmartUs</title>
 </head>
 <body style="margin: 0;">
@@ -33,20 +35,44 @@
         </div>
     </div>
 
-    <div class="btn_container">
-        <div class="btn_box">
-            <button type="button" class="btn btn-secondary btn-lg">배우기</button>
-            <button type="button" class="btn btn-secondary btn-lg">연습하기</button>
-        </div>
+    <!-- Button to open a sheet -->
+    <button type="button" id="open-sheet" aria-controls="sheet">Open Sheet</button>
+
+    <!-- The sheet component -->
+    <div id="sheet" class="column items-center justify-end" aria-hidden="true">
+      <!-- Dark background for the sheet -->
+      <div class="overlay"></div>
+
+      <!-- The sheet itself -->
+      <div class="contents column">
+        <!-- Sheet controls -->
+        <header class="controls">
+          <!-- The thing to drag if you want to resize the sheet -->
+          <div class="draggable-area">
+            <div class="draggable-thumb"></div>
+          </div>
+          <!-- Button to close the sheet -->
+          <button class="close-sheet" type="button" title="Close the sheet">&times;</button>
+        </header>
+
+        <!-- Body of the sheet -->
+        <main class="body fill column">
+          <div class="top_box">
+              <div class="top_title">원하시는 구성을 선택해주세요.</div>
+              <button type="button" class="btn btn-danger top_btn">취소</button>
+          </div>
+          <div class="mid_box">
+
+          </div>
+        </main>
+      </div>
     </div>
+
     <script>
         function openImg(){
-            Swal.fire({
-                icon: 'warning',                         // Alert 타입
-                title: '준비 중',         // Alert 제목
-                text: '해당 서비스는 준비 중입니다 :)',  // Alert 내용
-            });
+          document.getElementById('open-sheet').click();
         }
+
     </script>
 </body>
 </html>
