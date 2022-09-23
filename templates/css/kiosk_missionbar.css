@@ -5,6 +5,16 @@
     font-style: normal;
 }
 
+@keyframes blink-effect {
+    0% {
+    font-size: 25px;
+    }
+    100% {
+    font-size: 26px;
+    }
+
+}
+
 nav{
     font-family: 'Happiness-Sans-Bold', serif;
     align-items: center;
@@ -153,18 +163,11 @@ span {
     margin-top: 25px;
 }
 
-div.pulse-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+.bound {
+    animation-direction: alternate;
+    animation-name: blink-effect;
+    animation-duration: 0.7s;
+    animation-duration: leaner;
+    animation-iteration-count: infinite;
+    animation-direction: altertate;
 }
-
-div.pulse {
-  height: 50px;
-  width: 50px;
-  background-color: rgb(199, 153, 8);
-  border-radius: 50%;
-  animation: pulse 1.5s infinite;
-}
-
