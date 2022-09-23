@@ -19,6 +19,14 @@
   width: 25vw;
 }
 
+.menu_box img {
+  transition: all 0.2s linear;
+}
+
+.menu_box img:hover{
+  transform: scale(1.1);
+}
+
 .btn_container{
   display: flex;
   justify-content: center;
@@ -38,3 +46,4 @@
   width: 40vw;
   background-color: black;
 }
+
