@@ -39,10 +39,10 @@
     </nav>
 
     <div class="menu_top">
-        <img src="../static/media/mac_food/hamburger/big_mac_set.png" alt="선택메뉴">
+        <img src="" id="selected_image" alt="선택메뉴">
         <div class="text_box">
             <div class="message">다양한 메뉴와 함께 즐겨보세요</div>
-            <div class="selected_menu">빅맥 버거 - 세트</div>
+            <div class="selected_menu" id="selected_name"></div>
         </div>
     </div>
 
@@ -85,13 +85,34 @@
     </div>
 
     <script>
-        function openImg(burger) {
-            select_set(burger)
-            document.getElementById('open-sheet').click();
-            // console.log("!!");
+        function getitem() {
+          var name = sessionStorage.getItem('selected_item');
+          var price = sessionStorage.getItem('selected_item_price');
+          var burger_num = -1;
+
+          if (name.substring(0, 2) == '빅맥')
+            burger_num = 0;
+          else if (name.substring(0, 2) == '19')
+            burger_num = 1;
+          else if (name.substring(0, 2) == '맥스')
+            burger_num = 2;
+          else if (name.substring(0, 2) == '맥치')
+            burger_num = 3;
+          else if (name.substring(0, 2) == '슈슈')
+            burger_num = 4;
+          else 
+            burger_num = 5;
+
+            if (name.substring(name.length - 2, name.length) == '세트')
+              document.getElementById("selected_image").src = menuVar['hamburger'][burger_num][1]['img'];
+            else
+              document.getElementById("selected_image").src = menuVar['hamburger'][burger_num][0]['img'];
+            document.getElementById("selected_name").innerHTML = name;
         };
+
         getMission();
         timer();
+        getitem();
     </script>
 </body>
 
