@@ -9,7 +9,7 @@ nav{
     font-family: 'Happiness-Sans-Bold', serif;
     align-items: center;
     border-radius: 0px 0px 10px 10px;
-    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5) ;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
 .mission-box:after{ clear: both; display: block; content: ''}
@@ -152,3 +152,19 @@ span {
     text-align: center;
     margin-top: 25px;
 }
+
+div.pulse-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+div.pulse {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(199, 153, 8);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
