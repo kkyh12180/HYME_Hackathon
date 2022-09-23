@@ -236,7 +236,7 @@ var getMission = function() {
 var timer = function() {
     // 130초 (2분 10초)
     var time;
-    if (sessionStorage.getItem('time')==null){
+    if (sessionStorage.getItem('time') == null) {
         time = 130;
         sessionStorage.setItem('time', time);
     } else{

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Happiness-Sans-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.basic img {
+    width: 40vw;
+}
+
+.line img {
+    height: 5vh;
+}
+
+.line {
+    padding-top: 3%;
+}
+
+.check_container {
+    padding-left: 7%;
+    font-family: 'Happiness-Sans-Bold', serif;
+    color: #005738;
+}
