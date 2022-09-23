@@ -1,0 +1,10 @@
+.pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay-img {
+    width: 60vw;
+    margin-top: 40vw;
+}
