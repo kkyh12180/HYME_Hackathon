@@ -188,7 +188,8 @@ var getMission = function() {
      * dessert : 17-21
      * happy_meal : 22-24
     */
-    var mission_item_selector = Math.floor(Math.random() * 25);
+    // var mission_item_selector = Math.floor(Math.random() * 25);
+    var mission_item_selector = Math.floor(Math.random() * 6);
     // console.log(mission_item1)
     var is_set = -1;
     var drink_selector = -1;
