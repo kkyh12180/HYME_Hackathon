@@ -81,7 +81,7 @@ nav{
     font-family: 'Happiness-Sans-Bold', serif;
     padding-top: 5%;
     padding-left: 5%;
-    padding-bottom: 7%;
+    padding-bottom: 6%;
 }
 
 .menu_container {
@@ -143,6 +143,7 @@ nav{
 .side_box p {
     font-family: 'Happiness-Sans-Bold', serif;
     font-size: 10px;
+    margin-bottom: 0.6rem;
 }
 
 
@@ -158,7 +159,7 @@ nav{
   background-color: #005738;
   color: white;
   padding-left: 2vw;
-  /* margin-top: 15vh; */
+  font-size: 15px;
 }
 
 .order_contents{
@@ -167,8 +168,27 @@ nav{
   flex-flow: row wrap;
   width: 100%;
   height:10vh;
+  font-size: 15px;
   justify-content: center;
   align-items: center;
   align-content: center;
   background-color: white;
+  color: #5E5E5E;
+}
+
+.order_bottom{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  background-color: #EBEBEB;
+  height:5vh;
+  margin: 0 auto;
+
+}
+
+button{
+  width: 45vw;
+  height: 3.5vh;
+  text-align: center;
 }
