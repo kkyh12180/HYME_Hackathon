@@ -1,3 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background: #fff;
+    --foreground: #000;
+    --divider: #dcdcdc;
+    --overlay: #888;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #000;
+        --foreground: #fff;
+        --divider: #333;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+
+    overflow: hidden;
+    line-height: 1.5;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* button {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 0.0625rem solid var(--divider);
+  
+    background: var(--background);
+    color: var(--foreground);
+    cursor: pointer;
+  } */
+
+#open-sheet {
+    display: none;
+}
+
+#sheet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+#sheet[aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#sheet .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#sheet .contents {
+    border-radius: 1rem 1rem 0 0;
+
+    background: var(--background);
+
+    position: relative;
+    overflow-y: hidden;
+
+    --default-transitions: transform 0.5s, border-radius 0.5s;
+
+    transition: var(--default-transitions);
+    transform: translateY(0);
+
+    max-height: 100vh;
+    height: 30vh;
+
+    max-width: 70rem;
+
+    box-sizing: border-box;
+    padding: 1rem;
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+#sheet .contents:not(.not-selectable) {
+    transition: var(--default-transitions), height 0.5s;
+}
+
+#sheet .contents.fullscreen {
+    border-radius: 0;
+}
+
+#sheet[aria-hidden="true"] .contents {
+    transform: translateY(100%);
+}
+
+#sheet .draggable-area {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 3rem;
+    margin: auto;
+    padding: 1rem;
+    cursor: grab;
+}
+
+#sheet .draggable-thumb {
+    display: none;
+    width: inherit;
+    height: 0.25rem;
+    background: var(--divider);
+    border-radius: 0.125rem;
+}
+
+#sheet .body {
+    height: 100%;
+    overflow-y: auto;
+    gap: 1rem;
+}
+
+.contents {
+    width: 100%;
+}
+
+.top_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+.top_title {
+    font-size: 16px;
+}
+
+.top_btn {
+    font-size: 15px;
+    width: 25vw;
+    height: 3vh;
+    background-color: #D60000;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.mid_box {
+    display: flex;
+}
+
+.menu_img {
+    width: 30vw;
+}
+
+.menu_name {
+    font-size: 14px;
+    margin-left: 2vw;
+}
+
+.menu_price {
+    float: right;
+    font-size: 14px;
+    margin-right: 2vw;
+
+}
+
 @font-face {
     font-family: 'Happiness-Sans-Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
@@ -5,14 +189,18 @@
     font-style: normal;
 }
 
-nav{
+nav {
     font-family: 'Happiness-Sans-Bold', serif;
     align-items: center;
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
-.mission-box:after{ clear: both; display: block; content: ''}
+.mission-box:after {
+    clear: both;
+    display: block;
+    content: ''
+}
 
 .mission-box {
     height: 100%;
@@ -68,7 +256,7 @@ nav{
     border-left: 1px solid;
     height: 100%;
     margin: auto 0;
-    border-radius:0px 5px 5px 0px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 /*
@@ -101,7 +289,7 @@ nav{
     grid-template-columns: repeat(3, 1fr);
     gap: 5vw;
     place-items: center;
-    padding-top : 2%;
+    padding-top: 2%;
 }
 
 .menu_box img {
@@ -122,13 +310,13 @@ nav{
     align-items: center;
 }
 
-.side_box {    
+.side_box {
     display: grid;
     width: 20vw;
     grid-template-columns: repeat(1, 1fr);
     gap: 2vw;
     place-items: center;
-    padding-top : 1%;
+    padding-top: 1%;
     float: left;
     text-align: center;
 }
@@ -140,58 +328,59 @@ nav{
 .side_box img {
     width: 12vw;
 }
+
 .side_box p {
     font-family: 'Happiness-Sans-Bold', serif;
     font-size: 10px;
     margin-bottom: 0.4rem;
 }
 
-p{
-  margin-bottom: 0;
+p {
+    margin-bottom: 0;
 }
 
-.order_box{
-  /* height:10vh; */
-  position: absolute;
-  bottom: 0;
+.order_box {
+    /* height:10vh; */
+    position: absolute;
+    bottom: 0;
 }
 
-.order_title{
-  width:100vw;
-  height: 3vh;
-  background-color: #005738;
-  color: white;
-  padding-left: 2vw;
-  font-size: 15px;
+.order_title {
+    width: 100vw;
+    height: 3vh;
+    background-color: #005738;
+    color: white;
+    padding-left: 2vw;
+    font-size: 15px;
 }
 
-.order_contents{
-  /* display: flex; */
-  display: inline-flex;
-  flex-flow: row wrap;
-  width: 100%;
-  height:10vh;
-  font-size: 15px;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: white;
-  color: #5E5E5E;
+.order_contents {
+    /* display: flex; */
+    display: inline-flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 10vh;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    color: #5E5E5E;
 }
 
-.order_bottom{
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
-  background-color: #EBEBEB;
-  height:5vh;
-  margin: 0 auto;
+.order_bottom {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    background-color: #EBEBEB;
+    height: 5vh;
+    margin: 0 auto;
 
 }
 
-button{
-  width: 45vw;
-  height: 3.5vh;
-  text-align: center;
+button {
+    width: 45vw;
+    height: 3.5vh;
+    text-align: center;
 }
