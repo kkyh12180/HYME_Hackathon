@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/kiosk_missionbar.css">
+    <script src="./menu.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>SmartUs</title>
+</head>
+<body style="margin: 0; background-color: #005738;" >
+
+    <nav class="navbar sticky-top bg-light">
+        <div class="container-fluid">
+            <div class="navbar-brand" id="logo_mission">
+                <img src="../static/media/missionLogo.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+                <span style="font-size: 20px;">미션</span>
+            </div>
+            <div class="mission-box">
+                <p id="mission"></p>
+                <div class="time-box">
+                    <img src="../static/media/sand-clock.png" alt="시계" style="width: 15px">
+                    <p class="time-left"></p>
+                </div>
+            </div>
+        </div>
+        <div class="progress-container">
+            <p class="progress-text">진행률</p>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">72%</div>
+            </div>
+        </div>
+    </nav>
+    <div class="logo-container" style="padding-top: 15vw;">
+        <img src="../static/media/mcdonald-logo.png" alt="mcdonald">
+    </div>
+    <p style="text-align: center; color: white; margin-top: 10px;">주문을 확인하세요.</p>
+
+    <div class="receipt-container">
+        <div class="receipt-1">
+            <p id="receipt-menu">
+                <span>1</span> X <span>빅맥 버거 - 세트</span>
+            </p>
+            <p id="receipt-price">
+                9,100원
+            </p>
+        </div>
+        <div class="receipt-2"><p>콜라 - 라지</p><p>후렌치 후라이 L</p></div>
+        <div class="receipt-3">
+            <div class="receipt-button" id="button-delete" style="margin-left: 20px;">삭제</div>
+            <div class="receipt-button" id="button-modify"style="margin-right: 20px;">변경</div>
+        </div>
+    </div>
+    <div class="next-button">다음</div>
+    <script>
+        getMission();
+        timer();
+    </script>
+</body>
+</html>

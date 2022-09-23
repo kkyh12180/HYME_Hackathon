@@ -15,6 +15,10 @@
 
 }
 
+p {
+    font-family: 'Happiness-Sans-Bold', serif;
+}
+
 nav{
     font-family: 'Happiness-Sans-Bold', serif;
     align-items: center;
@@ -171,3 +175,78 @@ span {
     animation-iteration-count: infinite;
     animation-direction: altertate;
 }
+
+.receipt-container {
+    background-color: white;
+    width: 90vw;
+    text-align: center;
+    margin-left: 5vw;
+    color: #005738;
+    margin-top: 35px;
+}
+
+.receipt-1 {
+    width: 100%;
+    display: flex;
+}
+.receipt-2 {
+    border-top: 2px dashed #005738;
+    border-bottom: 2px dashed #005738;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.receipt-2 p {
+    margin-bottom: 0;
+}
+
+#receipt-menu {
+    width: 60%;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
+#receipt-price {
+    width: 40%;
+    text-align: right;
+    margin-bottom: 0px;
+    padding-right: 10px;
+}
+
+.receipt-3 {
+    padding-bottom: 1px;
+    height: 40px;
+}
+
+.receipt-button {
+    width: 80px;
+    background-color: #005738;
+    margin: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+#button-delete {
+    float:left;
+}
+
+#button-modify {
+    float: right;
+}
+
+.next-button {
+    position: fixed;
+    bottom: 10px;
+    width: 90%;
+    color: white;
+    border-radius: 5px;
+    background-color: #2AA478;
+    text-align: center;
+    padding: 2px;
+    margin-left: 5%;
+  }
