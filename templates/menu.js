@@ -83,7 +83,18 @@ var menuVar = {
             { // large_set
                 "name" : "슈슈 버거 라지 세트", "img" : "../static/media/mac_food/hamburger/supreme_shrimp_set.png", "price" : 7900
             },
-        ]
+        ],
+        [ // double_bulgogi
+            { // single
+                "name" : "더블 불고기 버거", "img" : "../static/media/mac_food/hamburger/double_bulgogi.png", "price" : 5300
+            },
+            { // normal_set
+                "name" : "더블 불고기 버거 세트", "img" : "../static/media/mac_food/hamburger/double_bulgogi_set.png", "price" : 7300
+            },
+            { // large_set
+                "name" : "더블 불고기 버거 라지 세트", "img" : "../static/media/mac_food/hamburger/double_bulgogi_set.png", "price" : 7900
+            },
+        ],
     ],
     "side" : [
         { // mac_wing_2 -> menuVar["side"][0]
@@ -166,45 +177,46 @@ var sideVar = [
 
 var getMission = function() {
     /*
-     * hamburger : 0-4
-     * side : 5-8
-     * drink : 9-15
-     * dessert : 16-20
-     * happy_meal : 21-23
+     * hamburger : 0-5
+     * side : 6-9
+     * drink : 10-16
+     * dessert : 17-21
+     * happy_meal : 22-24
     */
-    var mission_item_selector = Math.floor(Math.random() * 24);
+    var mission_item_selector = Math.floor(Math.random() * 25);
     // console.log(mission_item1)
     var is_set = -1;
     var drink_selector = -1;
     var value = Math.floor(Math.random() * 3) + 1;
     
     // If hamburger, collect set
-    if (mission_item_selector < 5) {
+    if (mission_item_selector < 6) {
         is_set = Math.floor(Math.random() * 3);
     }
     
     // If hamburger or side, collect drink
-    if (mission_item_selector < 9) {
+    if (mission_item_selector < 10) {
         drink_selector = Math.floor(Math.random() * 7);
     }
     
     // Create mission
     var mission = "";
 
-    if (mission_item_selector < 5) {
+    if (mission_item_selector < 6) {
         mission = menuVar["hamburger"][mission_item_selector][is_set]["name"] + "를 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
-    } else if ((mission_item_selector >= 5) && (mission_item_selector < 9)) {
-        mission = menuVar["side"][mission_item_selector - 5]["name"] + "을 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
-    } else if ((mission_item_selector >= 9) && (mission_item_selector < 16)) {
-        mission = menuVar["drink"][mission_item_selector - 9]["name"] + "를 " + value + "개 주문하기"
-    } else if ((mission_item_selector >= 16) && (mission_item_selector < 21)) {
-        mission = menuVar["dessert"][mission_item_selector - 16]["name"] + "를 " + value + "개 주문하기"
-    } else if ((mission_item_selector >= 21) && (mission_item_selector < 24)) {
-        mission = menuVar["happy_meal"][mission_item_selector - 21]["name"] + "을(를) " + value + "개 주문하기"
+    } else if ((mission_item_selector >= 6) && (mission_item_selector < 10)) {
+        mission = menuVar["side"][mission_item_selector - 6]["name"] + "을 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
+    } else if ((mission_item_selector >= 10) && (mission_item_selector < 17)) {
+        mission = menuVar["drink"][mission_item_selector - 10]["name"] + "를 " + value + "개 주문하기";
+    } else if ((mission_item_selector >= 17) && (mission_item_selector < 22)) {
+        mission = menuVar["dessert"][mission_item_selector - 17]["name"] + "를 " + value + "개 주문하기";
+    } else if ((mission_item_selector >= 22) && (mission_item_selector < 25)) {
+        mission = menuVar["happy_meal"][mission_item_selector - 22]["name"] + "을(를) " + value + "개 주문하기";
     } else {
-        console.log("Random Value Error.")
+        console.log("Random Value Error.");
     }
-
+    
+    console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
 }
 
@@ -218,7 +230,7 @@ var timer = function() {
             document.querySelector('.time-left').innerHTML = time + "초";
         } else {
             excess_time++;
-            console.log(excess_time + "초가 초과되었습니다.")
+            console.log(excess_time + "초가 초과되었습니다.");
         }
     }, 1000)
 }
@@ -250,4 +262,4 @@ var side_func = function() {
     timer();
     getMission();
 */
-console.log(menuVar['recommend'][0]['img'])
+getMission();
