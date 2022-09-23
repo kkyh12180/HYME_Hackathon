@@ -197,18 +197,6 @@ nav{
 
 .mission-box:after{ clear: both; display: block; content: ''}
 
-.mission-box {
-    height: 100%;
-    background-color: #FFF4E7;
-    width: 70%;
-    border: 1px solid;
-    font-size: 15px;
-    border-radius: 5px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-}
-
 .category_img {
     width: 30vw;
 }
