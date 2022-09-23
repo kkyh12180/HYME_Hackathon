@@ -195,19 +195,25 @@ var getMission = function() {
         console.log("Random Value Error.")
     }
 
-    console.log(mission);
+    document.querySelector('#mission').innerHTML = mission;
 }
 
 var timer = function() {
     // 130초 (2분 10초)
     var time = 130;
+    var excess_time = 0;
     setInterval(function() {
-        console.log(time + "초가 남았습니다.");
-        time--;
+        if (time > 0) {
+            document.querySelector('.time-left').innerHTML = time + "초";
+            time--;
+        } else {
+            excess_time++;
+            console.log(excess_time + "초가 초과되었습니다.")
+        }
     }, 1000)
 }
 
-
+getMission();
 /* test
     timer();
     getMission();
