@@ -48,7 +48,7 @@ nav{
 .time-box {
     float: right;
     width: 70px;
-    border: 1px solid;
+    border-left: 1px solid;
     height: 100%;
     margin: auto 0;
 }

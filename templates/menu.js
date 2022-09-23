@@ -204,8 +204,8 @@ var timer = function() {
     var excess_time = 0;
     setInterval(function() {
         if (time > 0) {
-            document.querySelector('.time-left').innerHTML = time + "초";
             time--;
+            document.querySelector('.time-left').innerHTML = time + "초";
         } else {
             excess_time++;
             console.log(excess_time + "초가 초과되었습니다.")
@@ -213,7 +213,9 @@ var timer = function() {
     }, 1000)
 }
 
-getMission();
+var next = function() {
+
+}
 /* test
     timer();
     getMission();
