@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.menu_box{
+    display: grid;
+    width: 90vw;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4vw;
+    place-items: center;
+    margin-top: 10vw;
+}
+
+.menu_box img {
+    width: 40vw;
+}
+
+.logo_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22vh;
+}
+  
+.btn_box{
+    display: grid;
+    gap: 5vw;
+    grid-template-columns: repeat(2, 1fr);
+  
+}
+  
+.btn-group-lg>.btn, .btn-lg{
+    font-size: 16px;
+    width: 44vw;
+    background-color: black;
+}
