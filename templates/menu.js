@@ -156,11 +156,11 @@ var menuVar = {
 
 var getMission = function() {
     /*
-     * 햄버거 : 0-4
-     * 사이드 : 5-8
-     * 드링크 : 9-15
-     * 디저트 : 16-20
-     * 해피밀 : 21-23
+     * hamburger : 0-4
+     * side : 5-8
+     * drink : 9-15
+     * dessert : 16-20
+     * happy_meal : 21-23
     */
     var mission_item_selector = Math.floor(Math.random() * 24);
     // console.log(mission_item1)
@@ -168,17 +168,17 @@ var getMission = function() {
     var drink_selector = -1;
     var value = Math.floor(Math.random() * 3) + 1;
     
-    // 햄버거일 경우 세트 선택
+    // If hamburger, collect set
     if (mission_item_selector < 5) {
         is_set = Math.floor(Math.random() * 3);
     }
     
-    // 9보다 낮을 경우 음료 선택
+    // If hamburger or side, collect drink
     if (mission_item_selector < 9) {
         drink_selector = Math.floor(Math.random() * 7);
     }
     
-    // 미션 생성 파트
+    // Create mission
     var mission = "";
 
     if (mission_item_selector < 5) {
@@ -198,4 +198,17 @@ var getMission = function() {
     console.log(mission);
 }
 
-getMission();
+var timer = function() {
+    // 130초 (2분 10초)
+    var time = 130;
+    setInterval(function() {
+        console.log(time + "초가 남았습니다.");
+        time--;
+    }, 1000)
+}
+
+
+/* test
+    timer();
+    getMission();
+*/
