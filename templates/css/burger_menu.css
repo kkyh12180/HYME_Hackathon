@@ -97,7 +97,8 @@ body {
 
   box-sizing: border-box;
   padding: 1rem;
-  padding-top: 3rem;
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 
 #sheet .contents:not(.not-selectable) {
@@ -114,6 +115,7 @@ body {
 
 #sheet .draggable-area {
   position: absolute;
+  display: none;
   top: 0;
   left: 0;
   right: 0;
@@ -124,17 +126,11 @@ body {
 }
 
 #sheet .draggable-thumb {
+  display: none;
   width: inherit;
   height: 0.25rem;
   background: var(--divider);
   border-radius: 0.125rem;
-}
-
-#sheet .close-sheet {
-  position: absolute;
-  right: 0;
-  top: 0;
-  border: none;
 }
 
 #sheet .body {
@@ -167,8 +163,22 @@ body {
   padding: 0;
   margin: 0;
 }
+.mid_box{
+  display: flex;
+}
+.menu_img{
+  width: 30vw;
+}
+.menu_name{
+  font-size: 14px;
+  margin-left: 2vw;
+}
+.menu_price{
+  float: right;
+  font-size: 14px;
+  margin-right: 2vw;
 
-
+}
 /***/
 
 .menu_container{
@@ -200,5 +210,32 @@ body {
   transform: scale(1.1);
 }
 
+body{
+  position:relative;
+}
 
+.order_box{
+  /* height:10vh; */
+  position: absolute;
+  bottom: 0;
+}
 
+.order_title{
+  width:100vw;
+  height: 3vh;
+  background-color: #005738;
+  color: white;
+  padding-left: 2vw;
+  /* margin-top: 15vh; */
+}
+
+.order_contents{
+  /* display: flex; */
+  display: inline-flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height:10vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

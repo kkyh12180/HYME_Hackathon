@@ -81,7 +81,7 @@ nav{
     font-family: 'Happiness-Sans-Bold', serif;
     padding-top: 5%;
     padding-left: 5%;
-    padding-bottom: 10%;
+    padding-bottom: 7%;
 }
 
 .menu_container {
@@ -126,7 +126,7 @@ nav{
     display: grid;
     width: 20vw;
     grid-template-columns: repeat(1, 1fr);
-    gap: 5vw;
+    gap: 2vw;
     place-items: center;
     padding-top : 1%;
     float: left;
@@ -143,4 +143,32 @@ nav{
 .side_box p {
     font-family: 'Happiness-Sans-Bold', serif;
     font-size: 10px;
+}
+
+
+.order_box{
+  /* height:10vh; */
+  position: absolute;
+  bottom: 0;
+}
+
+.order_title{
+  width:100vw;
+  height: 3vh;
+  background-color: #005738;
+  color: white;
+  padding-left: 2vw;
+  /* margin-top: 15vh; */
+}
+
+.order_contents{
+  /* display: flex; */
+  display: inline-flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height:10vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: white;
 }
