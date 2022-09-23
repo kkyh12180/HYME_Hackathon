@@ -1,33 +1,33 @@
 var menuVar = {
-    "recommend" : {
-        "big_mac" : {
+    "recommend" : [
+        { // big_mac
             "name" : "빅맥", "img" : "../static/media/mac_food/hamburger/big_mac.png", "price" : 5700
         },
-        "1955" : {
+        { // 1955
             "name" : "1955버거", "img" : "../static/media/mac_food/hamburger/1955.png", "price" : 6800
         },
-        "mac_spicy" : {
+        { // mac_spicy
             "name" : "맥스파이시 상하이 버거", "img" : "../static/media/mac_food/hamburger/mac_spicy.png", "price" : 5700
         },
-        "mac_chicken" : {
+        { // mac_chicken
             "name" : "맥치킨 모짜렐라 버거", "img" : "../static/media/mac_food/hamburger/mac_chicken.png", "price" : 5800
         },
-        "jeju" : {
+        { // jeju
             "name" : "제주 한라봉 칠러", "img" : "../static/media/mac_food/drink/jeju.png", "price" : 3700
         },
-        "chicken_tomato_snack_wrap" : {
+        { // chicken_tomato_snack_wrap
             "name" : "치킨 토마토 스낵랩", "img" : "../static/media/mac_food/side/chicken_tomato_snack_wrap.png", "price" : 2800
         },
-        "mac_wing_2" : {
+        { // mac_wing_2
             "name" : "맥윙 2조각", "img" : "../static/media/mac_food/side/chicken_tomato_snack_wrap.png", "price" : 3700
         },
-        "strawberry_shake" : {
+        { // strawberry_shake
             "name" : "딸기 쉐이크", "img" : "../static/media/mac_food/drink/strawberry_shake.png", "price" : 3500
         },
-        "choco_shake" : {
+        { // choco_shake
             "name" : "초코 쉐이크", "img" : "../static/media/mac_food/drink/choco_shake.png", "price" : 3500
         },
-    },
+    ],
     "hamburger" : [
         [ // big_mac
             { // single -> menuVar["hamburger"][0][0]
@@ -216,7 +216,18 @@ var timer = function() {
 var next = function() {
 
 }
+
+var recommend_func = function() {
+    for (var i = 0; i < 9; i++) {
+        var image_id = "image_" + (i + 1);
+        var item_id = "#item_" + (i + 1);
+
+        document.getElementById(image_id).src = menuVar['recommend'][i]['img'];
+        document.querySelector(item_id).innerHTML = menuVar['recommend'][i]['name'] + "<br>&#8361;" + (Math.floor(menuVar['recommend'][i]['price'] / 1000)) + "," + (menuVar['recommend'][i]['price'] % 1000);
+    }
+}
 /* test
     timer();
     getMission();
 */
+console.log(menuVar['recommend'][0]['img'])
