@@ -261,7 +261,7 @@ var recommend_func = function() {
         var item_id = "#item_" + (i + 1);
 
         document.getElementById(image_id).src = menuVar['recommend'][i]['img'];
-        document.querySelector(item_id).innerHTML = menuVar['recommend'][i]['name'] + "<br>&#8361;" + (Math.floor(menuVar['recommend'][i]['price'] / 1000)) + "," + (menuVar['recommend'][i]['price'] % 1000);
+        document.querySelector(item_id).innerHTML = menuVar['recommend'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['recommend'][i]['price'] / 1000)) + "," + (menuVar['recommend'][i]['price'] % 1000);
     }
 }
 
