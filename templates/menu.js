@@ -180,7 +180,7 @@ var sideVar = [
 
 // console.log(menuVar["hamburger"][0][1]["name"]);
 
-var getMission = function() {
+var setMission = function() {
     /*
      * hamburger : 0-5
      * side : 6-9
@@ -225,6 +225,12 @@ var getMission = function() {
     mission = place[place_num]['mis'] + ", " + mission;
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
+    localStorage.setItem("mission", mission);
+}
+
+var getMission = function() {
+    mission = localStorage.getItem("mission");
+    document.querySelector('#mission').innerHTML = mission;
 }
 
 var timer = function() {
@@ -247,10 +253,6 @@ var timer = function() {
             console.log(excess_time + "초가 초과되었습니다.");
         }
     }, 1000)
-}
-
-var next = function() {
-
 }
 
 var recommend_func = function() {
@@ -304,4 +306,3 @@ var select_set = function(burger) {
     timer();
     getMission();
 */
-getMission();
