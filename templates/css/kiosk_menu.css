@@ -4,6 +4,7 @@
   align-items: center;
   padding-left: 5%;
   padding-right: 5%;
+  margin-top: 10vw;
 }
 
 .menu_box{
@@ -31,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 18vh;
+  margin-top: 22vh;
 }
 
 .btn_box{
@@ -43,7 +44,13 @@
 
 .btn-group-lg>.btn, .btn-lg{
   font-size: 16px;
-  width: 40vw;
+  width: 44vw;
   background-color: black;
+}
+
+.logo_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 

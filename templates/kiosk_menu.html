@@ -13,8 +13,10 @@
     <img src="../static/media/back_img.png"
     style="width:100%">
 
-    <img class="title" src="../static/media/SMARTUS.png"
-    style="width: 100%; padding: 25%; padding-top: 18%">
+    <span class="logo_parent">
+        <img src="../static/media/SMARTUS.png"
+        style="width: 90vw; padding: 15%; padding-top: 18%">
+    </span>
 
     <div class="menu_container">
         <div class="menu_box">
@@ -22,7 +24,7 @@
           <img src="../static/media/kiosk/Rectangle 113-1.png" alt="할리스" onclick="openImg()">
           <img src="../static/media/kiosk/Rectangle 113-2.png" alt="파스쿠찌" onclick="openImg()">
     
-          <img src="../static/media/kiosk/Rectangle 114.png" alt="맥도날드">
+          <img src="../static/media/kiosk/Rectangle 114.png" alt="맥도날드" onclick="bright()">
           <img src="../static/media/kiosk/Rectangle 114-1.png" alt="베스킨라빈스" onclick="openImg()">
           <img src="../static/media/kiosk/Rectangle 114-2.png" alt="메가박스" onclick="openImg()">
     
@@ -35,17 +37,48 @@
 
     <div class="btn_container">
         <div class="btn_box">
-            <button type="button" class="btn btn-secondary btn-lg">배우기</button>
+            <button type="button" class="btn btn-secondary btn-lg" onclick=location.href="kiosk_1.html">배우기</button>
             <button type="button" class="btn btn-secondary btn-lg">연습하기</button>
         </div>
     </div>
     <script>
+        let num = 0;
+
         function openImg(){
             Swal.fire({
                 icon: 'warning',                         // Alert 타입
                 title: '준비 중',         // Alert 제목
                 text: '해당 서비스는 준비 중입니다 :)',  // Alert 내용
             });
+        }
+
+        function bright() {
+            if(num==1){
+                let element = document.querySelectorAll('div > img')
+
+                num =0;
+
+                for (let el of element) {
+                if(el.alt == "맥도날드"){
+                    el.style.cssText = 'transform: scale(1.0);';
+                }else{
+                    el.style.cssText = '';
+                }
+                }
+            }else{
+                let element = document.querySelectorAll('div > img')
+
+                num =1;
+
+                for (let el of element) {
+                if(el.alt != "맥도날드"){
+                    el.style.cssText = 'filter:brightness(70%); background-color:rgba(0,0,0,0.3); border-radius:20px;';
+                }else {
+                    el.style.cssText = 'transform: scale(1.15);'
+                }
+                }
+            }
+            
         }
     </script>
 </body>
