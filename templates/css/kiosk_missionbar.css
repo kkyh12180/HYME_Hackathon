@@ -7,7 +7,18 @@
 
 @keyframes blink-effect {
     0% {
-    font-size: 25px;
+        width: 103%;
+        height: 103%;
+    }
+    100% {
+        width: 98%;
+        height: 98%;
+    }
+}
+
+@keyframes guide-effect {
+    0% {
+    width: 25px;
     }
     100% {
     font-size: 26px;
@@ -256,4 +267,8 @@ span {
     text-align: center;
     padding: 2px;
     margin-left: 5%;
-  }
+}
+
+.guide-box {
+    border: 7px dashed red; 
+}
