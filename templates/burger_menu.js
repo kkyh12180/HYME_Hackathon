@@ -26,7 +26,7 @@ const setIsSheetShown = (value) => {
 
 // Open the sheet when clicking the 'open sheet' button
 openSheetButton.addEventListener("click", () => {
-  setSheetHeight(Math.min(27, 720 / window.innerHeight * 100))
+  setSheetHeight(Math.min(30, 720 / window.innerHeight * 100))
   setIsSheetShown(true)
   document.getElementById("contents").style.marginBottom = document.querySelector(".order_box").clientHeight+"px";
   console.log(document.getElementById("contents"));
@@ -74,7 +74,7 @@ const onDragEnd = () => {
   } else if (sheetHeight > 75) {
     setSheetHeight(100)
   } else {
-    setSheetHeight(Math.min(27, 720 / window.innerHeight * 100))
+    setSheetHeight(Math.min(30, 720 / window.innerHeight * 100))
   }
 }
 

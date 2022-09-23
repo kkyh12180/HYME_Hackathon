@@ -339,6 +339,8 @@ p{
     /* height:10vh; */
     position: absolute;
     bottom: 0;
+    z-index: 3;
+
   }
   
 .order_title{
