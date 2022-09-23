@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="contens">
+    <div class="contents">
         <div class="first_step">
           <img src="../static/media/icon/1.png" alt="1">
           <div class="burger_box">
@@ -58,37 +58,42 @@
           <div class="select_text">메뉴를 선택해주세요</div>
         </div>
         <div class="second_step_detail">
-          <div class="detail_box">
-            <div class="detail_menu menu-1" onclick="openCheck()">
-              <img src="../static/media/mac_food/side/potato.png" alt="메뉴1">
-              <div class="detail_menu_text potato">후렌치 후라이 - 미디엄</div>
-              <div class="detail_menu_price_box">
-                <div class="detail_menu_price">ㅤ</div>
+            <div class="detail_box">
+              <div class="detail_menu menu-1" onclick="openCheck('1')">
+                <img src="../static/media/mac_food/side/potato.png" alt="메뉴1">
+                <div class="detail_menu_text potato">후렌치 후라이 - 미디엄</div>
+                <div class="detail_menu_price_box">
+                  <div class="detail_menu_price">ㅤ</div>
+                </div>
+              </div>
+              <div class="detail_menu menu-2" onclick="openCheck('2')">
+                <img src="../static/media/mac_food/side/potato_set.png" alt="메뉴1">
+                <div class="detail_menu_text">후렌치 후라이  M +<br>
+                  골든 모짜렐라 치즈스틱 2조각</div>
+                <div class="detail_menu_price_box">
+                  <div class="detail_menu_price">+￦ 2,000</div>
+                </div>
+              </div>
+              <div class="detail_menu menu-3" onclick="openCheck('3')">
+                <img src="../static/media/mac_food/side/cheese_stick.png" alt="메뉴1">
+                <div class="detail_menu_text">골든 모짜렐라 치즈스틱<br>
+                  2조각</div>
+                <div class="detail_menu_price_box">
+                  <div class="detail_menu_price">+￦ 400</div>
+                </div>
               </div>
             </div>
-            <div class="detail_menu menu-2">
-              <img src="../static/media/mac_food/side/potato_set.png" alt="메뉴1">
-              <div class="detail_menu_text">후렌치 후라이  M +<br>
-                골든 모짜렐라 치즈스틱 2조각</div>
-              <div class="detail_menu_price_box">
-                <div class="detail_menu_price">+￦ 2,000</div>
-              </div>
-            </div>
-            <div class="detail_menu menu-3">
-              <img src="../static/media/mac_food/side/cheese_stick.png" alt="메뉴1">
-              <div class="detail_menu_text">골든 모짜렐라 치즈스틱<br>
-                2조각</div>
-              <div class="detail_menu_price_box">
-                <div class="detail_menu_price">+￦ 400</div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="third_step">
           <img src="../static/media/icon/3.png" alt="1">
           <div class="select_text">메뉴를 선택해주세요</div>
         </div>
+
     </div>
+    <img id="check-1" src="../static/media/icon/check.png" alt="">
+    <img id="check-2" src="../static/media/icon/check.png" alt="">
+    <img id="check-3" src="../static/media/icon/check.png" alt="">
+
 
     <div class="order_btn_container">
       <div class="order_bottom">
@@ -99,8 +104,21 @@
 
 
     <script>
-        function openCheck(burger) {
-            
+        function openCheck(num) {
+            if(num==1){
+              document.getElementById("check-1").style.display = "block";
+              document.getElementById("check-2").style.display = "none";
+              document.getElementById("check-3").style.display = "none";
+            }else if(num==2){
+              document.getElementById("check-1").style.display = "none";
+              document.getElementById("check-2").style.display = "block";
+              document.getElementById("check-3").style.display = "none";
+            }else if(num==3){
+              document.getElementById("check-1").style.display = "none";
+              document.getElementById("check-2").style.display = "none";
+              document.getElementById("check-3").style.display = "block";
+            }
+            localStorage.setItem("side", num);
         };
         getMission();
         timer();

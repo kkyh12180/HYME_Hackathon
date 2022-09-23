@@ -229,3 +229,28 @@ body{
   height: 3.5vh;
   text-align: center;
 }
+
+.contents{
+  position: absolute;
+}
+#check-1{
+  position: relative;
+  width:15vw;
+  top: 22vh;
+  left: 7vw;
+  display: none;
+}
+#check-2{
+  position: relative;
+  width:15vw;
+  top: 22vh;
+  left: 42vw;
+  display: none;
+}
+#check-3{
+  position: relative;
+  width:15vw;
+  top: 22vh;
+  left: 76vw;
+  display: none;
+}
