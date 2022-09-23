@@ -22,3 +22,27 @@
     font-family: 'Happiness-Sans-Bold', serif;
     color: #005738;
 }
+
+.menu_top {
+    display: flex;
+    align-items: center;
+}
+
+.menu_top img {
+    width: 35vw;
+    margin-top: 2vh;
+}
+
+.text_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.text_box div {
+    font-family: 'Happiness-Sans-Bold', serif;
+}
+
+.selected_menu {
+    font-size: 23px;
+    color: #005738;
+}
