@@ -1,0 +1,9 @@
+.mission {
+    height: auto;
+    background-color: #FFF4E7;
+    width: 60%;
+    border: 1px solid;
+    font-size: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
