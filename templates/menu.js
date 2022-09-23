@@ -175,7 +175,7 @@ var sideVar = [
     {"img" : "../static/media/sidebar/set.png", "name" : "추천 메뉴"},
     {"img" : "../static/media/sidebar/happy_meal.png", "name" : "해피밀"},
     {"img" : "../static/media/sidebar/happy_country.png", "name" : "행복의나라 메뉴"},
-    {"img" : "../static/media/sidebar/mac_allday.png", "name" : "사이드"},
+    {"img" : "../static/media/sidebar/side.png", "name" : "사이드"},
 ];
 
 // console.log(menuVar["hamburger"][0][1]["name"]);
