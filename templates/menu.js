@@ -302,6 +302,16 @@ var select_set = function(burger) {
     document.querySelector("#menu_name_large").innerHTML = menuVar['hamburger'][burger_num][2]['name'];
     document.querySelector("#menu_price_large").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][2]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][2]['price'] % 1000);
 }
+
+var basket = function(item, name, set, side, price) {
+    var basket_item = [];
+    if ((basket_item = sessionStorage.getItem('basket')) != null) {
+        basket_item.push([item, name, set, side, price]);
+    } else {
+        basket_item.push([item, name, set, side, price]);
+    }
+    sessionStorage.setItem('basket', basket_item);
+}
 /* test
     timer();
     getMission();
