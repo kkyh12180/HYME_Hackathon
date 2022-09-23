@@ -1,0 +1,35 @@
+/*
+.body_container {
+    margin: 20% 0;
+}
+*/
+.menu_name_container {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 10%;
+}
+
+.menu_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.menu_box {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
+    place-items: center;
+    padding-top : 2%;
+}
+
+.menu_box img {
+    width: 20vw;
+}
+
+.menu_btn {
+    float: left;
+}
