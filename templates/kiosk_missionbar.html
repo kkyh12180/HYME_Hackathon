@@ -12,14 +12,28 @@
 
     <nav class="navbar sticky-top bg-light">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="../static/media/missionLogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            <span style="font-size: 20px;">MISSION</span>
-        </a>
-        <div class="mission">빅맥 라지 세트 1개 주문하기 (콜라) </div>
+            <div class="navbar-brand" id="logo_mission" href="#">
+                <img src="../static/media/missionLogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <span style="font-size: 20px;">미션</span>
+            </div>
+            <div class="mission-box">
+                <p class="mission">
+                    빅맥 라지 세트 1개 주문하기 (콜라) 
+                </p>
+                <div class="time-box">
+                    <img src="../static/media/sand-clock.png" alt="시계" style="width: 15px">
+                    <p class="time-left">120 초</p>
+                </div>
+            </div>
         </div>
+        <div class="progress-container">
+            <p class="progress-text">진행률</p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            </div>
+        </div>
+
     </nav>
-    
 
 </body>
 </html>

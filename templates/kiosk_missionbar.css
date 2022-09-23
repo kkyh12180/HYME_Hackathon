@@ -1,9 +1,54 @@
-.mission {
-    height: auto;
+nav{
+    align-items: center;
+}
+
+.mission-box:after{ clear: both; display: block; content: ''}
+
+.mission-box {
+    height: 100%;
     background-color: #FFF4E7;
-    width: 60%;
+    width: 70%;
     border: 1px solid;
     font-size: 15px;
     border-radius: 5px;
     text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+#logo_mission {
+    width: 20%;
+}
+
+.progress-container {
+    width: 100%;
+}
+
+.progress {
+    float: right;
+    width: 75%;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+.progress-text {
+    float: left;
+    margin: 10px;
+    width: 15%;
+    font-size: 15px;
+}
+
+.mission {
+    float: left;
+    width: 60%;
+    height: 100%;
+    margin: auto;
+}
+
+.time-box {
+    float: right;
+    width: 70px;
+    border: 1px solid;
+    height: 100%;
+    margin: auto 0;
 }
