@@ -1,0 +1,66 @@
+.logo_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.score-text {
+    font-size: 30px;
+}
+
+.standard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+.standard-img {
+    width: 7vw;
+    margin-right: 2vw;
+}
+
+.standard-text {
+    font-size : 23px;
+}
+
+.standard-parent {
+    margin-top: 8vh;
+}
+
+.ment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.ment-text {
+    font-size: 30px;
+}
+
+.btn_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+}
+  
+.btn_box{
+    display: grid;
+    gap: 5vw;
+  
+}
+  
+.btn-group-lg>.btn, .btn-lg{
+    font-size: 16px;
+    width: 90vw;
+    background-color: black;
+}

@@ -35,6 +35,18 @@
         </div>
     </div>
 
+
+    <div class="order_box">
+        <div class="order_title">주문내역</div>
+        <div class="order_contents">장바구니가 비어 있습니다.</div>
+        <div class="order_bottom">
+            <button type="button" class="btn btn-danger cancel_btn" style="padding:0; font-size: 15px;">주문취소</button>
+            <button type="button" class="btn btn-success order_btn" style="padding:0; font-size: 15px;">주문완료</button>
+        </div>
+    </div>
+
+
+
     <!-- Button to open a sheet -->
     <button type="button" id="open-sheet" aria-controls="sheet">Open Sheet</button>
 
@@ -44,25 +56,37 @@
       <div class="overlay"></div>
 
       <!-- The sheet itself -->
-      <div class="contents column">
+      <div id="contents" class="contents column">
         <!-- Sheet controls -->
         <header class="controls">
-          <!-- The thing to drag if you want to resize the sheet -->
           <div class="draggable-area">
             <div class="draggable-thumb"></div>
           </div>
-          <!-- Button to close the sheet -->
-          <button class="close-sheet" type="button" title="Close the sheet">&times;</button>
+          <!-- <button class="close-sheet close" type="button" title="Close the sheet">&times;</button> -->
         </header>
 
         <!-- Body of the sheet -->
         <main class="body fill column">
           <div class="top_box">
               <div class="top_title">원하시는 구성을 선택해주세요.</div>
-              <button type="button" class="btn btn-danger top_btn">취소</button>
+              <button type="button" class="btn btn-danger top_btn close-sheet">취소</button>
           </div>
           <div class="mid_box">
-
+              <div class="menu">
+                  <img class="menu_img" src="../static/media/mac_food/hamburger/big_mac.png" alt="빅맥">
+                  <div class="menu_name">빅맥</div>
+                  <div class="menu_price">￦5,700</div>
+              </div>
+              <div class="menu">
+                  <img class="menu_img" src="../static/media/mac_food/hamburger/big_mac_set.png" alt="빅맥">
+                  <div class="menu_name">빅맥세트</div>
+                  <div class="menu_price">￦7,500</div>
+              </div>
+              <div class="menu">
+                  <img class="menu_img" src="../static/media/mac_food/hamburger/big_mac_set.png" alt="빅맥">
+                  <div class="menu_name">빅맥세트 - 라지</div>
+                  <div class="menu_price">￦8,100</div>
+              </div>
           </div>
         </main>
       </div>
