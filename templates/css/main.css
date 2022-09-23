@@ -143,7 +143,11 @@ nav{
 .side_box p {
     font-family: 'Happiness-Sans-Bold', serif;
     font-size: 10px;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+
+p{
+  margin-bottom: 0;
 }
 
 .order_box{
