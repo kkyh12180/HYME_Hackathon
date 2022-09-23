@@ -1,0 +1,270 @@
+@font-face {
+  font-family: 'Happiness-Sans-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+nav{
+  font-family: 'Happiness-Sans-Bold', serif;
+  align-items: center;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.mission-box:after{ clear: both; display: block; content: ''}
+
+.mission-box {
+  height: 100%;
+  background-color: #FFF4E7;
+  width: 70%;
+  border: 1px solid;
+  font-size: 15px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+#logo_mission {
+  width: 20%;
+}
+
+.progress-container {
+  background-color: #FFC42C;
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.progress {
+  float: right;
+  width: 75%;
+  margin: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.progress-text {
+  float: left;
+  margin: 10px;
+  margin-right: 0px;
+  width: 15%;
+  font-size: 15px;
+  text-align: center;
+}
+
+#mission {
+  float: left;
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+
+.time-box {
+  float: right;
+  width: 70px;
+  border-left: 1px solid;
+  height: 100%;
+  margin: auto 0;
+  border-radius:0px 5px 5px 0px;
+}
+
+p{
+  margin-bottom: 0;
+}
+
+/***/
+
+body{
+  height: 100vh;
+}
+
+.menu_top{
+  display: flex;
+  align-items: center;
+}
+
+.menu_top img{
+  width: 35vw;
+  margin-top: 2vh;
+}
+
+.text_box{
+  display: flex;
+  flex-direction: column;
+}
+.text_box div{
+  font-family: 'Happiness-Sans-Bold', serif;
+}
+.selected_menu{
+  font-size: 23px;
+  color: #005738;
+}
+
+.first_step{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_step img{
+  width: 8vw;
+}
+.burger_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.burger_box img{
+  width: 20vw;
+}
+.burger_name{
+  font-size: 12px;
+}
+.change_text{
+  font-size: 11px;
+}
+.change_btn{
+  font-size: 12px;
+  padding: 1.5vw;
+  margin-left: 1vw;
+  /* padding-left:-5vw; */
+}
+
+.second_step{
+  display: flex;
+  align-items: center;
+  margin-top: 2vh;
+}
+.second_step>img{
+  width:9.7vw;
+  margin-left: 1vw;
+}
+.select_text {
+  margin-left: 2.5vw;
+}
+
+.side_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.side_box img{
+  width: 20vw;
+}
+.side_name{
+  font-size: 12px;
+}
+
+
+.second_step_detail{
+  background-image: url('/static/media/icon/text_box.png');
+  width: 100vw;
+  height: 20vh;
+  background-size: cover;
+  
+}
+.detail_box{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2vh;
+}
+.detail_menu img{
+  height: 12vh;
+}
+.menu-1 img{
+  height: 11vh;
+  margin-top:1.2vh;
+}
+.detail_menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60%;
+  width: 30vw;
+}
+.detail_menu_text{
+  font-size: 10px;
+}
+
+.detail_menu_price_box{
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  margin-right: 7vw;
+  /* align-items: right; */
+}
+.detail_menu_price{
+  float: left;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.third_step{
+  display: flex;
+  align-items: center;
+  margin-top: 2vh;
+}
+.third_step img{
+  width:9.7vw;
+  margin-left: 1vw;
+}
+
+
+.order_btn_container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.order_bottom{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  height:5vh;
+  margin: 0 auto;
+
+}
+
+.cancel_btn,
+.order_btn{
+  width: 45vw;
+  height: 3.5vh;
+  text-align: center;
+}
+
+.contents{
+  position: absolute;
+}
+#check-1{
+  position: relative;
+  width:15vw;
+  top: 30vh;
+  left: 9vw;
+  display: none;
+}
+#check-2{
+  position: relative;
+  width:15vw;
+  top: 30vh;
+  left: 42vw;
+  display: none;
+}
+#check-3{
+  position: relative;
+  width:15vw;
+  top: 30vh;
+  left: 76vw;
+  display: block;
+}
+
+#side_name{
+  font-size: 14px;
+}
+#side_menu{
+  height: 6vh;
+}
