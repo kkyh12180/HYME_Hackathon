@@ -149,7 +149,7 @@ body{
 
 
 .second_step_detail{
-  background-image: url('/static/media/icon/text_box.png');
+  background-image: url('../../static/media/icon/text_box.png');
   width: 100vw;
   height: 20vh;
   background-size: cover;

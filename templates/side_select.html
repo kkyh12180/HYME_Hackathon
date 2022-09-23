@@ -36,10 +36,10 @@
     </nav>
 
     <div class="menu_top">
-        <img src="../static/media/mac_food/hamburger/big_mac_set.png" alt="선택메뉴">
+        <img src="../static/media/mac_food/hamburger/big_mac_set.png" id="selected_image" alt="선택메뉴">
         <div class="text_box">
             <div class="message">다양한 메뉴와 함께 즐겨보세요</div>
-            <div class="selected_menu">빅맥 버거 - 세트</div>
+            <div class="selected_menu" id="selected_name">빅맥 버거 - 세트</div>
         </div>
     </div>
 
@@ -47,8 +47,8 @@
         <div class="first_step">
           <img src="../static/media/icon/1.png" alt="1">
           <div class="burger_box">
-            <img src="../static/media/mac_food/hamburger/big_mac.png" alt="햄버거">
-            <div class="burger_name">빅맥버거</div>
+            <img src="../static/media/mac_food/hamburger/big_mac.png" id="burger_image" alt="햄버거">
+            <div class="burger_name" id="burger_name">빅맥버거</div>
           </div>
           <div class="change_text">다양한 재료를 추가/변경해보세요</div>
           <button type="button" class="btn btn-success change_btn">재료 추가/변경</button>
@@ -120,10 +120,39 @@
             }
             localStorage.setItem("side", num);
         };
+
+        function getitem() {
+          var name = sessionStorage.getItem('selected_item');
+          var price = sessionStorage.getItem('selected_item_price');
+          var burger_num = -1;
+
+          if (name.substring(0, 2) == '빅맥')
+            burger_num = 0;
+          else if (name.substring(0, 2) == '19')
+            burger_num = 1;
+          else if (name.substring(0, 2) == '맥스')
+            burger_num = 2;
+          else if (name.substring(0, 2) == '맥치')
+            burger_num = 3;
+          else if (name.substring(0, 2) == '슈슈')
+            burger_num = 4;
+          else 
+            burger_num = 5;
+
+            if (name.substring(name.length - 2, name.length) == '세트')
+              document.getElementById("selected_image").src = menuVar['hamburger'][burger_num][1]['img'];
+            else
+              document.getElementById("selected_image").src = menuVar['hamburger'][burger_num][0]['img'];
+            document.getElementById("selected_name").innerHTML = name;
+            document.getElementById("burger_image").src = menuVar['hamburger'][burger_num][0]['img'];
+            document.getElementById("burger_name").innerHTML = menuVar['hamburger'][burger_num][0]['name'];
+        };
+
         getMission();
         timer();
-        recommend_func();
-        side_func();
+        getitem();
+        // recommend_func();
+        // side_func();
     </script>
 
 </body>
