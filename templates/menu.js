@@ -1,7 +1,7 @@
 var menuVar = {
     "recommend" : {
         "big_mac" : {
-            "name" : "빅맥", "img" : "../static/media/mac_food/hamburger/big_mac.png", "price" : 4500
+            "name" : "빅맥", "img" : "../static/media/mac_food/hamburger/big_mac.png", "price" : 5700
         },
         "1955" : {
             "name" : "1955버거", "img" : "../static/media/mac_food/hamburger/1955.png", "price" : 6800
@@ -30,19 +30,59 @@ var menuVar = {
     },
     "hamburger" : {
         "big_mac" : {
-            "name" : "빅맥", "img" : "../static/media/mac_food/hamburger/big_mac.png", "price" : 4500
+            "single" : {
+                "name" : "빅맥", "img" : "../static/media/mac_food/hamburger/big_mac.png", "price" : 5700
+            },
+            "normal_set" : {
+                "name" : "빅맥 세트", "img" : "../static/media/mac_food/hamburger/big_mac_set.png", "price" : 7500
+            },
+            "large_set" : {
+                "name" : "빅맥 라지 세트", "img" : "../static/media/mac_food/hamburger/big_mac_set.png", "price" : 8100
+            },
         },
         "1955" : {
-            "name" : "1955버거", "img" : "../static/media/mac_food/hamburger/1955.png", "price" : 6800
+            "single" : {
+                "name" : "1955버거", "img" : "../static/media/mac_food/hamburger/1955.png", "price" : 6800
+            },
+            "normal_set" : {
+                "name" : "1955버거 세트", "img" : "../static/media/mac_food/hamburger/1955_set.png", "price" : 8800
+            },
+            "large_set" : {
+                "name" : "1955버거 라지 세트", "img" : "../static/media/mac_food/hamburger/1955_set.png", "price" : 9400
+            },
         },
         "mac_spicy" : {
-            "name" : "맥스파이시 상하이 버거", "img" : "../static/media/mac_food/hamburger/mac_spicy.png", "price" : 5700
+            "single" : {
+                "name" : "맥스파이시 상하이 버거", "img" : "../static/media/mac_food/hamburger/mac_spicy.png", "price" : 5700
+            },
+            "normal_set" : {
+                "name" : "맥스파이시 상하이 버거 세트", "img" : "../static/media/mac_food/hamburger/mac_spicy_set.png", "price" : 7500
+            },
+            "large_set" : {
+                "name" : "맥스파이시 상하이 버거 라지 세트", "img" : "../static/media/mac_food/hamburger/mac_spicy_set.png", "price" : 8100
+            },
         },
         "mac_chicken" : {
-            "name" : "맥치킨 모짜렐라 버거", "img" : "../static/media/mac_food/hamburger/mac_chicken.png", "price" : 5800
+            "single" : {
+                "name" : "맥치킨 모짜렐라 버거", "img" : "../static/media/mac_food/hamburger/mac_chicken.png", "price" : 5800
+            },
+            "normal_set" : {
+                "name" : "맥치킨 모짜렐라 버거 세트", "img" : "../static/media/mac_food/hamburger/mac_chicken_set.png", "price" : 8200
+            },
+            "large_set" : {
+                "name" : "맥치킨 모짜렐라 버거 라지 세트", "img" : "../static/media/mac_food/hamburger/mac_chicken_set.png", "price" : 8800
+            },
         },
         "supreme_shrimp" : {
-            "name" : "슈슈 버거", "img" : "../static/media/mac_food/hamburger/supreme_shrimp.png", "price" : 5500
+            "single" : {
+                "name" : "슈슈 버거", "img" : "../static/media/mac_food/hamburger/supreme_shrimp.png", "price" : 5500
+            },
+            "normal_set" : {
+                "name" : "슈슈 버거 세트", "img" : "../static/media/mac_food/hamburger/supreme_shrimp_set.png", "price" : 7300
+            },
+            "large_set" : {
+                "name" : "슈슈 버거 라지 세트", "img" : "../static/media/mac_food/hamburger/supreme_shrimp_set.png", "price" : 7900
+            },
         }
     },
     "side" : {
