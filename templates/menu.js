@@ -163,6 +163,11 @@ var menuVar = {
     ],
 };
 
+var place = [
+    {"mis" : "매장에서 식사"},
+    {"mis" : "테이크 아웃"},
+];
+
 var sideVar = [
     {"img" : "../static/media/sidebar/mac_allday.png", "name" : "맥올데이 세트"},
     {"img" : "../static/media/sidebar/drink.png", "name" : "음료 & 커피"},
@@ -170,8 +175,8 @@ var sideVar = [
     {"img" : "../static/media/sidebar/set.png", "name" : "추천 메뉴"},
     {"img" : "../static/media/sidebar/happy_meal.png", "name" : "해피밀"},
     {"img" : "../static/media/sidebar/happy_country.png", "name" : "행복의나라 메뉴"},
-    {"img" : "../static/media/sidebar/mac_allday.png", "name" : "사이드"},
-]
+    {"img" : "../static/media/sidebar/side.png", "name" : "사이드"},
+];
 
 // console.log(menuVar["hamburger"][0][1]["name"]);
 
@@ -187,6 +192,7 @@ var getMission = function() {
     // console.log(mission_item1)
     var is_set = -1;
     var drink_selector = -1;
+    var place_num = Math.floor(Math.random() * 2);
     var value = Math.floor(Math.random() * 3) + 1;
     
     // If hamburger, collect set
@@ -215,19 +221,26 @@ var getMission = function() {
     } else {
         console.log("Random Value Error.");
     }
-    
+    mission = place[place_num]['mis'] + ", " + mission;
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
 }
 
 var timer = function() {
     // 130초 (2분 10초)
-    var time = 130;
+    var time;
+    if (sessionStorage.getItem('time')==null){
+        time = 130;
+        sessionStorage.setItem('time', time);
+    } else{
+        time = sessionStorage.getItem('time');
+    }
     var excess_time = 0;
     setInterval(function() {
         if (time > 0) {
             time--;
             document.querySelector('.time-left').innerHTML = time + "초";
+            sessionStorage.setItem('time', time);
         } else {
             excess_time++;
             console.log(excess_time + "초가 초과되었습니다.");
