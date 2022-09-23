@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
-    <link rel="stylesheet" href="css/side_select.css">
+    <link rel="stylesheet" href="css/drink_select.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="./menu.js"></script>
     <title>SmartUs</title>
@@ -36,10 +36,10 @@
     </nav>
 
     <div class="menu_top">
-        <img src="../static/media/mac_food/hamburger/big_mac_set.png" id="selected_image" alt="선택메뉴">
+        <img src="../static/media/mac_food/hamburger/big_mac_set.png" alt="선택메뉴">
         <div class="text_box">
             <div class="message">다양한 메뉴와 함께 즐겨보세요</div>
-            <div class="selected_menu" id="selected_name">빅맥 버거 - 세트</div>
+            <div class="selected_menu">빅맥 버거 - 세트</div>
         </div>
     </div>
 
@@ -47,47 +47,49 @@
         <div class="first_step">
           <img src="../static/media/icon/1.png" alt="1">
           <div class="burger_box">
-            <img src="../static/media/mac_food/hamburger/big_mac.png" id="burger_image" alt="햄버거">
-            <div class="burger_name" id="burger_name">빅맥버거</div>
+            <img src="../static/media/mac_food/hamburger/big_mac.png" alt="햄버거">
+            <div class="burger_name">빅맥버거</div>
           </div>
           <div class="change_text">다양한 재료를 추가/변경해보세요</div>
-          <button type="button" class="btn btn-success change_btn" onclick="location.href='select_material.html'">재료 추가/변경</button>
+          <button type="button" class="btn btn-success change_btn">재료 추가/변경</button>
         </div>
         <div class="second_step">
           <img src="../static/media/icon/2.png" alt="1">
-          <div class="select_text">메뉴를 선택해주세요</div>
-        </div>
-        <div class="second_step_detail">
-            <div class="detail_box">
-              <div class="detail_menu menu-1" onclick="openCheck('1')">
-                <img src="../static/media/mac_food/side/potato.png" alt="메뉴1">
-                <div class="detail_menu_text potato">후렌치 후라이 - 미디엄</div>
-                <div class="detail_menu_price_box">
-                  <div class="detail_menu_price">ㅤ</div>
-                </div>
-              </div>
-              <div class="detail_menu menu-2" onclick="openCheck('2')">
-                <img src="../static/media/mac_food/side/potato_set.png" alt="메뉴2">
-                <div class="detail_menu_text">후렌치 후라이  M +<br>
-                  골든 모짜렐라 치즈스틱 2조각</div>
-                <div class="detail_menu_price_box">
-                  <div class="detail_menu_price">+￦ 2,000</div>
-                </div>
-              </div>
-              <div class="detail_menu menu-3" onclick="openCheck('3')">
-                <img src="../static/media/mac_food/side/cheese_stick.png" alt="메뉴3">
-                <div class="detail_menu_text">골든 모짜렐라 치즈스틱<br>
-                  2조각</div>
-                <div class="detail_menu_price_box">
-                  <div class="detail_menu_price">+￦ 400</div>
-                </div>
-              </div>
-            </div>
+          <div class="side_box">
+            <img id="side_menu" src="" alt="사이드메뉴">
+            <!-- <div id="side_name" class="side_name"></div> -->
+          </div>
+          <div id="side_name" class="select_text"></div>
         </div>
         <div class="third_step">
           <img src="../static/media/icon/3.png" alt="1">
           <div class="select_text">메뉴를 선택해주세요</div>
         </div>
+        <div class="second_step_detail">
+          <div class="detail_box">
+            <div class="detail_menu menu-1" onclick="openCheck('1')">
+              <img src="../static/media/mac_food/drink/cola_noback.png" alt="메뉴1">
+              <div class="detail_menu_text">콜라</div>
+              <div class="detail_menu_price_box">
+                <div class="detail_menu_price">+￦ 2,000</div>
+              </div>
+            </div>
+            <div class="detail_menu menu-2" onclick="openCheck('2')">
+              <img src="../static/media/mac_food/drink/fanta_noback.png" alt="메뉴2">
+              <div class="detail_menu_text">환타</div>
+              <div class="detail_menu_price_box">
+                <div class="detail_menu_price">+￦ 2,000</div>
+              </div>
+            </div>
+            <div class="detail_menu menu-3" onclick="openCheck('3')">
+              <img src="../static/media/mac_food/drink/sprite_noback.png" alt="메뉴3">
+              <div class="detail_menu_text">스프라이트</div>
+              <div class="detail_menu_price_box">
+                <div class="detail_menu_price">+￦ 2,000</div>
+              </div>
+            </div>
+          </div>
+      </div>
 
     </div>
     <img id="check-1" src="../static/media/icon/check.png" alt="">
@@ -102,12 +104,19 @@
       </div>
     </div>
 
-
     <script>
-        function sleep(ms) {
-          const wakeUpTime = Date.now() + ms;
-          while (Date.now() < wakeUpTime) {}
+        var side = localStorage.getItem("side");
+        if(side==1){
+            document.getElementById("side_menu").src = "../static/media/mac_food/side/potato.png";
+            document.getElementById("side_name").innerHTML = "후렌치 후라이 - 미디엄";
+        }else if(side==2){
+            document.getElementById("side_menu").src = "../static/media/mac_food/side/potato_set.png";
+            document.getElementById("side_name").innerHTML = "후렌치 후라이  M + <br>골든 모짜렐라 치즈스틱 2조각";
+        }else if(side==3){
+            document.getElementById("side_menu").src = "../static/media/mac_food/side/cheese_stick.png";
+            document.getElementById("side_name").innerHTML = "골든 모짜렐라 치즈스틱 2조각";
         }
+
         function openCheck(num) {
             if(num==1){
               document.getElementById("check-1").style.display = "block";
@@ -123,40 +132,9 @@
               document.getElementById("check-3").style.display = "block";
             }
             localStorage.setItem("side", num);
-            setTimeout("location.href='drink_select.html'",1000);
-            // location.href="drink_select.html";
         };
-
-        function getitem() {
-          var name = sessionStorage.getItem('selected_item');
-          var price = sessionStorage.getItem('selected_item_price');
-          var burger_num = -1;
-
-          if (name.substring(0, 2) == '빅맥')
-            burger_num = 0;
-          else if (name.substring(0, 2) == '19')
-            burger_num = 1;
-          else if (name.substring(0, 2) == '맥스')
-            burger_num = 2;
-          else if (name.substring(0, 2) == '맥치')
-            burger_num = 3;
-          else if (name.substring(0, 2) == '슈슈')
-            burger_num = 4;
-          else 
-            burger_num = 5;
-
-            if (name.substring(name.length - 2, name.length) == '세트')
-              document.getElementById("selected_image").src = menuVar['hamburger'][burger_num][1]['img'];
-            else
-              document.getElementById("selected_image").src = menuVar['hamburger'][burger_num][0]['img'];
-            document.getElementById("selected_name").innerHTML = name;
-            document.getElementById("burger_image").src = menuVar['hamburger'][burger_num][0]['img'];
-            document.getElementById("burger_name").innerHTML = menuVar['hamburger'][burger_num][0]['name'];
-        };
-
         getMission();
         timer();
-        getitem();
         // recommend_func();
         // side_func();
     </script>

@@ -138,7 +138,7 @@ body{
   align-items: center;
   margin-top: 2vh;
 }
-.second_step img{
+.second_step>img{
   width:9.7vw;
   margin-left: 1vw;
 }
@@ -146,6 +146,18 @@ body{
   margin-left: 2.5vw;
 }
 
+.side_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.side_box img{
+  width: 20vw;
+}
+.side_name{
+  font-size: 12px;
+}
 
 
 .second_step_detail{
@@ -158,17 +170,14 @@ body{
 .detail_box{
   display: flex;
   justify-content: space-around;
-  padding-top: 5vh;
+  padding-top: 2vh;
+}
+.detail_menu img{
+  height: 12vh;
 }
 .menu-1 img{
-  width: 20vw;
-}
-.menu-2 img{
-  width: 30vw;
-}
-.menu-3 img{
-  width: 15vw;
-  margin-top: 2vh;
+  height: 11vh;
+  margin-top:1.2vh;
 }
 .detail_menu{
   display: flex;
@@ -176,14 +185,12 @@ body{
   justify-content: space-between;
   align-items: center;
   height: 60%;
-
+  width: 30vw;
 }
 .detail_menu_text{
   font-size: 10px;
 }
-.potato{
-  margin-top: 2vh;
-}
+
 .detail_menu_price_box{
   display: flex;
   width: 100%;
@@ -236,21 +243,28 @@ body{
 #check-1{
   position: relative;
   width:15vw;
-  top: 22vh;
-  left: 7vw;
+  top: 30vh;
+  left: 9vw;
   display: none;
 }
 #check-2{
   position: relative;
   width:15vw;
-  top: 22vh;
+  top: 30vh;
   left: 42vw;
   display: none;
 }
 #check-3{
   position: relative;
   width:15vw;
-  top: 22vh;
+  top: 30vh;
   left: 76vw;
-  display: none;
+  display: block;
+}
+
+#side_name{
+  font-size: 14px;
+}
+#side_menu{
+  height: 6vh;
 }
