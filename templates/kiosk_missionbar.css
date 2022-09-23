@@ -1,5 +1,7 @@
 nav{
     align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 3px 10px 3px #003F29;
 }
 
 .mission-box:after{ clear: both; display: block; content: ''}
@@ -21,7 +23,11 @@ nav{
 }
 
 .progress-container {
+    background-color: #FFC42C;
+    border-radius: 0px 0px 10px 10px;
     width: 100%;
+    margin-top: 10px;
+    margin-bottom: -10px;
 }
 
 .progress {
