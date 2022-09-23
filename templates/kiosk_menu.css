@@ -1,0 +1,40 @@
+.menu_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.menu_box{
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vw;
+  place-items: center;
+
+}
+
+.menu_box img {
+  width: 25vw;
+}
+
+.btn_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18vh;
+}
+
+.btn_box{
+  display: grid;
+  gap: 5vw;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.btn-group-lg>.btn, .btn-lg{
+  font-size: 16px;
+  width: 40vw;
+  background-color: black;
+}
