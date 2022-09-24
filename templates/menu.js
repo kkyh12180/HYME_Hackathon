@@ -242,7 +242,8 @@ var timer = function() {
     } else{
         time = sessionStorage.getItem('time');
     }
-    var excess_time = 0;
+    var excess_time = sessionStorage.getItem('excess_time');
+
     setInterval(function() {
         if (time > 0) {
             time--;
@@ -250,6 +251,7 @@ var timer = function() {
             sessionStorage.setItem('time', time);
         } else {
             excess_time++;
+            sessionStorage.setItem('excess_time', time);
             // console.log(excess_time + "초가 초과되었습니다.");
         }
     }, 1000)
@@ -260,7 +262,7 @@ var recommend_func = function() {
         var image_id = "image_" + (i + 1);
         var item_id = "#item_" + (i + 1);
 
-        document.getElementById(image_id).src = menuVar['recommend'][i]['img'];
+        document.getElementById(    image_id).src = menuVar['recommend'][i]['img'];
         document.querySelector(item_id).innerHTML = menuVar['recommend'][i]['name'] + "<br>&#8361;" + (Math.floor(menuVar['recommend'][i]['price'] / 1000)) + "," + (menuVar['recommend'][i]['price'] % 1000);
     }
 }
@@ -303,6 +305,7 @@ var select_set = function(burger) {
     document.querySelector("#menu_price_large").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][2]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][2]['price'] % 1000);
 }
 
+
 var basket = function(item, name, set, side, price) {
     var basket_item = [];
     if ((basket_item = sessionStorage.getItem('basket')) != null) {
@@ -312,6 +315,8 @@ var basket = function(item, name, set, side, price) {
     }
     sessionStorage.setItem('basket', basket_item);
 }
+
+
 /* test
     timer();
     getMission();
