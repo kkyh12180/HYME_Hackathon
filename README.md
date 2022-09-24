@@ -41,13 +41,16 @@ Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/I
 🌟 특별 세션 - 스마트 기술 교육 부재
 
 # 💡Intro
-```
+각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
+
 # 💡Explain
-```
+자바 스크립트 활용 , 
+
 # 🔧Tech
-```
+
+
 # 💻Video
-```
+
 
 
 Type data makes to change Background Image.
