@@ -211,6 +211,7 @@ var setMission = function() {
 
     // var basket = function(item, name, set, side, drink, price)
     var mission_item = [];
+    mission_item.push(place_num);
     if (mission_item_selector < 6) {
         mission = menuVar["hamburger"][mission_item_selector][is_set]["name"] + "를 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
         mission_item.push(['hamburger', mission_item_selector, is_set, -1, -1, menuVar["hamburger"][mission_item_selector][is_set]["price"]]);
