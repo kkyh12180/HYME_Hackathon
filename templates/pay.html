@@ -45,6 +45,11 @@
     <script>
         getMission();
         timer();
+        // 3초 후 자동으로 화면 넘어가는 기능 구현
+        setTimeout(function() {
+            var link = 'kiosk_machine.html';
+            location.href = link;
+        }, 3000);
     </script>
 </body>
 

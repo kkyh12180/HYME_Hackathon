@@ -160,6 +160,44 @@ var menuVar = {
         { // cheese
             "name" : "치즈 버거", "img" : "../static/media/mac_food/happy_meal/cheese.png", "price" : 5500
         },
+        {
+            "name" : "에그 맥머핀", "img" : "../static/media/mac_food/happy_meal/egg_mac.png", "price" : 5500
+        },
+        {
+            "name" : "베이컨 에그 맥머핀", "img" : "../static/media/mac_food/happy_meal/bacon_egg.png", "price" : 5500
+        },
+        {
+            "name" : "소시지 에그 맥머핀", "img" : "../static/media/mac_food/happy_meal/sausage_egg.png", "price" : 5500
+        },
+        {
+            "name" : "핫케익", "img" : "../static/media/mac_food/happy_meal/hot_cake.png", "price" : 5500
+        }
+    ],
+    "mac_morning" : [
+        { 
+            "name" : "베이컨 에그 맥그리들", "img" : "../static/media/mac_food/mac_morning/bacon_egg_mac.png", "price" : 4700
+        },
+        { 
+            "name" : "소시지 에그 맥그리들", "img" : "../static/media/mac_food/mac_morning/sausege_egg.png", "price" : 4900
+        },
+        { 
+            "name" : "치킨 토마토 스낵랩", "img" : "../static/media/mac_food/mac_morning/chicken.png", "price" : 2800
+        },
+        {
+            "name" : "베이컨 토마토 에그 머핀", "img" : "../static/media/mac_food/mac_morning/bacon_tomato.png", "price" : 4500
+        },
+        {
+            "name" : "에그 맥머핀", "img" : "../static/media/mac_food/mac_morning/egg_mac.png", "price" : 3800
+        },
+        {
+            "name" : "베이컨 에그 맥머핀", "img" : "../static/media/mac_food/mac_morning/bacon_egg.png", "price" : 4000
+        },
+        {
+            "name" : "상하이 치킨 스낵랩", "img" : "../static/media/mac_food/mac_morning/sanghi.png", "price" : 3200
+        },
+        {
+            "name" : "디럭스 브렉퍼스트", "img" : "../static/media/mac_food/mac_morning/derux.png", "price" : 6000
+        }
     ],
 };
 
@@ -174,7 +212,7 @@ var sideVar = [
     {"img" : "../static/media/sidebar/set.png", "name" : "버거 & 세트"},
     {"img" : "../static/media/sidebar/set.png", "name" : "추천 메뉴"},
     {"img" : "../static/media/sidebar/happy_meal.png", "name" : "해피밀"},
-    {"img" : "../static/media/sidebar/happy_country.png", "name" : "행복의나라 메뉴"},
+    {"img" : "../static/media/sidebar/mac_morning.png", "name" : "맥모닝"},
     {"img" : "../static/media/sidebar/side.png", "name" : "사이드"},
 ];
 
@@ -290,6 +328,31 @@ var drink_func = function() {
     }
 
     document.getElementById("image_8").src = "../static/media/mac_food/blank.png";
+    document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
+}
+
+var happy_meal_func = function() {
+    for (var i = 0; i < 7 ; i++) {
+        var image_id = "image_" + (i + 1);
+        var item_id = "#item_" + (i + 1);
+        
+        document.getElementById(image_id).src = menuVar['happy_meal'][i]['img'];
+        document.querySelector(item_id).innerHTML = menuVar['happy_meal'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['happy_meal'][i]['price']/1000)) + "," + (menuVar['happy_meal'][i]['price'] % 1000);
+    }
+
+    document.getElementById("image_8").src = "../static/media/mac_food/blank.png";
+    document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
+}
+
+var mac_morning_func = function() {
+    for (var i = 0; i < 8 ; i++) {
+        var image_id = "image_" + (i + 1);
+        var item_id = "#item_" + (i + 1);
+        
+        document.getElementById(image_id).src = menuVar['mac_morning'][i]['img'];
+        document.querySelector(item_id).innerHTML = menuVar['mac_morning'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['mac_morning'][i]['price']/1000)) + "," + (menuVar['mac_morning'][i]['price'] % 1000);
+    }
+    
     document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
 }
 
