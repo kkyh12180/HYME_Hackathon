@@ -226,12 +226,12 @@ var setMission = function() {
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
     localStorage.setItem("mission", mission);
-}
+};
 
 var getMission = function() {
     mission = localStorage.getItem("mission");
     document.querySelector('#mission').innerHTML = mission;
-}
+};
 
 var timer = function() {
     // 130초 (2분 10초)
@@ -259,7 +259,7 @@ var timer = function() {
             // console.log(excess_time + "초가 초과되었습니다.");
         }
     }, 1000)
-}
+};
 
 var recommend_func = function() {
     for (var i = 0; i < 9; i++) {
@@ -269,7 +269,7 @@ var recommend_func = function() {
         document.getElementById(image_id).src = menuVar['recommend'][i]['img'];
         document.querySelector(item_id).innerHTML = menuVar['recommend'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['recommend'][i]['price'] / 1000)) + "," + (menuVar['recommend'][i]['price'] % 1000);
     }
-}
+};
 
 var side_func = function() {
     for (var i = 0; i < 7; i++) {
@@ -279,7 +279,7 @@ var side_func = function() {
         document.getElementById(image_id).src = sideVar[i]['img'];
         document.querySelector(item_id).innerHTML = sideVar[i]['name'];
     }
-}
+};
 
 var select_set = function(burger) {
     var burger_num = -1;
@@ -309,7 +309,7 @@ var select_set = function(burger) {
     document.querySelector("#menu_price_large").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][2]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][2]['price'] % 1000);
 
     sessionStorage.setItem("name", burger_num);
-}
+};
 
 var basket = function(item, name, set, side, drink, price) {
     if (sessionStorage.getItem('basket') == null) {
@@ -324,9 +324,9 @@ var basket = function(item, name, set, side, drink, price) {
         }
     }
     sessionStorage.setItem('basket', JSON.stringify(basket_item));
-}
+};
 
-function send_burger_info(type) {
+var send_burger_info = function(type) {
     var name = "";
     var price = 0;
     var price_text = "";
@@ -350,7 +350,22 @@ function send_burger_info(type) {
     location.href="side_select.html"
 };
 
-/* test
-    timer();
-    getMission();
-*/
+function save_single() {
+    var name = document.getElementById('menu_name_single');
+    var burger_num = -1;
+
+    if (name.substring(0, 2) == '빅맥')
+        burger_num = 0;
+    else if (name.substring(0, 2) == '19')
+        burger_num = 1;
+    else if (name.substring(0, 2) == '맥스')
+        burger_num = 2;
+    else if (name.substring(0, 2) == '맥치')
+        burger_num = 3;
+    else if (name.substring(0, 2) == '슈슈')
+        burger_num = 4;
+    else 
+        burger_num = 5;
+
+    basket('hamburger', burger_num, 0, -1, -1 , menuVar['hamburger'][burger_num][0]['price']);
+}
