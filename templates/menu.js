@@ -160,6 +160,18 @@ var menuVar = {
         { // cheese
             "name" : "치즈 버거", "img" : "../static/media/mac_food/happy_meal/cheese.png", "price" : 5500
         },
+        {
+            "name" : "에그 맥머핀", "img" : "../static/media/mac_food/happy_meal/egg_mac.png", "price" : 5500
+        },
+        {
+            "name" : "베이컨 에그 맥머핀", "img" : "../static/media/mac_food/happy_meal/bacon_egg.png", "price" : 5500
+        },
+        {
+            "name" : "소시지 에그 맥머핀", "img" : "../static/media/mac_food/happy_meal/sausage_egg.png", "price" : 5500
+        },
+        {
+            "name" : "핫케익", "img" : "../static/media/mac_food/happy_meal/hot_cake.png", "price" : 5500
+        }
     ],
 };
 
@@ -287,6 +299,19 @@ var drink_func = function() {
         
         document.getElementById(image_id).src = menuVar['drink'][i]['img'];
         document.querySelector(item_id).innerHTML = menuVar['drink'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['drink'][i]['price']/1000)) + "," + (menuVar['drink'][i]['price'] % 1000);
+    }
+
+    document.getElementById("image_8").src = "../static/media/mac_food/blank.png";
+    document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
+}
+
+var happy_meal_func = function() {
+    for (var i = 0; i < 7 ; i++) {
+        var image_id = "image_" + (i + 1);
+        var item_id = "#item_" + (i + 1);
+        
+        document.getElementById(image_id).src = menuVar['happy_meal'][i]['img'];
+        document.querySelector(item_id).innerHTML = menuVar['happy_meal'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['happy_meal'][i]['price']/1000)) + "," + (menuVar['happy_meal'][i]['price'] % 1000);
     }
 
     document.getElementById("image_8").src = "../static/media/mac_food/blank.png";

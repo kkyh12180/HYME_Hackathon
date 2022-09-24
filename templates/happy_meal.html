@@ -10,8 +10,6 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="burger_menu.js" defer></script>
     <link rel="stylesheet" href="css/total.css">
     <title>SmartUs</title>
 </head>
@@ -83,94 +81,46 @@
 
             <div class="menu_container">
                 <div class="menu_box">
-                    <div class="menu_item" id="1_item" onclick="openImg('big_mac')">
+                    <div class="menu_item" id="1_item" onclick="basket('drink', 0, -1, -1, -1, 2200)">
                         <img src="" id="image_1" alt="추천">
                         <p id="item_1" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="2_item" onclick="openImg('1955')">
+                    <div class="menu_item" id="2_item" onclick="basket('drink', 1, -1, -1, -1, 2200)">
                         <img src="" id="image_2" alt="추천">
                         <p id="item_2" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="3_item" onclick="openImg('mac_spicy')">
+                    <div class="menu_item" id="3_item" onclick="basket('drink', 2, -1, -1, -1, 3700)">
                         <img src="" id="image_3" alt="추천">
                         <p id="item_3" style="float: right;"></p>
                     </div>
 
-                    <div class="menu_item" id="4_item" onclick="openImg('mac_chicken')">
+                    <div class="menu_item" id="4_item" onclick="basket('drink', 3, -1, -1, -1, 3200)">
                         <img src="" id="image_4" alt="추천">
                         <p id="item_4" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="5_item" onclick="basket('drink', 2, -1, -1, -1, 3700)">
+                    <div class="menu_item" id="5_item" onclick="basket('drink', 4, -1, -1, -1, 3500)">
                         <img src="" id="image_5" alt="추천">
                         <p id="item_5" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="6_item" onclick="basket('side', 3, -1, -1, -1, 2800)">
+                    <div class="menu_item" id="6_item" onclick="basket('drink', 5, -1, -1, -1, 3500)">
                         <img src="" id="image_6" alt="추천">
                         <p id="item_6" style="float: right;"></p>
                     </div>
 
-                    <div class="menu_item" id="7_item" onclick="basket('side', 0, -1, -1, -1, 3700)">
+                    <div class="menu_item" id="7_item" onclick="basket('drink', 6, -1, -1, -1, 3500)">
                         <img src="" id="image_7" alt="추천">
                         <p id="item_7" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="8_item" onclick="basket('drink', 5, -1, -1, -1, 3500)">
+                    <div class="menu_item" id="8_item">
                         <img src="" id="image_8" alt="추천">
                         <p id="item_8" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="9_item" onclick="basket('drink', 6, -1, -1, -1, 3500)">
+                    <div class="menu_item" id="9_item">
                         <img src="" id="image_9" alt="추천">
                         <p id="item_9" style="float: right;"></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Button to open a sheet -->
-    <button type="button" id="open-sheet" aria-controls="sheet">Open Sheet</button>
-
-    <!-- The sheet component -->
-    <div id="sheet" class="column items-center justify-end" aria-hidden="true">
-        <!-- Dark background for the sheet -->
-        <div class="overlay"></div>
-
-        <!-- The sheet itself -->
-        <div id="contents" class="contents column">
-            <!-- Sheet controls -->
-            <header class="controls">
-                <div class="draggable-area">
-                    <div class="draggable-thumb"></div>
-                </div>
-                <!-- <button class="close-sheet close" type="button" title="Close the sheet">&times;</button> -->
-            </header>
-
-            <!-- Body of the sheet -->
-            <main class="body fill column">
-                <div class="top_box">
-                    <div class="top_title">원하시는 구성을 선택해주세요.</div>
-                    <button type="button" class="btn btn-danger top_btn close-sheet">취소</button>
-                </div>
-                <div class="mid_box">
-                    <div class="menu" onclick="save_single()">
-                        <img class="menu_img" id="menu_img_single" src="../static/media/mac_food/hamburger/big_mac.png"
-                            alt="빅맥">
-                        <div class="menu_name" id="menu_name_single">빅맥</div>
-                        <div class="menu_price" id="menu_price_single">￦5,700</div>
-                    </div>
-                    <div class="menu" onclick="send_burger_info('set')">
-                        <img class="menu_img" id="menu_img_set" src="../static/media/mac_food/hamburger/big_mac_set.png"
-                            alt="빅맥">
-                        <div class="menu_name" id="menu_name_set">빅맥세트</div>
-                        <div class="menu_price" id="menu_price_set">￦7,500</div>
-                    </div>
-                    <div class="menu" onclick="send_burger_info('large')">
-                        <img class="menu_img" id="menu_img_large"
-                            src="../static/media/mac_food/hamburger/big_mac_set.png" alt="빅맥">
-                        <div class="menu_name" id="menu_name_large">빅맥세트 - 라지</div>
-                        <div class="menu_price" id="menu_price_large">￦8,100</div>
-                    </div>
-                </div>
-            </main>
         </div>
     </div>
 
@@ -191,7 +141,7 @@
         };
         getMission();
         timer();
-        recommend_func();
+        happy_meal_func();
         side_func();
     </script>
 </body>
