@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Happiness-Sans-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@keyframes guide-effect {
+    0% {
+    width: 25px;
+    }
+    100% {
+    font-size: 26px;
+    }
+
+}
+
+@keyframes blink-effect {
+    0% {
+        width: 99%;
+        height: 99%;
+    }
+
+    100% {
+        width: 103%;
+        height: 103%;
+    }
+}
+
+@keyframes border-effect {
+    0% {
+        border: 7px dashed red; 
+    }
+    100% {
+        border: 0px; 
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 0, 0.7);
+    }
+}
+
+.guide-box {
+    border: 7px solid red;
+}
+
+.explanation {
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Happiness-Sans-Bold', serif;
+    animation: pulse 1s alternate infinite;
+}
+
+.bound {
+    animation-direction: alternate;
+    animation-name: guide-effect;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.bound-2 {
+    animation-direction: alternate;
+    animation-name: blink-effect;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.guide {
+    color: white;
+    margin: 10px;
+    margin-top: 40px;
+    font-family: 'Happiness-Sans-Bold', serif;
+    font-size: 15px;
+    text-align: center;
+}

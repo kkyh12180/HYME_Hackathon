@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/burger_set.css">
     <link rel="stylesheet" href="css/kiosk_missionbar.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="burger_menu.js" defer></script>
@@ -26,7 +26,6 @@
             </div>
             <div class="mission-box">
                 <p id="mission" style="width: 100%;"></p>
-
             </div>
         </div>
         <div class="progress-container">
@@ -42,7 +41,7 @@
     <div class="body_container">
         <div class="menu_name_container">
             <img src="../static/media/Mc_logo.png" style="width: 10vw; float: left;">
-            <h2 id="menu_name">&nbsp;&nbsp;&nbsp;추천 메뉴</h2>
+            <h2 id="menu_name">&nbsp;&nbsp;&nbsp;버거&세트</h2>
         </div>
 
         <div class="body">
@@ -52,15 +51,15 @@
                         <img src="" id="side_image_1" alt="추천"><br>
                         <p id="side_item_1"></p>
                     </div>
-                    <div class="side_item" id="2_side">
+                    <div class="side_item" id="2_side" onclick="location.href='drink_menu.html'">
                         <img src="" id="side_image_2" alt="추천"><br>
                         <p id="side_item_2"></p>
                     </div>
-                    <div class="side_item guide-box" style="border-radius: 10px;" id="3_side" onclick="location.href='guide_burger_set.html'; sessionStorage.setItem('item', 'hamburger');">
+                    <div class="side_item" id="3_side" onclick="location.href='burger_set.html'">
                         <img src="" id="side_image_3" alt="추천"><br>
                         <p id="side_item_3"></p>
                     </div>
-                    <div class="side_item" id="4_side">
+                    <div class="side_item" id="4_side" onclick="location.href='kiosk_4.html'">
                         <img src="" id="side_image_4" alt="추천"><br>
                         <p id="side_item_4"></p>
                     </div>
@@ -72,7 +71,7 @@
                         <img src="" id="side_image_6" alt="추천"><br>
                         <p id="side_item_6"></p>
                     </div>
-                    <div class="side_item" id="7_side">
+                    <div class="side_item" id="7_side" onclick="location.href='side_set.html'">
                         <img src="" id="side_image_7" alt="추천"><br>
                         <p id="side_item_7"></p>
                     </div>
@@ -81,44 +80,18 @@
 
             <div class="menu_container">
                 <div class="menu_box">
-                    <div class="menu_item" style="border-radius: 10px; padding: 3px;" id="1_item" onclick="openImg('big_mac')">
-                        <img src="" id="image_1" alt="추천">
-                        <p id="item_1" style="float: right;"></p>
-                    </div>
-                    <div class="menu_item" id="2_item" onclick="openImg('1955')">
-                        <img src="" id="image_2" alt="추천">
-                        <p id="item_2" style="float: right;"></p>
-                    </div>
-                    <div class="menu_item" id="3_item" onclick="openImg('mac_spicy')">
-                        <img src="" id="image_3" alt="추천">
-                        <p id="item_3" style="float: right;"></p>
-                    </div>
-
-                    <div class="menu_item" id="4_item" onclick="openImg('mac_chicken')">
-                        <img src="" id="image_4" alt="추천">
-                        <p id="item_4" style="float: right;"></p>
-                    </div>
-                    <div class="menu_item" id="5_item">
-                        <img src="" id="image_5" alt="추천">
-                        <p id="item_5" style="float: right;"></p>
-                    </div>
-                    <div class="menu_item" id="6_item">
-                        <img src="" id="image_6" alt="추천">
-                        <p id="item_6" style="float: right;"></p>
-                    </div>
-
-                    <div class="menu_item" id="7_item">
-                        <img src="" id="image_7" alt="추천">
-                        <p id="item_7" style="float: right;"></p>
-                    </div>
-                    <div class="menu_item" id="8_item">
-                        <img src="" id="image_8" alt="추천">
-                        <p id="item_8" style="float: right;"></p>
-                    </div>
-                    <div class="menu_item" id="9_item">
-                        <img src="" id="image_9" alt="추천">
-                        <p id="item_9" style="float: right;"></p>
-                    </div>
+                    <div class="item"><img class="category_img" src="../static/media/burger_set/1955.png"
+                            onclick="openImg('1955')"></div>
+                    <div class="item guide-box" style="border-radius: 10px; padding:3px;"><img class="category_img" src="../static/media/burger_set/big.png"
+                            onclick="openImg('big_mac')"></div>
+                    <div class="item"><img class="category_img" src="../static/media/burger_set/chicken.png"
+                            onclick="openImg('mac_chicken')"></div>
+                    <div class="item"><img class="category_img" src="../static/media/burger_set/double.png"
+                            onclick="openImg('double_bulgogi')"></div>
+                    <div class="item"><img class="category_img" src="../static/media/burger_set/spicy.png"
+                            onclick="openImg('mac_spicy')"></div>
+                    <div class="item"><img class="category_img" src="../static/media/burger_set/susu.png"
+                            onclick="openImg('supreme_shrimp')"></div>
                 </div>
             </div>
         </div>
@@ -149,24 +122,28 @@
                     <button type="button" class="btn btn-danger top_btn close-sheet">취소</button>
                 </div>
                 <div class="mid_box">
-                    <div class="menu" style="border-radius: 10px;">
+                    <div class="menu" onclick="save_single()">
                         <img class="menu_img" id="menu_img_single" src="../static/media/mac_food/hamburger/big_mac.png"
                             alt="빅맥">
                         <div class="menu_name" id="menu_name_single">빅맥</div>
                         <div class="menu_price" id="menu_price_single">￦5,700</div>
                     </div>
-                    <div class="menu">
+                    <div class="menu" onclick="send_burger_info('set')">
                         <img class="menu_img" id="menu_img_set" src="../static/media/mac_food/hamburger/big_mac_set.png"
                             alt="빅맥">
                         <div class="menu_name" id="menu_name_set">빅맥세트</div>
                         <div class="menu_price" id="menu_price_set">￦7,500</div>
                     </div>
-                    <div class="menu">
+                    <div class="menu guide-box" style="border-radius: 10px" onclick="send_burger_info('large')">
                         <img class="menu_img" id="menu_img_large"
                             src="../static/media/mac_food/hamburger/big_mac_set.png" alt="빅맥">
                         <div class="menu_name" id="menu_name_large">빅맥세트 - 라지</div>
                         <div class="menu_price" id="menu_price_large">￦8,100</div>
                     </div>
+                </div>
+                <div class="explanation pulse" style="font-size: 12px; position: absolute; top: 40px; left: 25%;">
+                    <span style="color:red;">"라지 세트"</span> 를 선택해 주세요.
+                    취소 버튼을 눌러 취소할 수 있어요.
                 </div>
             </main>
         </div>
@@ -182,18 +159,17 @@
     </div>
 
     <div class="explanation pulse" style="font-size: 12px; position: absolute; bottom: 18%;">
-        "버거 & 세트" 버튼을 선택하면 햄버거 세트 메뉴를 확인할 수 있어요.
-        왼쪽의 메뉴 중 <span style="color:red;">"버거 & 세트"</span> 메뉴를 선택해 주세요.
+        이 화면에서는 원하는 햄버거를 고를 수 있어요. 각 햄버거를 선택하면, 세트메뉴를 고르는 화면이 나올 거예요.
+        우리는 햄버거 중 <span style="color:red;">"빅맥"</span> 을 선택할 거예요.
     </div>
-
     <script>
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
-            // console.log("!!");
         };
+
         getMission();
-        recommend_func();
+        //recommend_func();
         side_func();
     </script>
 </body>

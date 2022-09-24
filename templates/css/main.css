@@ -18,6 +18,18 @@
     }
 }
 
+@keyframes blink-effect {
+    0% {
+        width: 99%;
+        height: 99%;
+    }
+
+    100% {
+        width: 103%;
+        height: 103%;
+    }
+}
+
 html,
 body {
     height: 100%;
@@ -398,4 +410,19 @@ button {
     width: 45vw;
     height: 3.5vh;
     text-align: center;
+}
+
+
+.guide-box {
+    border: 7px solid red;
+}
+
+.explanation {
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Happiness-Sans-Bold', serif;
+    animation: pulse 1s alternate infinite;
 }
