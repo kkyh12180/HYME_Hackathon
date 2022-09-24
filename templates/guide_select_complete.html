@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
+    <link rel="stylesheet" href="css/kiosk_missionbar.css">
+    <link rel="stylesheet" href="css/select_complete.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./menu.js"></script>
+    <title>SmartUs</title>
+</head>
+<body style="margin: 0;">
+    <nav class="navbar sticky-top bg-light">
+        <div class="container-fluid">
+            <div class="navbar-brand" id="logo_mission">
+                <img src="../static/media/missionLogo.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+                <span style="font-size: 20px;">가이드</span>
+            </div>
+            <div class="mission-box">
+                <p id="mission" style="width: 100%;"></p>
+            </div>
+        </div>
+        <div class="progress-container">
+            <p class="progress-text">진행률</p>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" aria-label="Success striped example"
+                    style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu_top">
+        <img src="../static/media/mac_food/hamburger/big_mac_set.png" alt="선택메뉴">
+        <div class="text_box">
+            <div class="message">다양한 메뉴와 함께 즐겨보세요</div>
+            <div class="selected_menu">빅맥 버거 - 세트</div>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="first_step">
+          <img src="../static/media/icon/1.png" alt="1">
+          <div class="burger_box">
+            <img src="../static/media/mac_food/hamburger/big_mac.png" alt="햄버거">
+            <div class="burger_name">빅맥버거</div>
+          </div>
+          <div class="change_text">다양한 재료를 추가/변경해보세요</div>
+          <button type="button" class="btn btn-success change_btn">재료 추가/변경</button>
+        </div>
+        <div class="second_step">
+          <img src="../static/media/icon/2.png" alt="1">
+          <div class="side_box">
+            <img id="side_menu" src="" alt="사이드메뉴">
+          </div>
+          <div id="side_name" class="select_text"></div>
+        </div>
+        <div class="third_step">
+          <img src="../static/media/icon/3.png" alt="1">
+          <div class="drink_box">
+            <img id="drink_menu" src="" alt="음료수메뉴">
+          </div>
+          <div id="drink_name" class="select_text"></div>
+        </div>
+
+    </div>
+    <div class="explanation pulse" style="background-color: white; font-size: 14px; position: absolute; bottom:40vw;">
+        <span style="color:red;">선택한 메뉴가 맞는지 확인하는 화면이예요.</span><br>
+        알맞게 골랐다면 우측 하단의 <span style="color:red;">"주문완료"</span> 버튼을 눌러 장바구니에 담을 수 있고,
+         좌측 하단의 <span style="color:red;">"주문 취소"</span> 버튼을 누르면 이전의 메뉴 선택 화면으로 돌아가요.
+      </div>
+
+    <div class="order_btn_container">
+      <div class="order_bottom">
+          <button type="button" class="btn btn-danger cancel_btn" style="padding:0; font-size: 15px;" onclick="location.href='guide_kiosk_4.html'">주문취소</button>
+          <button type="button" class="btn btn-success order_btn" style="padding:0; font-size: 15px;" onclick="orderComplete()">주문완료</button>
+      </div>
+    </div>
+
+    <script>
+        var side = sessionStorage.getItem("side");
+        console.log(side);
+        if(side==1){
+            document.getElementById("side_menu").src = "../static/media/mac_food/side/potato.png";
+            document.getElementById("side_name").innerHTML = "후렌치 후라이 - 미디엄";
+        }else if(side==2){
+            document.getElementById("side_menu").src = "../static/media/mac_food/side/potato_set.png";
+            document.getElementById("side_name").innerHTML = "후렌치 후라이  M + <br>골든 모짜렐라 치즈스틱 2조각";
+        }else if(side==3){
+            document.getElementById("side_menu").src = "../static/media/mac_food/side/cheese_stick.png";
+            document.getElementById("side_name").innerHTML = "골든 모짜렐라 치즈스틱 2조각";
+        }
+
+        var drink = sessionStorage.getItem("drink");
+        if(drink==1){
+            document.getElementById("drink_menu").src = "../static/media/mac_food/drink/cola_noback.png";
+            document.getElementById("drink_name").innerHTML = "콜라";
+        }else if(drink==2){
+            document.getElementById("drink_menu").src = "../static/media/mac_food/drink/fanta_noback.png";
+            document.getElementById("drink_name").innerHTML = "환타";
+            document.getElementById("drink_menu").style.width = "23vw";
+            document.getElementById("drink_menu").style.margin = "0";
+            document.getElementById("drink_name").style.margin = "0";
+        }else if(drink==3){
+            document.getElementById("drink_menu").src = "../static/media/mac_food/drink/sprite_noback.png";
+            document.getElementById("drink_name").innerHTML = "스프라이트";
+            document.getElementById("drink_menu").style.width = "22vw";
+            document.getElementById("drink_menu").style.margin = "0";
+            document.getElementById("drink_name").style.margin = "0";
+        }
+        function orderComplete() {
+            var item = sessionStorage.getItem("item");
+            var name = sessionStorage.getItem("name");
+            var set = sessionStorage.getItem("set");
+            var side = sessionStorage.getItem("side");
+            var drink = sessionStorage.getItem("drink");
+            var price = sessionStorage.getItem("selected_item_price");
+
+            basket(item, name, set, side, drink, price);
+            location.href='guide_burger_set.html';
+            
+        }
+        getMission();
+        timer();
+        // recommend_func();
+        // side_func();
+    </script>
+
+</body>
+</html>
