@@ -73,7 +73,7 @@
     <div class="order_btn_container">
       <div class="order_bottom">
           <button type="button" class="btn btn-danger cancel_btn" style="padding:0; font-size: 15px;">주문취소</button>
-          <button type="button" class="btn btn-success order_btn" style="padding:0; font-size: 15px;">주문완료</button>
+          <button type="button" class="btn btn-success order_btn" style="padding:0; font-size: 15px;" onclikc="orderComplete()">주문완료</button>
       </div>
     </div>
 
@@ -100,12 +100,16 @@
             document.getElementById("drink_name").innerHTML = "환타";
             document.getElementById("drink_menu").style.width = "23vw";
             document.getElementById("drink_menu").style.margin = "0";
-
+            document.getElementById("drink_name").style.margin = "0";
         }else if(drink==3){
             document.getElementById("drink_menu").src = "../static/media/mac_food/drink/sprite_noback.png";
             document.getElementById("drink_name").innerHTML = "스프라이트";
             document.getElementById("drink_menu").style.width = "22vw";
             document.getElementById("drink_menu").style.margin = "0";
+            document.getElementById("drink_name").style.margin = "0";
+        }
+        function orderComplete() {
+            location.href='burger_set.html';
         }
         getMission();
         timer();
