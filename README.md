@@ -44,10 +44,19 @@ Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/I
 각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
 
 # 💡Explain
-자바 스크립트 활용 , 
+
 
 # 🔧Tech
+자바 스크립트 활용
+- 배열 사용 , timer 사용한 시간 제한 기능
 
+배포 및 호스팅
+- git.io 를 통한 배포로 모든 사람이 손쉽게 접근 가능한 프로덕트 구현
+
+자바스크립트 [추가예정]
+- Apps Script 활용해 사용자의 기본 정보 체크
+
+- 업데이트 일괄 알림 (메일 or 전화번호로)
 
 # 💻Video
 
