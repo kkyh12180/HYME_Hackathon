@@ -189,12 +189,12 @@ var setMission = function() {
      * happy_meal : 22-24
     */
     // var mission_item_selector = Math.floor(Math.random() * 25);
-    var mission_item_selector = Math.floor(Math.random() * 6);
+    var mission_item_selector = Math.floor(Math.random() * 17);
     // console.log(mission_item1)
     var is_set = -1;
     var drink_selector = -1;
     var place_num = Math.floor(Math.random() * 2);
-    var value = Math.floor(Math.random() * 3) + 1;
+    var value = 1;
     
     // If hamburger, collect set
     if (mission_item_selector < 6) {
@@ -209,12 +209,19 @@ var setMission = function() {
     // Create mission
     var mission = "";
 
+    // var basket = function(item, name, set, side, drink, price)
+    var mission_item = [];
     if (mission_item_selector < 6) {
         mission = menuVar["hamburger"][mission_item_selector][is_set]["name"] + "를 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
+        mission_item.push(['hamburger', mission_item_selector, is_set, -1, -1, menuVar["hamburger"][mission_item_selector][is_set]["price"]]);
+        mission_item.push(['drink', drink_selector, -1, -1, -1 , menuVar["drink"][drink_selector]["price"]]);
     } else if ((mission_item_selector >= 6) && (mission_item_selector < 10)) {
         mission = menuVar["side"][mission_item_selector - 6]["name"] + "을 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
+        mission_item.push(['side', mission_item_selector - 6, -1, -1, -1, menuVar["side"][mission_item_selector - 6]["price"]]);
+        mission_item.push(['drink', drink_selector, -1, -1, -1 , menuVar["drink"][drink_selector]["price"]]);
     } else if ((mission_item_selector >= 10) && (mission_item_selector < 17)) {
         mission = menuVar["drink"][mission_item_selector - 10]["name"] + "를 " + value + "개 주문하기";
+        mission_item.push(['drink', mission_item_selector - 10, -1, -1, -1 , menuVar["drink"][mission_item_selector - 10]["price"]]);
     } else if ((mission_item_selector >= 17) && (mission_item_selector < 22)) {
         mission = menuVar["dessert"][mission_item_selector - 17]["name"] + "를 " + value + "개 주문하기";
     } else if ((mission_item_selector >= 22) && (mission_item_selector < 25)) {
@@ -226,6 +233,7 @@ var setMission = function() {
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
     localStorage.setItem("mission", mission);
+    localStorage.setItem('mission_item', mission_item);
 };
 
 var getMission = function() {
