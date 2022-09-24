@@ -35,11 +35,10 @@ Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/I
 
 # 👩🏻 Team Name
 
-![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=Only%20Use%20Text&descAlignY=75&descAlign=60)
+![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=Only%20To%20Live%20Well%20Together&descAlignY=75&descAlign=60)
 
-```
 # 📚 Theme
-```
+
 # 💡Intro
 ```
 # 💡Explain
