@@ -284,6 +284,16 @@ var drink_func = function() {
     document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
 }
 
+var side_item_func = function() {
+    for (var i = 0; i < 4 ; i++) {
+        var image_id = "image_" + (i + 1);
+        var item_id = "#item_" + (i + 1);
+        
+        document.getElementById(image_id).src = menuVar['side'][i]['img'];
+        document.querySelector(item_id).innerHTML = menuVar['side'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['side'][i]['price']/1000)) + "," + (menuVar['side'][i]['price'] % 1000);
+    }
+};
+
 var side_func = function() {
     for (var i = 0; i < 7; i++) {
         var image_id = "side_image_" + (i + 1);
