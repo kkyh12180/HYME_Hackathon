@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <div class="navbar-brand" id="logo_mission">
                 <img src="../static/media/missionLogo.png" alt="Logo" width="30" class="d-inline-block align-text-top">
-                <span style="font-size: 20px;">미션</span>
+                <span style="font-size: 20px;">가이드</span>
             </div>
             <div class="mission-box">
                 <p id="mission"></p>
@@ -38,21 +38,27 @@
     </div>
     <div class="menu_container">
         <div class="menu_box">
-            <div class="eat-in" onClick="location.href='kiosk_4.html'">
+            <div class="eat-in bound guide-box" onClick="location.href='kiosk_guide_4.html'">
                 <img class="eat-img" id="table-service" src="../static/media/kiosk/table-service.png" alt="eat-in">
                 <p>테이블 서비스</p>
             </div>
-            <div class="take-out" onClick="location.href='kiosk_4.html'">
+            <div class="take-out bound guide-box" onClick="location.href='kiosk_guide_4.html'">
                 <img class="eat-img" id="self-service" src="../static/media/kiosk/self-service.png" alt="take-out">
                 <p>셀프 서비스</p>
             </div>
         </div>
     </div>
     <p class="guide"> <span style="color:yellow;">"테이블 서비스"</span>를 선택하시면<br> 주문하신 제품을 자리로 가져다 드리겠습니다.</p>
+    <div class="explanation pulse" style="font-size: 15px;">
+        <span style="color: red;">
+            둘 중 원하시는 서비스 하나를 선택해 주세요.
+        </span>
+        <br>"테이블 서비스": 주문한 상품을 직원이 가져다 드려요.
+        <br>"셀프 서비스": 주문한 상품을 직접 가져가야 해요.
+    </div>
 
     <script>
         getMission();
-        timer();
 
         $("#table-service").click(function(){ // 테이블 서비스 선택할 때
             localStorage.setItem("is_table_service", "1");
