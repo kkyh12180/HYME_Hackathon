@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
-    <link rel="stylesheet" href="css/drink_select.css">
+    <link rel="stylesheet" href="css/select_complete.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="./menu.js"></script>
     <title>SmartUs</title>
@@ -57,45 +57,18 @@
           <img src="../static/media/icon/2.png" alt="1">
           <div class="side_box">
             <img id="side_menu" src="" alt="사이드메뉴">
-            <!-- <div id="side_name" class="side_name"></div> -->
           </div>
           <div id="side_name" class="select_text"></div>
         </div>
         <div class="third_step">
           <img src="../static/media/icon/3.png" alt="1">
-          <div class="select_text">메뉴를 선택해주세요</div>
-        </div>
-        <div class="second_step_detail">
-          <div class="detail_box">
-            <div class="detail_menu menu-1" onclick="openCheck('1')">
-              <img src="../static/media/mac_food/drink/cola_noback.png" alt="메뉴1">
-              <div class="detail_menu_text">콜라</div>
-              <div class="detail_menu_price_box">
-                <div class="detail_menu_price">+￦ 2,000</div>
-              </div>
-            </div>
-            <div class="detail_menu menu-2" onclick="openCheck('2')">
-              <img src="../static/media/mac_food/drink/fanta_noback.png" alt="메뉴2">
-              <div class="detail_menu_text">환타</div>
-              <div class="detail_menu_price_box">
-                <div class="detail_menu_price">+￦ 2,000</div>
-              </div>
-            </div>
-            <div class="detail_menu menu-3" onclick="openCheck('3')">
-              <img src="../static/media/mac_food/drink/sprite_noback.png" alt="메뉴3">
-              <div class="detail_menu_text">스프라이트</div>
-              <div class="detail_menu_price_box">
-                <div class="detail_menu_price">+￦ 2,000</div>
-              </div>
-            </div>
+          <div class="drink_box">
+            <img id="drink_menu" src="" alt="음료수메뉴">
           </div>
-      </div>
+          <div id="drink_name" class="select_text"></div>
+        </div>
 
     </div>
-    <img id="check-1" src="../static/media/icon/check.png" alt="">
-    <img id="check-2" src="../static/media/icon/check.png" alt="">
-    <img id="check-3" src="../static/media/icon/check.png" alt="">
-
 
     <div class="order_btn_container">
       <div class="order_bottom">
@@ -106,6 +79,7 @@
 
     <script>
         var side = localStorage.getItem("side");
+        console.log(side);
         if(side==1){
             document.getElementById("side_menu").src = "../static/media/mac_food/side/potato.png";
             document.getElementById("side_name").innerHTML = "후렌치 후라이 - 미디엄";
@@ -116,23 +90,23 @@
             document.getElementById("side_menu").src = "../static/media/mac_food/side/cheese_stick.png";
             document.getElementById("side_name").innerHTML = "골든 모짜렐라 치즈스틱 2조각";
         }
-        function openCheck(num) {
-            if(num==1){
-              document.getElementById("check-1").style.display = "block";
-              document.getElementById("check-2").style.display = "none";
-              document.getElementById("check-3").style.display = "none";
-            }else if(num==2){
-              document.getElementById("check-1").style.display = "none";
-              document.getElementById("check-2").style.display = "block";
-              document.getElementById("check-3").style.display = "none";
-            }else if(num==3){
-              document.getElementById("check-1").style.display = "none";
-              document.getElementById("check-2").style.display = "none";
-              document.getElementById("check-3").style.display = "block";
-            }
-            localStorage.setItem("drink", num);
-            setTimeout("location.href='select_complete.html'",500);
-        };
+
+        var drink = localStorage.getItem("drink");
+        if(drink==1){
+            document.getElementById("drink_menu").src = "../static/media/mac_food/drink/cola_noback.png";
+            document.getElementById("drink_name").innerHTML = "콜라";
+        }else if(drink==2){
+            document.getElementById("drink_menu").src = "../static/media/mac_food/drink/fanta_noback.png";
+            document.getElementById("drink_name").innerHTML = "환타";
+            document.getElementById("drink_menu").style.width = "23vw";
+            document.getElementById("drink_menu").style.margin = "0";
+
+        }else if(drink==3){
+            document.getElementById("drink_menu").src = "../static/media/mac_food/drink/sprite_noback.png";
+            document.getElementById("drink_name").innerHTML = "스프라이트";
+            document.getElementById("drink_menu").style.width = "22vw";
+            document.getElementById("drink_menu").style.margin = "0";
+        }
         getMission();
         timer();
         // recommend_func();
