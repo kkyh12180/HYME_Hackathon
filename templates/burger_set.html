@@ -165,6 +165,7 @@
     </div>
 
     <script>
+        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: "+JSON.parse(sessionStorage.getItem("basket")).length;
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
@@ -173,13 +174,9 @@
         if(sessionStorage.getItem("basket")!=null){
           var basket_data = JSON.parse(sessionStorage.getItem("basket"));
           document.getElementsByClassName("order_contents")[0].style.display = "none";
-          // document.getElementsByClassName("total_box")[0].style.display = "block";
         }else {
           document.getElementsByClassName("order_contents")[0].style.display = "block";
-          // document.getElementsByClassName("total_box")[0].style.display = "none";
         }
-
-        console.log(document.getElementsByClassName("order_contents")[0]);
 
         getMission();
         timer();

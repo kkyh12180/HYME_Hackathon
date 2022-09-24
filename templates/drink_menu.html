@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@ivteplo/utilities.css@1.0.0/build/main.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/total.css">
+    <link rel="stylesheet" href="css/burger_set.css">
     <title>SmartUs</title>
 </head>
 
@@ -126,14 +127,33 @@
 
     <div class="order_box">
         <div class="order_title">주문내역</div>
-        <div class="order_contents">장바구니가 비어 있습니다.</div>
+        <div class="order_contents_box">
+            <div class="order_contents">장바구니가 비어 있습니다.</div>
+            <div class="total_box">
+                <span class="total_price">합계: (가격) | 제품: (개수)</span>
+                <span class="total_detail" onclick="location.href='total_menu.html'">주문 내역 상세 보기 >> </span>
+            </div>
+        </div>
         <div class="order_bottom">
             <button type="button" class="btn btn-danger cancel_btn" style="padding:0; font-size: 15px;">주문취소</button>
             <button type="button" class="btn btn-success order_btn" style="padding:0; font-size: 15px;">주문완료</button>
         </div>
     </div>
 
+
     <script>
+        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: "+JSON.parse(sessionStorage.getItem("basket")).length;
+        function openImg(burger) {
+            select_set(burger)
+            document.getElementById('open-sheet').click();
+        };
+
+        if(sessionStorage.getItem("basket")!=null){
+          var basket_data = JSON.parse(sessionStorage.getItem("basket"));
+          document.getElementsByClassName("order_contents")[0].style.display = "none";
+        }else {
+          document.getElementsByClassName("order_contents")[0].style.display = "block";
+        }
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
