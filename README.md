@@ -34,7 +34,7 @@
 Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
 # 👩🏻 Team Name
-```
+
 ![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=Only%20Use%20Text&descAlignY=75&descAlign=60)
 
 ```
