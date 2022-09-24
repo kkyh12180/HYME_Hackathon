@@ -39,10 +39,10 @@
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.3);
+        box-shadow: 0 0 0 5px rgba(255, 255, 0, 0.7);
     }
     100% {
-        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0.3);
+        box-shadow: 0 0 0 10px rgba(255, 255, 0, 0.7);
     }
 }
 
@@ -199,6 +199,13 @@ span {
 }
 
 .bound {
+    animation-direction: alternate;
+    animation-name: guide-effect;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.bound-2 {
     animation-direction: alternate;
     animation-name: blink-effect;
     animation-duration: 0.5s;
