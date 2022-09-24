@@ -35,24 +35,20 @@ Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/I
 
 # 👩🏻 Team Name
 ```
-https://capsule-render.vercel.app/api?
-```
-Just write query parameter end of this url. Like this
+![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=Only%20Use%20Text&descAlignY=75&descAlign=60)
 
-Markdown:
 ```
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
+# 📚 Theme
+```
+# 💡Intro
+```
+# 💡Explain
+```
+# 🔧Tech
+```
+# 💻Video
 ```
 
-HTML:
-```
-<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90" />
-```
-# Theme
-# Intro
-# Explain
-# Tech
-# Video
 
 Type data makes to change Background Image.
 - [wave](#wave) : default
