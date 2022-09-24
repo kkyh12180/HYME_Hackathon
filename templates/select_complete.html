@@ -78,7 +78,7 @@
     </div>
 
     <script>
-        var side = localStorage.getItem("side");
+        var side = sessionStorage.getItem("side");
         console.log(side);
         if(side==1){
             document.getElementById("side_menu").src = "../static/media/mac_food/side/potato.png";
@@ -91,7 +91,7 @@
             document.getElementById("side_name").innerHTML = "골든 모짜렐라 치즈스틱 2조각";
         }
 
-        var drink = localStorage.getItem("drink");
+        var drink = sessionStorage.getItem("drink");
         if(drink==1){
             document.getElementById("drink_menu").src = "../static/media/mac_food/drink/cola_noback.png";
             document.getElementById("drink_name").innerHTML = "콜라";
@@ -109,7 +109,16 @@
             document.getElementById("drink_name").style.margin = "0";
         }
         function orderComplete() {
+            var item = sessionStorage.getItem("item");
+            var name = sessionStorage.getItem("name");
+            var set = sessionStorage.getItem("set");
+            var side = sessionStorage.getItem("side");
+            var drink = sessionStorage.getItem("drink");
+            var price = sessionStorage.getItem("selected_item_price");
+
+            basket(item, name, set, side, drink, price);
             location.href='burger_set.html';
+            
         }
         getMission();
         timer();

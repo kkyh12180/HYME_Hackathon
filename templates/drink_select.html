@@ -105,7 +105,7 @@
     </div>
 
     <script>
-        var side = localStorage.getItem("side");
+        var side = sessionStorage.getItem("side");
         if(side==1){
             document.getElementById("side_menu").src = "../static/media/mac_food/side/potato.png";
             document.getElementById("side_name").innerHTML = "후렌치 후라이 - 미디엄";
@@ -130,7 +130,7 @@
               document.getElementById("check-2").style.display = "none";
               document.getElementById("check-3").style.display = "block";
             }
-            localStorage.setItem("drink", num);
+            sessionStorage.setItem("drink", num);
             setTimeout("location.href='select_complete.html'",500);
         };
         getMission();

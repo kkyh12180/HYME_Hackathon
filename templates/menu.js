@@ -299,7 +299,7 @@ var select_set = function(burger) {
     document.getElementById("menu_img_single").src = menuVar['hamburger'][burger_num][0]['img'];
     document.querySelector("#menu_name_single").innerHTML = menuVar['hamburger'][burger_num][0]['name'];
     document.querySelector("#menu_price_single").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][0]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][0]['price'] % 1000);
-
+    
     document.getElementById("menu_img_set").src = menuVar['hamburger'][burger_num][1]['img'];
     document.querySelector("#menu_name_set").innerHTML = menuVar['hamburger'][burger_num][1]['name'];
     document.querySelector("#menu_price_set").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][1]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][1]['price'] % 1000);
@@ -307,17 +307,23 @@ var select_set = function(burger) {
     document.getElementById("menu_img_large").src = menuVar['hamburger'][burger_num][2]['img'];
     document.querySelector("#menu_name_large").innerHTML = menuVar['hamburger'][burger_num][2]['name'];
     document.querySelector("#menu_price_large").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][2]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][2]['price'] % 1000);
+
+    sessionStorage.setItem("name", burger_num);
 }
 
-
-var basket = function(item, name, set, side, price) {
-    var basket_item = [];
-    if ((basket_item = sessionStorage.getItem('basket')) != null) {
-        basket_item.push([item, name, set, side, price]);
+var basket = function(item, name, set, side, drink, price) {
+    if (sessionStorage.getItem('basket') == null) {
+        var basket_item = [];
+        basket_item.push([item, name, set, side, drink, price]);
     } else {
-        basket_item.push([item, name, set, side, price]);
+        basket_item = JSON.parse(sessionStorage.getItem('basket'));
+        for (it in basket_item){
+            if (basket_item[it].toString() != [item, name, set, side, drink, price].toString()){
+                basket_item.push([item, name, set, side, drink, price]);
+            }
+        }
     }
-    sessionStorage.setItem('basket', basket_item);
+    sessionStorage.setItem('basket', JSON.stringify(basket_item));
 }
 
 function send_burger_info(type) {
@@ -327,12 +333,15 @@ function send_burger_info(type) {
     if (type == 'single') {
         name = document.getElementById('menu_name_single').innerText;
         price_text = document.getElementById('menu_price_single').innerText;
+        sessionStorage.setItem("set", 0)
     } else if (type == 'set') {
         name = document.getElementById('menu_name_set').innerText;
         price_text = document.getElementById('menu_price_set').innerText;
+        sessionStorage.setItem("set", 1)
     } else {
         name = document.getElementById('menu_name_large').innerText;
         price_text = document.getElementById('menu_price_large').innerText;
+        sessionStorage.setItem("set", 2)
     }
     // console.log(name);
     price = price_text[1] * 1000 + price_text[3] * 100;
