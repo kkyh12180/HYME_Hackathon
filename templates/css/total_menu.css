@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'Happiness-Sans-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+nav{
+  font-family: 'Happiness-Sans-Bold', serif;
+  align-items: center;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+.mission-box:after{ clear: both; display: block; content: ''}
+
+.mission-box {
+  height: 100%;
+  background-color: #FFF4E7;
+  width: 70%;
+  border: 1px solid;
+  font-size: 15px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+#logo_mission {
+  width: 20%;
+}
+
+.progress-container {
+  background-color: #FFC42C;
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.progress {
+  float: right;
+  width: 75%;
+  margin: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.progress-text {
+  float: left;
+  margin: 10px;
+  margin-right: 0px;
+  width: 15%;
+  font-size: 15px;
+  text-align: center;
+}
+
+#mission {
+  float: left;
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+
+.time-box {
+  float: right;
+  width: 70px;
+  border-left: 1px solid;
+  height: 100%;
+  margin: auto 0;
+  border-radius:0px 5px 5px 0px;
+}
+
+p{
+  margin-bottom: 0;
+}
+
+/***/
+
+body{
+  height: 100vh;
+}
+
+.title{
+  font-family: 'Happiness-Sans-Bold', serif;
+  font-size: 24px;
+  margin-top:1.5vh;
+  margin-left: 5vw;
+}
+
+
+/***/
+input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-group {
+  clear: both;
+  margin: 15px 0;
+  position: relative;
+}
+
+.input-group input[type='button'] {
+  background-color: #eeeeee;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  left: -6px;
+  text-align: center;
+  width: 62px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0 5px;
+  resize: vertical;
+}
+
+.button-plus {
+  left: -13px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+/***/
+
+.menu_item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top:1vh;
+}
+
+.menu_cancel_btn{
+  font-size: 14px;
+  padding: 0.3vh 2vw;
+}
+
+.menu_img{
+  width: 17vw;
+}
+.menu_title{
+  width: 33vw;
+}
+
+.input-group{
+  width:22vw;
+  margin: 0;
+}
+
+.input-group input{
+  /* padding: 3px 6px; */
+  height: 3vh;
+
+}
+
+.input-group-btn button{
+  padding: 3px 6px;
+  height: 3vh;
+  font-size: 12px;
+}
+
+
+
+.order_btn_container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.order_bottom{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  height:5vh;
+  margin: 0 auto;
+
+}
+
+.cancel_btn,
+.order_btn{
+  width: 45vw;
+  height: 3.5vh;
+  text-align: center;
+}
+
+#drink_menu{
+  width: 20vw;
+}

@@ -116,7 +116,7 @@
             var drink = sessionStorage.getItem("drink");
             var price = sessionStorage.getItem("selected_item_price");
 
-            basket(item, name, set, side, drink, price);
+            basket(item, parseInt(name), parseInt(set), parseInt(side), parseInt(drink), 1, parseInt(price));
             location.href='burger_set.html';
             
         }

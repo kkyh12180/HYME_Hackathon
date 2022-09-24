@@ -339,23 +339,27 @@ var select_set = function(burger) {
     document.getElementById("menu_img_large").src = menuVar['hamburger'][burger_num][2]['img'];
     document.querySelector("#menu_name_large").innerHTML = menuVar['hamburger'][burger_num][2]['name'];
     document.querySelector("#menu_price_large").innerHTML = "&#8361;" + (Math.floor(menuVar['hamburger'][burger_num][2]['price'] / 1000)) + "," + (menuVar['hamburger'][burger_num][2]['price'] % 1000);
-
+    
+    sessionStorage.setItem("item", "hamburger");
     sessionStorage.setItem("name", burger_num);
 };
 
-var basket = function(item, name, set, side, drink, price) {
+var basket = function(item, name, set, side, drink, count, price) {
+    var cnt = 0;
     if (sessionStorage.getItem('basket') == null) {
         var basket_item = [];
-        basket_item.push([item, name, set, side, drink, price]);
+        basket_item.push([item, name, set, side, drink, count, price]);
     } else {
         basket_item = JSON.parse(sessionStorage.getItem('basket'));
         for (it in basket_item){
-            if (basket_item[it].toString() != [item, name, set, side, drink, price].toString()){
-                basket_item.push([item, name, set, side, drink, price]);
+            if (basket_item[it].toString() != [item, name, set, side, drink, count, price].toString()){
+                cnt++;
             }
         }
+        if(cnt==basket_item.length){
+          basket_item.push([item, name, set, side, drink, count, price]);
+        }
     }
-    // console.log(JSON.stringify(basket_item));
     sessionStorage.setItem('basket', JSON.stringify(basket_item));
 };
 
@@ -381,6 +385,7 @@ var send_burger_info = function(type) {
     sessionStorage.setItem('selected_item', name);
     sessionStorage.setItem('selected_item_price', price);
     location.href="side_select.html"
+
 };
 
 var save_single = function() {
@@ -400,5 +405,5 @@ var save_single = function() {
     else 
         burger_num = 5;
 
-    basket('hamburger', burger_num, 0, -1, -1 , menuVar['hamburger'][burger_num][0]['price']);
+    basket('hamburger', burger_num, 0, -1, -1 , 1, menuVar['hamburger'][burger_num][0]['price']);
 };
