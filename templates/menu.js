@@ -242,7 +242,11 @@ var timer = function() {
     } else{
         time = sessionStorage.getItem('time');
     }
+    
     var excess_time = sessionStorage.getItem('excess_time');
+    if (excess_time == null) {
+        excess_time == 0;
+    }
 
     setInterval(function() {
         if (time > 0) {
@@ -316,6 +320,26 @@ var basket = function(item, name, set, side, price) {
     sessionStorage.setItem('basket', basket_item);
 }
 
+function send_burger_info(type) {
+    var name = "";
+    var price = 0;
+    var price_text = "";
+    if (type == 'single') {
+        name = document.getElementById('menu_name_single').innerText;
+        price_text = document.getElementById('menu_price_single').innerText;
+    } else if (type == 'set') {
+        name = document.getElementById('menu_name_set').innerText;
+        price_text = document.getElementById('menu_price_set').innerText;
+    } else {
+        name = document.getElementById('menu_name_large').innerText;
+        price_text = document.getElementById('menu_price_large').innerText;
+    }
+    // console.log(name);
+    price = price_text[1] * 1000 + price_text[3] * 100;
+    sessionStorage.setItem('selected_item', name);
+    sessionStorage.setItem('selected_item_price', price);
+    location.href="side_select.html"
+};
 
 /* test
     timer();

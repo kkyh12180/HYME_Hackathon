@@ -58,11 +58,11 @@
                         <img src="" id="side_image_2" alt="추천"><br>
                         <p id="side_item_2"></p>
                     </div>
-                    <div class="side_item" id="3_side">
+                    <div class="side_item" id="3_side" onclick="location.href='burger_set.html'">
                         <img src="" id="side_image_3" alt="추천"><br>
                         <p id="side_item_3"></p>
                     </div>
-                    <div class="side_item" id="4_side">
+                    <div class="side_item" id="4_side" onclick="location.href='kiosk_4.html'">
                         <img src="" id="side_image_4" alt="추천"><br>
                         <p id="side_item_4"></p>
                     </div>
@@ -125,19 +125,19 @@
                     <button type="button" class="btn btn-danger top_btn close-sheet">취소</button>
                 </div>
                 <div class="mid_box">
-                    <div class="menu" onclick="send_test('single')">
+                    <div class="menu" onclick="send_burger_info('single')">
                         <img class="menu_img" id="menu_img_single" src="../static/media/mac_food/hamburger/big_mac.png"
                             alt="빅맥">
                         <div class="menu_name" id="menu_name_single">빅맥</div>
                         <div class="menu_price" id="menu_price_single">￦5,700</div>
                     </div>
-                    <div class="menu" onclick="send_test('set')">
+                    <div class="menu" onclick="send_burger_info('set')">
                         <img class="menu_img" id="menu_img_set" src="../static/media/mac_food/hamburger/big_mac_set.png"
                             alt="빅맥">
                         <div class="menu_name" id="menu_name_set">빅맥세트</div>
                         <div class="menu_price" id="menu_price_set">￦7,500</div>
                     </div>
-                    <div class="menu" onclick="send_test('large')">
+                    <div class="menu" onclick="send_burger_info('large')">
                         <img class="menu_img" id="menu_img_large"
                             src="../static/media/mac_food/hamburger/big_mac_set.png" alt="빅맥">
                         <div class="menu_name" id="menu_name_large">빅맥세트 - 라지</div>
@@ -163,27 +163,6 @@
             document.getElementById('open-sheet').click();
             // console.log("!!");
         };
-
-        function send_test(type) {
-            var name = "";
-            var price = 0;
-            var price_text = "";
-            if (type == 'single') {
-                name = document.getElementById('menu_name_single').innerText;
-                price_text = document.getElementById('menu_price_single').innerText;
-            } else if (type == 'set') {
-                name = document.getElementById('menu_name_set').innerText;
-                price_text = document.getElementById('menu_price_set').innerText;
-            } else {
-                name = document.getElementById('menu_name_large').innerText;
-                price_text = document.getElementById('menu_price_large').innerText;
-            }
-            // console.log(name);
-            price = price_text[1] * 1000 + price_text[3] * 100;
-            sessionStorage.setItem('selected_item', name);
-            sessionStorage.setItem('selected_item_price', price);
-            location.href="side_select.html"
-        }
 
         getMission();
         timer();
