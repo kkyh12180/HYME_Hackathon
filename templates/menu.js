@@ -271,6 +271,19 @@ var recommend_func = function() {
     }
 };
 
+var drink_func = function() {
+    for (var i = 0; i < 7 ; i++) {
+        var image_id = "image_" + (i + 1);
+        var item_id = "#item_" + (i + 1);
+        
+        document.getElementById(image_id).src = menuVar['drink'][i]['img'];
+        document.querySelector(item_id).innerHTML = menuVar['drink'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['drink'][i]['price']/1000)) + "," + (menuVar['drink'][i]['price'] % 1000);
+    }
+
+    document.getElementById("image_8").src = "../static/media/mac_food/blank.png";
+    document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
+}
+
 var side_func = function() {
     for (var i = 0; i < 7; i++) {
         var image_id = "side_image_" + (i + 1);
