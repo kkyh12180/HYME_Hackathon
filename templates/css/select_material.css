@@ -46,3 +46,24 @@
     font-size: 23px;
     color: #005738;
 }
+
+
+.order_btn_container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.order_bottom{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  height:5vh;
+  margin: 0 auto;
+}
+
+.order_btn{
+  width: 90vw;
+  height: 3.5vh;
+  text-align: center;
+}

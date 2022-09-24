@@ -171,6 +171,7 @@ body {
 }
 
 .menu_name {
+    float: left;
     font-size: 14px;
     margin-left: 2vw;
 }
@@ -180,6 +181,10 @@ body {
     font-size: 14px;
     margin-right: 2vw;
 
+}
+
+.menu_item {
+    width: 25vw;
 }
 
 @font-face {
@@ -206,7 +211,6 @@ nav {
     height: 100%;
     background-color: #FFF4E7;
     width: 70%;
-    border: 1px solid;
     font-size: 15px;
     border-radius: 5px;
     text-align: center;
@@ -287,9 +291,9 @@ nav {
     display: grid;
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5vw;
+    row-gap: 13vw;
     place-items: center;
-    padding-top: 2%;
+    padding-top: 10vw;
 }
 
 .menu_box img {
@@ -298,6 +302,13 @@ nav {
 
 .menu_btn {
     float: left;
+}
+
+.price {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding-right: 2vw;
 }
 
 .eat-in {
@@ -332,17 +343,21 @@ nav {
 .side_box p {
     font-family: 'Happiness-Sans-Bold', serif;
     font-size: 10px;
+    width: 20vw;
     margin-bottom: 0.4rem;
 }
 
 p {
     margin-bottom: 0;
+    font-size: 0.01px;
+    width: 100%;
 }
 
 .order_box {
     /* height:10vh; */
     position: absolute;
     bottom: 0;
+    z-index: 3;
 }
 
 .order_title {
