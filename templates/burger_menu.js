@@ -29,7 +29,7 @@ openSheetButton.addEventListener("click", () => {
   setSheetHeight(Math.min(30, 720 / window.innerHeight * 100))
   setIsSheetShown(true)
   document.getElementById("contents").style.marginBottom = document.querySelector(".order_box").clientHeight+"px";
-  console.log(document.getElementById("contents"));
+  // console.log(document.getElementById("contents"));
 })
 
 // Hide the sheet when clicking the 'close' button

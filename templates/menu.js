@@ -19,7 +19,7 @@ var menuVar = {
             "name" : "치킨 토마토 스낵랩", "img" : "../static/media/mac_food/side/chicken_tomato_snack_wrap.png", "price" : 2800
         },
         { // mac_wing_2
-            "name" : "맥윙 2조각", "img" : "../static/media/mac_food/side/chicken_tomato_snack_wrap.png", "price" : 3700
+            "name" : "맥윙 2조각", "img" : "../static/media/mac_food/side/mac_wing_2.png", "price" : 3700
         },
         { // strawberry_shake
             "name" : "딸기 쉐이크", "img" : "../static/media/mac_food/drink/strawberry_shake.png", "price" : 3500
@@ -346,6 +346,7 @@ var basket = function(item, name, set, side, drink, price) {
             }
         }
     }
+    // console.log(JSON.stringify(basket_item));
     sessionStorage.setItem('basket', JSON.stringify(basket_item));
 };
 
@@ -373,8 +374,8 @@ var send_burger_info = function(type) {
     location.href="side_select.html"
 };
 
-function save_single() {
-    var name = document.getElementById('menu_name_single');
+var save_single = function() {
+    var name = document.getElementById('menu_name_single').innerText;
     var burger_num = -1;
 
     if (name.substring(0, 2) == '빅맥')
@@ -391,4 +392,4 @@ function save_single() {
         burger_num = 5;
 
     basket('hamburger', burger_num, 0, -1, -1 , menuVar['hamburger'][burger_num][0]['price']);
-}
+};
