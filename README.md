@@ -14,6 +14,10 @@
 
 ![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=To%20Live%20Well%20Together&descAlignY=75&descAlign=60)
 
+
+<p align="center"><img src="./readme_img/ppt/index.png" width="200" height="450"/></p>
+
+
 # 📚 Theme
 🌟 특별 세션 - 스마트 기술 교육 부재
 
