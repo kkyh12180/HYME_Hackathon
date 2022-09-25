@@ -168,6 +168,13 @@
         아래 주문 내역에서 장바구니에 담긴 메뉴들을 확인할 수 있어요. 주문 내역 상세 보기를 통해 개수를 변경할 수도 있어요.
     </div>
     <script>
+        function backToStart(){
+            Swal.fire({
+                // icon: 'warning',                         // Alert 타입
+                title: '준비 중',         // Alert 제목
+                text: '해당 서비스는 준비 중입니다 :)',  // Alert 내용
+            });
+        }
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
@@ -186,6 +193,10 @@
         getMission();
         //recommend_func();
         side_func();
+
+        setTimeout(function() {
+            backToStart();
+        }, 2000);
     </script>
 </body>
 
