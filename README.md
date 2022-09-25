@@ -6,13 +6,13 @@
 
 ![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=To%20Live%20Well%20Together&descAlignY=75&descAlign=60)
 
+<br>
+</br>
 
 <p align="center"><img src="./readme_img/ppt/index.png" width="800"/></p>
 
 
 # 📚 Theme
-![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=Theme&fontAlign=80&fontAlignY=40&color=gradient)
-<br></br>
 <p>🌟 특별 세션 - 스마트 기술 교육 부재</p>
 
 <br>
@@ -89,14 +89,14 @@
 
 # 🔧Tech
 <h3>✦ 자바 스크립트 활용</h3>
-**- 배열 사용 , timer 사용한 시간 제한 기능
+- 배열 사용 , timer 사용한 시간 제한 기능
 
 <h3>✦ 배포 및 호스팅</h3>
-**- git.io 를 통한 배포로 모든 사람이 손쉽게 접근 가능한 프로덕트 구현
+- git.io 를 통한 배포로 모든 사람이 손쉽게 접근 가능한 프로덕트 구현
 
 <h3>✦ [추가예정]</h3>
-**- Apps Script 활용해 사용자의 기본 정보 체크
-**- 업데이트 일괄 알림 (메일 or 전화번호로)
+- Apps Script 활용해 사용자의 기본 정보 체크
+- 업데이트 일괄 알림 (메일 or 전화번호로)
 
 <br>
 </br>
