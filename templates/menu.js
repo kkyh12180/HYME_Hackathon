@@ -541,7 +541,7 @@ var change_count = function() {
     basket_item = JSON.parse(sessionStorage.getItem("basket"));
     for (it in basket_item) {
       cnt += basket_item[it][5];
-      price += basket_item[it][6];
+      price += basket_item[it][5]*basket_item[it][6];
     }
     if (sessionStorage.getItem("basket") != null) {
         document.getElementsByClassName("total_price")[0].innerHTML = "합계: "+price+" | 담은 개수: " + cnt;
