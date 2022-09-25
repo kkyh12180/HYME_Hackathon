@@ -101,24 +101,24 @@
                         <img src="" id="image_4" alt="추천">
                         <p id="item_4" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="5_item" onclick="basket('drink', 2, -1, -1, -1, 3700)">
+                    <div class="menu_item" id="5_item" onclick="basket('drink', 2, -1, -1, -1, 1, 3700); change_count(); check_empty();">
                         <img src="" id="image_5" alt="추천">
                         <p id="item_5" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="6_item" onclick="basket('side', 3, -1, -1, -1, 2800)">
+                    <div class="menu_item" id="6_item" onclick="basket('side', 3, -1, -1, -1, 1, 2800); change_count(); check_empty();">
                         <img src="" id="image_6" alt="추천">
                         <p id="item_6" style="float: right;"></p>
                     </div>
 
-                    <div class="menu_item" id="7_item" onclick="basket('side', 0, -1, -1, -1, 3700)">
+                    <div class="menu_item" id="7_item" onclick="basket('side', 0, -1, -1, -1, 1, 3700); change_count(); check_empty();">
                         <img src="" id="image_7" alt="추천">
                         <p id="item_7" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="8_item" onclick="basket('drink', 5, -1, -1, -1, 3500)">
+                    <div class="menu_item" id="8_item" onclick="basket('drink', 5, -1, -1, -1, 1, 3500); change_count(); check_empty();">
                         <img src="" id="image_8" alt="추천">
                         <p id="item_8" style="float: right;"></p>
                     </div>
-                    <div class="menu_item" id="9_item" onclick="basket('drink', 6, -1, -1, -1, 3500)">
+                    <div class="menu_item" id="9_item" onclick="basket('drink', 6, -1, -1, -1, 1, 3500); change_count(); check_empty();">
                         <img src="" id="image_9" alt="추천">
                         <p id="item_9" style="float: right;"></p>
                     </div>
@@ -152,19 +152,19 @@
                     <button type="button" class="btn btn-danger top_btn close-sheet">취소</button>
                 </div>
                 <div class="mid_box">
-                    <div class="menu" onclick="save_single()">
+                    <div class="menu" onclick="save_single(); change_count(); check_empty();">
                         <img class="menu_img" id="menu_img_single" src="../static/media/mac_food/hamburger/big_mac.png"
                             alt="빅맥">
                         <div class="menu_name" id="menu_name_single">빅맥</div>
                         <div class="menu_price" id="menu_price_single">￦5,700</div>
                     </div>
-                    <div class="menu" onclick="send_burger_info('set')">
+                    <div class="menu" onclick="send_burger_info('set'); change_count(); ">
                         <img class="menu_img" id="menu_img_set" src="../static/media/mac_food/hamburger/big_mac_set.png"
                             alt="빅맥">
                         <div class="menu_name" id="menu_name_set">빅맥세트</div>
                         <div class="menu_price" id="menu_price_set">￦7,500</div>
                     </div>
-                    <div class="menu" onclick="send_burger_info('large')">
+                    <div class="menu" onclick="send_burger_info('large'); change_count();">
                         <img class="menu_img" id="menu_img_large"
                             src="../static/media/mac_food/hamburger/big_mac_set.png" alt="빅맥">
                         <div class="menu_name" id="menu_name_large">빅맥세트 - 라지</div>
@@ -192,29 +192,34 @@
 
     <script>
         if (sessionStorage.getItem("basket") != null) {
-            document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: "+JSON.parse(sessionStorage.getItem("basket")).length;
+            document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: " + JSON.parse(sessionStorage.getItem("basket")).length;
         }
+
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
         };
 
-        if(sessionStorage.getItem("basket")!=null){
-          var basket_data = JSON.parse(sessionStorage.getItem("basket"));
-          document.getElementsByClassName("order_contents")[0].style.display = "none";
-        }else {
-          document.getElementsByClassName("order_contents")[0].style.display = "block";
-        }
+        function check_empty() {
+            if (sessionStorage.getItem("basket")!=null) {
+            var basket_data = JSON.parse(sessionStorage.getItem("basket"));
+            document.getElementsByClassName("order_contents")[0].style.display = "none";
+            } else {
+            document.getElementsByClassName("order_contents")[0].style.display = "block";
+            }
+        };
 
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
             // console.log("!!");
         };
+
         getMission();
         timer();
         recommend_func();
         side_func();
+        check_empty();
     </script>
 </body>
 

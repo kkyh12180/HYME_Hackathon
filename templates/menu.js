@@ -470,3 +470,17 @@ var save_single = function() {
 
     basket('hamburger', burger_num, 0, -1, -1 , 1, menuVar['hamburger'][burger_num][0]['price']);
 };
+
+var change_count = function() {
+    if (sessionStorage.getItem("basket") != null) {
+        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: " + JSON.parse(sessionStorage.getItem("basket")).length;
+    }
+};
+
+var check_empty = function() {
+    if (sessionStorage.getItem("basket") != null) {
+    document.getElementsByClassName("order_contents")[0].style.display = "none";
+    } else {
+    document.getElementsByClassName("order_contents")[0].style.display = "block";
+    }
+};

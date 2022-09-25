@@ -126,19 +126,19 @@
                     <button type="button" class="btn btn-danger top_btn close-sheet">취소</button>
                 </div>
                 <div class="mid_box">
-                    <div class="menu" onclick="save_single()">
+                    <div class="menu" onclick="save_single(); change_count(); check_empty();">
                         <img class="menu_img" id="menu_img_single" src="../static/media/mac_food/hamburger/big_mac.png"
                             alt="빅맥">
                         <div class="menu_name" id="menu_name_single">빅맥</div>
                         <div class="menu_price" id="menu_price_single">￦5,700</div>
                     </div>
-                    <div class="menu" onclick="send_burger_info('set')">
+                    <div class="menu" onclick="send_burger_info('set'); change_count();">
                         <img class="menu_img" id="menu_img_set" src="../static/media/mac_food/hamburger/big_mac_set.png"
                             alt="빅맥">
                         <div class="menu_name" id="menu_name_set">빅맥세트</div>
                         <div class="menu_price" id="menu_price_set">￦7,500</div>
                     </div>
-                    <div class="menu" onclick="send_burger_info('large')">
+                    <div class="menu" onclick="send_burger_info('large'); change_count();">
                         <img class="menu_img" id="menu_img_large"
                             src="../static/media/mac_food/hamburger/big_mac_set.png" alt="빅맥">
                         <div class="menu_name" id="menu_name_large">빅맥세트 - 라지</div>
@@ -182,6 +182,7 @@
         timer();
         //recommend_func();
         side_func();
+        check_empty();
     </script>
 </body>
 
