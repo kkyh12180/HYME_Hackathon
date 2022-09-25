@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Happiness-Sans-Bold';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
@@ -14,17 +15,10 @@ nav{
 
 .mission-box:after{ clear: both; display: block; content: ''}
 
-.mission-box {
-  height: 100%;
-  background-color: #FFF4E7;
-  width: 70%;
-  border: 1px solid;
-  font-size: 15px;
-  border-radius: 5px;
-  text-align: center;
-  align-items: center;
-  display: flex;
+.category_img {
+  width: 30vw;
 }
+
 
 #logo_mission {
   width: 20%;
@@ -71,10 +65,9 @@ nav{
   border-radius:0px 5px 5px 0px;
 }
 
-p{
-  margin-bottom: 0;
+.navbar-brand{
+  padding:0;
 }
-
 /***/
 
 body{
