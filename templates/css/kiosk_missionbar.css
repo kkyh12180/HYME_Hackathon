@@ -283,7 +283,7 @@ span {
 }
 
 .next-button {
-    position: fixed;
+    /*position: fixed; */
     bottom: 10px;
     width: 90%;
     color: white;
@@ -292,6 +292,8 @@ span {
     text-align: center;
     padding: 2px;
     margin-left: 5%;
+    margin-top: 7%;
+    margin-bottom: 7%;
 }
 
 .guide-box {
