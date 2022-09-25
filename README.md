@@ -26,7 +26,12 @@
 # 💡Explain
 <p align="center"><img src="./readme_img/ppt/index_problem.PNG"/></p>
 <p align="center"><img src="./readme_img/ppt/problem.PNG"/></p>
-<p align="center"><img src="./readme_img/ppt/index_update.PNG"/></p>
+<p align="center"><img src="./readme_img/ppt/solution.PNG"/></p>
+
+<br>
+</br>
+
+<p align="center"><img src="./readme_img/ppt/demo_main.PNG" width="200" /></p>
 
 <br>
 </br>
@@ -55,6 +60,11 @@
 <h2 align="center">키오스크 게임 진행</h2>
 <p align="center"><img src="./readme_img/select.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 실제 키오스크와 똑같은 Ui/Ux 를 직접 만져보며 실행할 수 있습니다.</h4>
+
+<br>
+</br>
+
+<p align="center"><img src="./readme_img/ppt/demo_final.PNG" width="200" /></p>
 
 <br>
 </br>
