@@ -41,11 +41,11 @@
                     💡적절한 위치에 신용카드를 가져가세요.
                 </div>
             </div>
-            <div class="credit-card" draggable="true" style="position: absolute;">
-                <img class="credit" draggable="true" id="ball" src="../static/media/kiosk/credit.png">
+            <div class="credit-card"id="ball">
+                <img class="credit" src="../static/media/kiosk/credit.png">
             </div>
             <div style="position: absolute;">
-                <img class="droppable" id="gate" src="https://en.js.cx/clipart/soccer-gate.svg">
+                <img class="droppable" id="gate" src="https://en.js.cx/clipart/soccer-gate.svg" style=" width: 100px; margin-bottom: 5vw;">
             </div>
         </div>
     </div>
@@ -103,39 +103,72 @@
     <script>
         setMission();
         timer();
-
-        function dragElement(elmnt) {
-        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0; 
-        elmnt.onmousedown = dragMouseDown;
-
-        function dragMouseDown(e) {
-            e = e || window.event;
-            e.preventDefault(); 
-            pos3 = e.clientX;
-            pos4 = e.clientY; 
-            document.onmouseup = closeDragElement;
-            document.onmousemove = elementDrag;
+        ball = document.getElementById("ball");
+        
+        let currentDroppable = null;
+        
+        ball.onmousedown = function (event) {
+        
+            let shiftX = event.clientX - ball.getBoundingClientRect().left;
+            let shiftY = event.clientY - ball.getBoundingClientRect().top;
+        
+            ball.style.position = 'absolute';
+            ball.style.zIndex = 1000;
+            document.body.append(ball);
+        
+            moveAt(event.pageX, event.pageY);
+        
+            function moveAt(pageX, pageY) {
+                ball.style.left = pageX - shiftX + 'px';
+                ball.style.top = pageY - shiftY + 'px';
+            }
+        
+            function onMouseMove(event) {
+                moveAt(event.pageX, event.pageY);
+        
+                ball.hidden = true;
+                let elemBelow = document.elementFromPoint(event.clientX, event.clientY); // elemBelow : 드롭할 수 있는 공의 아래 요소, 축구골대
+                ball.hidden = false;
+        
+                if (!elemBelow) return;
+        
+                let droppableBelow = elemBelow.closest('.droppable');
+                
+                if (currentDroppable != droppableBelow) {
+                    if (currentDroppable) { 
+                    leaveDroppable(currentDroppable);
+                    }
+                    currentDroppable = droppableBelow;
+                    if (currentDroppable) { 
+                    enterDroppable(currentDroppable);
+                    }
+                }
+            }
+        
+            document.addEventListener('mousemove', onMouseMove);
+        
+            ball.onmouseup = function () {
+                document.removeEventListener('mousemove', onMouseMove);
+                ball.onmouseup = null;
+            };
+        
+        };
+        
+        function enterDroppable(elem) {
+            elem.style.background = 'pink';
+            setTimeout(function() {
+                var link = 'menu.html';
+                location.href = link;
+            }, 1000);
         }
-
-        function elementDrag(e) {
-            e = e || window.event;
-            e.preventDefault();
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY; 
-            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        
+        function leaveDroppable(elem) {
+            elem.style.background = '';
         }
-
-        function closeDragElement() {
-            document.onmouseup = null;
-            document.onmousemove = null;
-            console.log("현재 요소의 위치 y는 " + elmnt.top +", x는" + elmnt.left  + "입니다.");
-        }
-        }
-
-        dragElement(document.getElementById("ball"));
+        
+        ball.ondragstart = function () {
+            return false;
+        };
     </script>
 </body>
 </html>
