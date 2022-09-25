@@ -17,7 +17,6 @@
 </br>
 
 # 💡Intro
-각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
 
 <p align="center"><img src="./readme_img/ppt/intro.PNG"/></p>
 
@@ -25,6 +24,13 @@
 </br>
 
 # 💡Explain
+<p align="center"><img src="./readme_img/ppt/index_problem.PNG"/></p>
+<p align="center"><img src="./readme_img/ppt/problem.PNG"/></p>
+<p align="center"><img src="./readme_img/ppt/index_update.PNG"/></p>
+
+<br>
+</br>
+
 <h2 align="center">메인 메뉴 선택 화면</h2>
 <p align="center"><img src="./readme_img/menu.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 키오스크 외의 다양한 스마트 기기들을 선택할 수 있습니다.</h4>
@@ -68,7 +74,9 @@
 </br>
 
 <p align="center"><img src="./readme_img/ppt/index_update.PNG"/></p>
+<p align="center"><img src="./readme_img/ppt/update.PNG"/></p>
 <p align="center"><img src="./readme_img/ppt/index_effect.PNG"/></p>
+<p align="center"><img src="./readme_img/ppt/effect.PNG"/></p>
 
 # 🔧Tech
 자바 스크립트 활용
