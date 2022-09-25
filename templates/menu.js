@@ -485,6 +485,30 @@ var send_burger_info = function(type) {
 
 };
 
+var guide_send_burger_info = function(type) {
+  var name = "";
+  var price = 0;
+  var price_text = "";
+  if (type == 'single') {
+      name = document.getElementById('menu_name_single').innerText;
+      price_text = document.getElementById('menu_price_single').innerText;
+      sessionStorage.setItem("set", 0)
+  } else if (type == 'set') {
+      name = document.getElementById('menu_name_set').innerText;
+      price_text = document.getElementById('menu_price_set').innerText;
+      sessionStorage.setItem("set", 1)
+  } else {
+      name = document.getElementById('menu_name_large').innerText;
+      price_text = document.getElementById('menu_price_large').innerText;
+      sessionStorage.setItem("set", 2)
+  }
+  // console.log(name);
+  price = price_text[1] * 1000 + price_text[3] * 100;
+  sessionStorage.setItem('selected_item', name);
+  sessionStorage.setItem('selected_item_price', price);
+  location.href="guide_side_select.html"
+};
+
 var save_single = function() {
     var name = document.getElementById('menu_name_single').innerText;
     var burger_num = -1;
