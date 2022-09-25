@@ -382,18 +382,22 @@ p {
     font-size: 15px;
 }
 
-.order_contents {
-    /* display: flex; */
-    display: inline-flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 10vh;
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-color: white;
-    color: #5E5E5E;
+.order_contents_box{
+  display: inline-flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height:10vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+
+}
+
+.order_contents{
+  /* display: flex; */
+  font-size: 15px;
+  color: #5E5E5E;
 }
 
 .order_bottom {
