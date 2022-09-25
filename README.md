@@ -144,7 +144,7 @@
 
 # 💻Video
 
-### 🔥 데모 영상입니다. [https://kkyh12180.github.io/HYME_Hackathon/](https://youtu.be/K0PAryFDTk8)
+### 🔥 데모 영상입니다. [Watch Video - SMARTUS](https://youtu.be/K0PAryFDTk8)
 <br>
 </br>
 
