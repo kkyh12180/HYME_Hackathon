@@ -109,6 +109,8 @@
           while (Date.now() < wakeUpTime) {}
         }
         function openCheck(num) {
+            var price = 0
+            price += Number(sessionStorage.getItem('selected_item_price'));
             if(num==1){
               document.getElementById("check-1").style.display = "block";
               document.getElementById("check-2").style.display = "none";
@@ -117,12 +119,15 @@
               document.getElementById("check-1").style.display = "none";
               document.getElementById("check-2").style.display = "block";
               document.getElementById("check-3").style.display = "none";
+              price += 2000;
             }else if(num==3){
               document.getElementById("check-1").style.display = "none";
               document.getElementById("check-2").style.display = "none";
               document.getElementById("check-3").style.display = "block";
+              price += 400;
             }
             sessionStorage.setItem("side", num);
+            sessionStorage.setItem("selected_item_price", price);
             setTimeout("location.href='drink_select.html'",500);
             // location.href="drink_select.html";
         };
