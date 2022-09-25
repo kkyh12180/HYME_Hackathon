@@ -33,6 +33,12 @@
 ### 키오스크 미션 화면
 <img src="./readme_img/select.png" width="200" height="450"/> 
 
+### 키오스크 게임 최종 화면
+<img src="./readme_img/final.png" width="200" height="450"/> 
+
+### 키오스크 가이드 (배우기) 화면
+<img src="./readme_img/guide.png" width="200" height="450"/> 
+
 # 🔧Tech
 자바 스크립트 활용
 - 배열 사용 , timer 사용한 시간 제한 기능
