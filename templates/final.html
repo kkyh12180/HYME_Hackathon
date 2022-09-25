@@ -139,7 +139,7 @@
         else 
             time_ment = "제한 시간 초과..."
 
-        if (score >= 70) 
+        if (score == 100) 
             last_ment = "실제 키오스크를 이용해보세요!";
         else 
             last_ment = "더 연습해 보세요!"
@@ -150,6 +150,7 @@
         document.getElementById('last_ment').innerHTML = last_ment;
 
         localStorage.clear();
+        sessionStorage.clear();
     </script>
 
 </body>
