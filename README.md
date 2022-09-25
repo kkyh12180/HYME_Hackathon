@@ -129,6 +129,9 @@
 이것이 더는 익숙한 풍경이 아니기를 바랍니다.<br/><br/><br/></p>
 
 # 🔧Tech
+<p align="center"><img src="./readme_img/work_flow.png" width="800"/></p>
+<br/>
+
 <h3>✦ 자바 스크립트 활용</h3>
 - 배열 사용 , timer 사용한 시간 제한 기능
 
