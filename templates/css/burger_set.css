@@ -195,7 +195,7 @@ nav{
     font-family: 'Happiness-Sans-Bold', serif;
     align-items: center;
     border-radius: 0px 0px 10px 10px;
-    box-shadow: 0px 3px 10px 3px #003F29;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
 .mission-box:after{ clear: both; display: block; content: ''}
