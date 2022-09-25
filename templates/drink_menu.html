@@ -130,7 +130,7 @@
         <div class="order_contents_box">
             <div class="order_contents">장바구니가 비어 있습니다.</div>
             <div class="total_box">
-                <span class="total_price">합계: (가격) | 제품: (개수)</span>
+                <span class="total_price"></span>
                 <span class="total_detail" onclick="location.href='total_menu.html'">주문 내역 상세 보기 >> </span>
             </div>
         </div>
@@ -152,7 +152,7 @@
           var basket_data = JSON.parse(sessionStorage.getItem("basket"));
           document.getElementsByClassName("order_contents")[0].style.display = "none";
           document.getElementsByClassName("total_box")[0].style.display = "flex";
-          document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: "+JSON.parse(sessionStorage.getItem("basket")).length;
+          //document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: "+JSON.parse(sessionStorage.getItem("basket")).length;
         }else {
           document.getElementsByClassName("total_box")[0].style.display = "none";
           document.getElementsByClassName("order_contents")[0].style.display = "block";
