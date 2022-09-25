@@ -66,6 +66,9 @@
 <p align="center"><img src="./readme_img/guide.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 키오스크를 아예 처음 접하는 사람을 위해 수행해야하는 액션을 가르쳐주는 가이드 모드가 존재합니다.</h4>
 
+<br>
+</br>
+
 # 🔧Tech
 자바 스크립트 활용
 - 배열 사용 , timer 사용한 시간 제한 기능
@@ -77,7 +80,13 @@
 - Apps Script 활용해 사용자의 기본 정보 체크
 - 업데이트 일괄 알림 (메일 or 전화번호로)
 
+<br>
+</br>
+
 # 💻Video
+
+<br>
+</br>
 
 
 ## Wave <a id="wave">
