@@ -21,8 +21,11 @@
 각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
 
 # 💡Explain
-<img src="./readme_img/menu.png" width="200" height="450"/> 어쩌고 저쩌고 
-어쩌고 저쩌고 2
+### 메인 메뉴 선택 화면
+<img src="./readme_img/menu.png" width="200" height="450"/> 
+<img src="./readme_img/brand.png" width="200" height="450"/> 
+<img src="./readme_img/mission.png" width="200"/>
+<img src="./readme_img/select.png" width="200" height="450"/> 
 
 # 🔧Tech
 자바 스크립트 활용
