@@ -7,7 +7,7 @@
 ![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=To%20Live%20Well%20Together&descAlignY=75&descAlign=60)
 
 
-<p align="center"><img src="./readme_img/ppt/index.png"/></p>
+<p align="center"><img src="./readme_img/ppt/index.png" width="800"/></p>
 
 
 # 📚 Theme
@@ -18,7 +18,7 @@
 
 # 💡Intro
 
-<p align="center"><img src="./readme_img/ppt/intro.PNG"/></p>
+<p align="center"><img src="./readme_img/ppt/intro.PNG" width="800"/></p>
 
 <br>
 </br>
