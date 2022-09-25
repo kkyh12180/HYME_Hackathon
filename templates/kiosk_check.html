@@ -71,7 +71,7 @@
             // console.log(basket[0]);
             // item, name, set, side, drink, count, price
             // console.log(menu[basket[0][0]][basket[0][1]][basket[0][2]]);
-            if (basket[0][0] == 'hamburger') {
+            if ((basket[0][0] == 'hamburger') && (basket[0][2] != 0)) {
                 document.write(
                     '<div class="receipt-1">' +
                         '<p id="receipt-menu">' +
@@ -86,6 +86,21 @@
                         '<div class="receipt-button" id="button-delete" style="margin-left: 20px;">삭제</div>' +
                         '<div class="receipt-button" id="button-modify"style="margin-right: 20px;">변경</div>' +
                     '</div>'
+                );
+            } else if ((basket[0][0] == 'hamburger') && (basket[0][2] == 0)) {
+                document.write(
+                    '<div class="receipt-1">' +
+                            '<p id="receipt-menu">' +
+                                '<span>' + basket[0][5] + '</span> X <span>' + menu[basket[0][0]][basket[0][1]][basket[0][2]]["name"] + '</span>' +
+                            '</p>' +
+                            '<p id="receipt-price"> ' +
+                                Math.floor(basket[0][5] * basket[0][6] / 1000) + ',' + (basket[0][5] * basket[0][6] % 1000) + '원' +
+                            '</p>' +
+                        '</div>' +
+                        '<div class="receipt-3">' +
+                            '<div class="receipt-button" id="button-delete" style="margin-left: 20px;">삭제</div>' +
+                            '<div class="receipt-button" id="button-modify"style="margin-right: 20px;">변경</div>' +
+                        '</div>'
                 );
             } else {
                 document.write(
@@ -118,7 +133,7 @@
         // item, name, set, side, drink, count, price
         // console.log(menu[basket[0][0]][basket[0][1]][basket[0][2]]);
         for (i = 1; i < basket.length; i++) {
-            if (basket[i][0] == 'hamburger') {
+            if ((basket[i][0] == 'hamburger') && (basket[i][2] != 0)) {
                 document.write(
                     '<div class="receipt-container">' +
                         '<div class="receipt-1">' +
@@ -133,6 +148,23 @@
                         '<div class="receipt-3">' +
                             '<div class="receipt-button" id="button-delete" style="margin-left: 20px;">삭제</div>' +
                             '<div class="receipt-button" id="button-modify"style="margin-right: 20px;">변경</div>' +
+                        '</div>' +
+                    '</div>'
+                );
+            } else if ((basket[i][0] == 'hamburger') && (basket[i][2] == 0)) {
+                document.write(
+                    '<div class="receipt-container">' +
+                        '<div class="receipt-1">' +
+                                '<p id="receipt-menu">' +
+                                    '<span>' + basket[i][5] + '</span> X <span>' + menu[basket[i][0]][basket[i][1]][basket[i][2]]["name"] + '</span>' +
+                                '</p>' +
+                                '<p id="receipt-price"> ' +
+                                    Math.floor(basket[i][5] * basket[i][6] / 1000) + ',' + (basket[i][5] * basket[i][6] % 1000) + '원' +
+                                '</p>' +
+                        '</div>' +
+                        '<div class="receipt-3">' +
+                                '<div class="receipt-button" id="button-delete" style="margin-left: 20px;">삭제</div>' +
+                                '<div class="receipt-button" id="button-modify"style="margin-right: 20px;">변경</div>' +
                         '</div>' +
                     '</div>'
                 );
