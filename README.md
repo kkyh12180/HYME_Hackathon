@@ -9,29 +9,6 @@
   </a>
 </p>
 
-## Navigation
-1. [How to Use](#how-to-use)
-2. [Types](#types)
-3. [Color](#color)
-4. [Custom Color List](#custom-color-list)
-5. [Section](#section)
-6. [Reversal](#reversal)
-7. [Height](#height)
-8. [Text](#text)
-9. [Desc](#desc)
-10. [Text Background](#text-background)
-11. [Text Animation](#text-animation)
-12. [Font Color](#fontcolor)
-13. [Font Size](#fontsize)
-14. [Font Align - X](#fontalign)
-15. [Font Align - Y](#fontaligny)
-16. [Desc Size](#descsize)
-17. [Desc Align - X](#descalign)
-18. [Desc Align - Y](#descaligny) 
-19. [Rotate](#rotate)
-20. [Demo](#demo)
-
-Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
 # 👩🏻 Team Name
 
@@ -55,7 +32,6 @@ Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/I
 
 자바스크립트 [추가예정]
 - Apps Script 활용해 사용자의 기본 정보 체크
-
 - 업데이트 일괄 알림 (메일 or 전화번호로)
 
 # 💻Video
