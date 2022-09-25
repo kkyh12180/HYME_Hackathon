@@ -19,7 +19,7 @@
 # 💡Intro
 각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
 
-<p align="center"><img src="./readme_img/ppt/intro.png"/></p>
+<p align="center"><img src="./readme_img/ppt/intro.PNG"/></p>
 
 <br>
 </br>
@@ -67,8 +67,8 @@
 <br>
 </br>
 
-<p align="center"><img src="./readme_img/ppt/index_update.png"/></p>
-<p align="center"><img src="./readme_img/ppt/index_effect.png"/></p>
+<p align="center"><img src="./readme_img/ppt/index_update.PNG"/></p>
+<p align="center"><img src="./readme_img/ppt/index_effect.PNG"/></p>
 
 # 🔧Tech
 자바 스크립트 활용
