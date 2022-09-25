@@ -21,7 +21,7 @@
 각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
 
 # 💡Explain
-### 메인 메뉴 선택 화면
+<h3 align="center">메인 메뉴 선택 화면</h3>
 <p align="center"><img src="./readme_img/menu.png" width="200" height="450"/></p>
 💡 - 키오스크 외의 다양한 스마트 기기들을 선택할 수 있습니다.
 
