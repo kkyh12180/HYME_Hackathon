@@ -225,6 +225,10 @@ var burger_side_var = [
     "후렌치 후라이 - 미디엄", "후렌치 후라이 M + 골든 모짜렐라 치즈스틱 2조각", "골든 모짜렐라 치즈스틱"
 ]
 
+var burger_drink_var = [
+    "콜라", "환타", "스프라이트"
+]
+
 // console.log(menuVar["hamburger"][0][1]["name"]);
 
 var setMission = function() {
@@ -289,7 +293,10 @@ var setMission = function() {
     } else {
         console.log("Random Value Error.");
     }
-    mission = place[place_num]['mis'] + ", " + service[service_num]['mis'] + ", " + mission;
+    if (place_num == 0)
+        mission = place[place_num]['mis'] + ", " + service[service_num]['mis'] + ", " + mission;
+    else 
+    mission = place[place_num]['mis'] + ", " + mission;
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
     localStorage.setItem("mission", mission);

@@ -160,13 +160,15 @@
         </div>
         <div class="order_bottom">
             <button type="button" class="btn btn-danger cancel_btn" style="padding:0; font-size: 15px;">주문취소</button>
-            <button type="button" class="btn btn-success order_btn" style="padding:0; font-size: 15px;">주문완료</button>
+            <button type="button" class="btn btn-success order_btn" style="padding:0; font-size: 15px;" onclick="location.href='kiosk_check.html'">주문완료</button>
         </div>
     </div>
 
     <script>
         console.log(JSON.parse(sessionStorage.getItem("basket")));
-        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: "+JSON.parse(sessionStorage.getItem("basket")).length;
+        if (sessionStorage.getItem("basket") != null) {
+            document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: " + JSON.parse(sessionStorage.getItem("basket")).length;
+        }
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
