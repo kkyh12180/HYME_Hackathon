@@ -93,7 +93,7 @@
                             '</button>'+
                         '</span>'+
                     '</div>'+
-                    '<div class="menu_price">'+basket[i][5] * basket[i][6]+'</div>'+
+                    '<div class="menu_price" id="quant['+i+']">'+basket[i][5] * basket[i][6]+'</div>'+
                 '</div>');
             } else {
                 document.write('<div class="menu_item">'+
@@ -106,14 +106,14 @@
                                 '<span class="glyphicon glyphicon-minus"></span>'+
                             '</button>'+
                         '</span>'+
-                        '<input type="text" name="quant['+i+']" class="form-control input-number" value="'+basket[i][5]+'" min="1" max="10">'+
+                        '<input type="text" name="quant['+i+']" id="input-'+i+'" class="form-control input-number" value="'+basket[i][5]+'" min="1" max="10">'+
                         '<span class="input-group-btn">'+
                             '<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant['+i+']">'+
                                 '<span class="glyphicon glyphicon-plus"></span>'+
                             '</button>'+
                         '</span>'+
                     '</div>'+
-                    '<div class="menu_price">'+basket[i][5] * basket[i][6]+'</div>'+
+                    '<div class="menu_price" id="quant['+i+']">'+basket[i][5] * basket[i][6]+'</div>'+
                 '</div>');
             }
         }
@@ -125,12 +125,15 @@
       <script type="text/javascript">
           //plugin bootstrap minus and plus
           //http://jsfiddle.net/laelitenetwork/puJ6G/
+          
+          var basket_item = JSON.parse(sessionStorage.getItem("basket"));
           $('.btn-number').click(function(e){
             e.preventDefault();
             
             fieldName = $(this).attr('data-field');
             type      = $(this).attr('data-type');
             var input = $("input[name='"+fieldName+"']");
+            var price = document.getElementById(fieldName);
             var currentVal = parseInt(input.val());
             if (!isNaN(currentVal)) {
                 if(type == 'minus') {
@@ -141,7 +144,7 @@
                     if(parseInt(input.val()) == input.attr('min')) {
                         $(this).attr('disabled', true);
                     }
-  
+                    price.innerText = parseInt(input.val())*basket_item[fieldName[6]][6];
                 } else if(type == 'plus') {
   
                     if(currentVal < input.attr('max')) {
@@ -150,7 +153,7 @@
                     if(parseInt(input.val()) == input.attr('max')) {
                         $(this).attr('disabled', true);
                     }
-  
+                    price.innerText = parseInt(input.val())*basket_item[fieldName[6]][6];
                 }
             } else {
                 input.val(0);
@@ -215,6 +218,7 @@
             var basket_items = JSON.parse(sessionStorage.getItem("basket"));
             // sessionStorage.removeItem("basket");
             for (i = 0; i < basket_items.length; i++) {
+              // console.log(document.getElementById('input-'+i));
               basket_items[i][5] = document.getElementById('input-'+i).value;
               basket_update.push([basket_items[i][0], basket_items[i][1], basket_items[i][2], basket_items[i][3], basket_items[i][4],parseInt(basket_items[i][5]), basket_items[i][6]]);
             }
