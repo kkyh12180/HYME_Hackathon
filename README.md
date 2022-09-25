@@ -155,5 +155,13 @@
 <br>
 </br>
 
-
+# 🙆‍♀️ Team Info
+<h2> 🫠 Team Leader - 컴퓨터학부 20학번 김민주 </h2>
+<br/>
+<h2> 🔧 Team Member - 컴퓨터학부 20학번 김영효 </h2>
+<br/>
+<h2> 🏆 Team Member - 컴퓨터학부 20학번 김현지 </h2>
+<br/>
+<h2> 🥰 Team Member - 컴퓨터학부 20학번 이은지 </h2>
+<br/>
 ![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Now%20Use%20me!&fontSize=90)
