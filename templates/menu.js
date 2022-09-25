@@ -207,8 +207,8 @@ var place = [
 ];
 
 var service = [
-    {"mis" : "테이블 서비스"},
     {"mis" : "셀프 서비스"},
+    {"mis" : "테이블 서비스"},
 ];
 
 var sideVar = [
@@ -274,13 +274,15 @@ var setMission = function() {
     mission_item.push(place_num);
     if (place_num == 0) {
         mission_item.push(service_num);
+    } else {
+        mission_item.push(-1);
     }
     if (mission_item_selector < 6) {
-        mission = menuVar["hamburger"][mission_item_selector][is_set]["name"] + "를 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
+        mission = menuVar["hamburger"][mission_item_selector][is_set]["name"] + "를 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + " 하나)";
         mission_item.push(['hamburger', mission_item_selector, is_set, value]);
         mission_item.push(['drink', drink_selector, -1, 1]);
     } else if ((mission_item_selector >= 6) && (mission_item_selector < 10)) {
-        mission = menuVar["side"][mission_item_selector - 6]["name"] + "을 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
+        mission = menuVar["side"][mission_item_selector - 6]["name"] + "을 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + "하나)";
         mission_item.push(['side', mission_item_selector - 6, -1, value]);
         mission_item.push(['drink', drink_selector, -1, 1]);
     } else if ((mission_item_selector >= 10) && (mission_item_selector < 17)) {
@@ -321,6 +323,7 @@ var timer = function() {
     var excess_time = sessionStorage.getItem('excess_time');
     if (excess_time == null) {
         excess_time == 0;
+        sessionStorage.setItem('excess_time', excess_time);
     }
 
     setInterval(function() {
@@ -330,7 +333,7 @@ var timer = function() {
             sessionStorage.setItem('time', time);
         } else {
             excess_time++;
-            sessionStorage.setItem('excess_time', time);
+            sessionStorage.setItem('excess_time', excess_time);
             // console.log(excess_time + "초가 초과되었습니다.");
         }
     }, 1000)
