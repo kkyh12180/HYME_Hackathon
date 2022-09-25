@@ -6,12 +6,14 @@
 
 ![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=To%20Live%20Well%20Together&descAlignY=75&descAlign=60)
 
+<br>
+</br>
 
 <p align="center"><img src="./readme_img/ppt/index.png" width="800"/></p>
 
 
 # 📚 Theme
-🌟 특별 세션 - 스마트 기술 교육 부재
+<p>🌟 특별 세션 - 스마트 기술 교육 부재</p>
 
 <br>
 </br>
@@ -25,13 +27,28 @@
 
 # 💡Explain
 <p align="center"><img src="./readme_img/ppt/index_problem.PNG" width="800"/></p>
+<br>
+</br>
+<p align="center">대한민국 사회는 고령화 사회를 넘어 초고령화 사회를 바라보고 있습니다.<br/>
+또 코로나 19가 심화되는 과정에서 대면 접촉을 최소화하기 위해 대다수의 점원이 서있던 자리를 키오스크가 대신했습니다. <br/>
+  이러한 이유로 셀프 키오스크 성장세가 12.2%에 도달할 동안, 점원 대신 키오스크를 선호하는 사람은 고작 35% 에 머무르고 있다는 통계가 존재합니다. <br/>
+  이런 사실을 바탕으로 팀 HYME은, 초고령화 사회로 달려가는 대한민국의 ‘디지털 문맹’들을 위한 교육 서비스의 필요성에 주목했습니다.<br/></p>
+<br>
+</br>
 <p align="center"><img src="./readme_img/ppt/problem.PNG" width="800"/></p>
 <p align="center"><img src="./readme_img/ppt/solution.PNG" width="800"/></p>
+<br/>
+<p align="center">이 중에서 저희가 특히 집중하고자 했던 부분은 평가항목과 방법의 개발입니다. <br/>
+이 솔루션에 가장 포커스를 맞춘 이유로 하나의 격언을 인용할 수 있을 것 같습니다. <br/>
+‘너 자신을 알라.’입니다. 내가 무엇을 모르는지 알아야 새로운 것을 배워나갈 수 있고, 배워나가는 자세가 되어 야 익숙해지고 즐길 수 있을 것입니다.<br/>
+때문에 저희는 스마트 기기에 대한 부담감을 줄이고 재미있게 배워나갈 수 있는 서비스를 고안하고자 했고, <br/>
+목적에 가장 부합하는 서비스 형태로 ‘게임’을 차용했습니다.<br/></p>
+<br/>
 
 <br>
 </br>
 
-<h2 align="center">메인 메뉴 선택 화면</h2>
+<h2>📎메인 메뉴 선택 화면</h2>
 
 <p align="center"><img src="./readme_img/ppt/demo_main.PNG" width="500" /></p>
 
@@ -44,40 +61,36 @@
 <br>
 </br>
 
-<h2 align="center">키오스크 브랜드 선택 화면</h2>
+<h2>📎키오스크 브랜드 선택 화면</h2>
 <p align="center"><img src="./readme_img/brand.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 키오스크의 여러 브랜드를 선택하고, 'Game (연습하기)' & 'Guide (배우기)' 두 가지 모드로 실행할 수 있습니다.</h4>
 
 <br>
 </br>
 
-<h2 align="center">🎮 Game Mode : 미션 안내</h2>
+<h2>🎮 Game Mode : 미션 안내</h2>
 <p align="center"><img src="./readme_img/mission.png" width="200"/></p>
 <h4 align="center">💡 - 미션 탭이 상단에 등장하게 되고 제한 시간 타이머가 실행됩니다.</h4>
 
 <br>
 </br>
 
-<h2 align="center">키오스크 게임 진행</h2>
+<h2>🎮 키오스크 게임 진행</h2>
 <p align="center"><img src="./readme_img/select.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 실제 키오스크와 똑같은 Ui/Ux 를 직접 만져보며 실행할 수 있습니다.</h4>
 
 <br>
 </br>
 
+<h2>🎮 키오스크 게임 최종 화면</h2>
 <p align="center"><img src="./readme_img/ppt/demo_final.PNG" width="500" /></p>
-
-<br>
-</br>
-
-<h2 align="center">키오스크 게임 최종 화면</h2>
 <p align="center"><img src="./readme_img/final.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 잔여 시간과 달성률을 기반으로 미션 수행도를 평가하고, 일정 점수에 따라 평가 코멘트를 작성합니다.</h4>
   
 <br>
 </br>
 
-<h2 align="center">키오스크 가이드 (배우기) 화면</h2>
+<h2>📚 키오스크 가이드 (배우기) 화면</h2>
 <p align="center"><img src="./readme_img/guide.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 키오스크를 아예 처음 접하는 사람을 위해 수행해야하는 액션을 가르쳐주는 가이드 모드가 존재합니다.</h4>
 
@@ -91,14 +104,14 @@
 
 # 🔧Tech
 <h3>✦ 자바 스크립트 활용</h3>
-**- 배열 사용 , timer 사용한 시간 제한 기능**
+- 배열 사용 , timer 사용한 시간 제한 기능
 
 <h3>✦ 배포 및 호스팅</h3>
-**- git.io 를 통한 배포로 모든 사람이 손쉽게 접근 가능한 프로덕트 구현**
+- git.io 를 통한 배포로 모든 사람이 손쉽게 접근 가능한 프로덕트 구현
 
 <h3>✦ [추가예정]</h3>
-**- Apps Script 활용해 사용자의 기본 정보 체크**
-**- 업데이트 일괄 알림 (메일 or 전화번호로)**
+- Apps Script 활용해 사용자의 기본 정보 체크
+- 업데이트 일괄 알림 (메일 or 전화번호로)
 
 <br>
 </br>
@@ -107,46 +120,6 @@
 
 <br>
 </br>
-
-
-## Wave <a id="wave">
-![wave](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&text=WAVE)
-
-## Egg <a id="egg">
-![egg](https://capsule-render.vercel.app/api?type=egg&color=auto&height=210)
-
-## Shark <a id="shark">
-![shark](https://capsule-render.vercel.app/api?type=shark&color=gradient&height=140)
-
-## Slice <a id="slice">
-![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=70&rotate=13&fontAlignY=25&desc=desc%20function%20is%20also%20rotated.&descAlign=70.&descAlignY=44)
-  
-## Rect <a id="rect">
-![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=%20%20RECT%20%20&fontAlign=30&fontSize=30&textBg=true&desc=Use%20%27textBg%27%20to%20highlight%20%27text%27&descAlign=60&descAlignY=50)
-
-## Soft <a id="soft">
-![soft](https://capsule-render.vercel.app/api?type=soft&color=auto&text=Good%20to%20use%20with%20other%20readme&fontSize=40&animation=twinkling)
-
-## Rounded <a id="rounded">
-![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded%20with%20stroke&fontAlignY=50&fontSize=40&height=200&stroke=000000&strokeWidth=2)
-
-## Cylinder <a id="cylinder">
-![cylinder](https://capsule-render.vercel.app/api?type=cylinder&color=auto&text=Cylinder&fontAlignY=45&fontSize=40&height=150&animation=blinking&desc=desc%20is%20also%20animated&descAlignY=70)
-
-## Waving <a id="waving">
-![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=Waving!&fontAlign=80&fontAlignY=40&color=gradient)
-
-## Transparent <a id="transparent">
-![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=Transparent&height=150&fontSize=60&desc=Only%20Use%20Text&descAlignY=75&descAlign=60)
-
-
-
-<hr/>
-
-# Things that helped contribute
-
-- SVG Path Easy Maker [Codepen](https://codepen.io/kyechan99/pen/yLeQVBa)
-- SVG Path draw [mavo.io](https://mavo.io/demos/svgpath/)
 
 
 ![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Now%20Use%20me!&fontSize=90)
