@@ -371,8 +371,6 @@ var happy_meal_func = function() {
         document.querySelector(item_id).innerHTML = menuVar['happy_meal'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['happy_meal'][i]['price']/1000)) + "," + (menuVar['happy_meal'][i]['price'] % 1000);
     }
 
-    document.getElementById("image_8").src = "../static/media/mac_food/blank.png";
-    document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
 }
 
 var mac_morning_func = function() {
@@ -382,9 +380,12 @@ var mac_morning_func = function() {
         
         document.getElementById(image_id).src = menuVar['mac_morning'][i]['img'];
         document.querySelector(item_id).innerHTML = menuVar['mac_morning'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['mac_morning'][i]['price']/1000)) + "," + (menuVar['mac_morning'][i]['price'] % 1000);
+        if(menuVar['mac_morning'][i]['price'] % 1000==0){
+          document.querySelector(item_id).innerHTML = menuVar['mac_morning'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['mac_morning'][i]['price']/1000)) + ",000";
+        }
+
     }
     
-    document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
 }
 
 var side_item_func = function() {
@@ -458,6 +459,9 @@ var basket = function(item, name, set, side, drink, count, price) {
         }
     }
     sessionStorage.setItem('basket', JSON.stringify(basket_item));
+    if(item!='hamburger'){
+      location.reload();
+    }
 };
 
 var send_burger_info = function(type) {
