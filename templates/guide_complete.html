@@ -82,7 +82,7 @@
                 <div class="menu_box">
                     <div class="item"><img class="category_img" src="../static/media/burger_set/1955.png"
                             onclick="openImg('1955')"></div>
-                    <div class="item guide-box" style="border-radius: 10px; padding:3px;"><img class="category_img" src="../static/media/burger_set/big.png"
+                    <div class="item"><img class="category_img" src="../static/media/burger_set/big.png"
                             onclick="openImg('big_mac')"></div>
                     <div class="item"><img class="category_img" src="../static/media/burger_set/chicken.png"
                             onclick="openImg('mac_chicken')"></div>
@@ -153,10 +153,10 @@
         <div class="order_title">주문내역</div>
         <div class="order_contents_box">
             <div class="order_contents">장바구니가 비어 있습니다.</div>
-            <!-- <div class="total_box">
+            <div class="total_box">
                 <span class="total_price">합계: (가격) | 담은 개수: (개수)</span>
                 <span class="total_detail" onclick="location.href='total_menu.html'">주문 내역 상세 보기 >> </span>
-            </div> -->
+            </div>
         </div>
         <div class="order_bottom">
             <button type="button" class="btn btn-danger cancel_btn" style="padding:0; font-size: 15px;">주문취소</button>
@@ -165,14 +165,23 @@
     </div>
 
     <div class="explanation pulse" style="font-size: 12px; position: absolute; bottom: 18%;">
-        이 화면에서는 원하는 햄버거를 고를 수 있어요. 각 햄버거를 선택하면, 세트메뉴를 고르는 화면이 나올 거예요.
-        우리는 햄버거 중 <span style="color:red;">"빅맥"</span> 을 선택할 거예요.
+        아래 주문 내역에서 장바구니에 담긴 메뉴들을 확인할 수 있어요. 주문 내역 상세 보기를 통해 개수를 변경할 수도 있어요.
     </div>
     <script>
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
         };
+        if(sessionStorage.getItem("basket")!=null){
+          var basket_data = JSON.parse(sessionStorage.getItem("basket"));
+          document.getElementsByClassName("order_contents")[0].style.display = "none";
+          document.getElementsByClassName("total_box")[0].style.display = "flex";
+          document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: "+JSON.parse(sessionStorage.getItem("basket")).length;
+        }else {
+          document.getElementsByClassName("total_box")[0].style.display = "none";
+          document.getElementsByClassName("order_contents")[0].style.display = "block";
+        }
+        change_count();
 
         getMission();
         //recommend_func();
