@@ -268,26 +268,26 @@ var setMission = function() {
 
     // var basket = function(item, name, set, side, drink, count, price)
     // mission_item = [item, name, set, value]
-    var mission_item = [];
+    var mission_item = {};
 
     // 0 : 매장, 1 : 테이크아웃
-    mission_item.push(place_num);
+    mission_item[0] = place_num;
     if (place_num == 0) {
-        mission_item.push(service_num);
+        mission_item[1] = service_num;
     } else {
-        mission_item.push(-1);
+        mission_item[1] = -1;
     }
     if (mission_item_selector < 6) {
         mission = menuVar["hamburger"][mission_item_selector][is_set]["name"] + "를 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + " 하나)";
-        mission_item.push(['hamburger', mission_item_selector, is_set, value]);
-        mission_item.push(['drink', drink_selector, -1, 1]);
+        mission_item[2] = ['hamburger', mission_item_selector, is_set, value];
+        mission_item[3] = ['drink', drink_selector, -1, 1];
     } else if ((mission_item_selector >= 6) && (mission_item_selector < 10)) {
         mission = menuVar["side"][mission_item_selector - 6]["name"] + "을 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + "하나)";
-        mission_item.push(['side', mission_item_selector - 6, -1, value]);
-        mission_item.push(['drink', drink_selector, -1, 1]);
+        mission_item[2] = ['side', mission_item_selector - 6, -1, value];
+        mission_item[3] = ['drink', drink_selector, -1, 1];
     } else if ((mission_item_selector >= 10) && (mission_item_selector < 17)) {
         mission = menuVar["drink"][mission_item_selector - 10]["name"] + "를 " + value + "개 주문하기";
-        mission_item.push(['drink', mission_item_selector - 10, -1, 1]);
+        mission_item[2] = ['drink', mission_item_selector - 10, -1, value];
     } else if ((mission_item_selector >= 17) && (mission_item_selector < 22)) {
         mission = menuVar["dessert"][mission_item_selector - 17]["name"] + "를 " + value + "개 주문하기";
     } else if ((mission_item_selector >= 22) && (mission_item_selector < 25)) {
@@ -302,7 +302,7 @@ var setMission = function() {
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
     localStorage.setItem("mission", mission);
-    localStorage.setItem('mission_item', mission_item);
+    localStorage.setItem('mission_item', JSON.stringify(mission_item));
 };
 
 var getMission = function() {
@@ -322,7 +322,7 @@ var timer = function() {
     
     var excess_time = sessionStorage.getItem('excess_time');
     if (excess_time == null) {
-        excess_time == 0;
+        excess_time = 0;
         sessionStorage.setItem('excess_time', excess_time);
     }
 
