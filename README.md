@@ -17,7 +17,6 @@
 </br>
 
 # 💡Intro
-각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
 
 <p align="center"><img src="./readme_img/ppt/intro.PNG"/></p>
 
@@ -25,7 +24,20 @@
 </br>
 
 # 💡Explain
+<p align="center"><img src="./readme_img/ppt/index_problem.PNG" width="800"/></p>
+<p align="center"><img src="./readme_img/ppt/problem.PNG" width="800"/></p>
+<p align="center"><img src="./readme_img/ppt/solution.PNG" width="800"/></p>
+
+<br>
+</br>
+
 <h2 align="center">메인 메뉴 선택 화면</h2>
+
+<p align="center"><img src="./readme_img/ppt/demo_main.PNG" width="500" /></p>
+
+<br>
+</br>
+
 <p align="center"><img src="./readme_img/menu.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 키오스크 외의 다양한 스마트 기기들을 선택할 수 있습니다.</h4>
 
@@ -53,6 +65,11 @@
 <br>
 </br>
 
+<p align="center"><img src="./readme_img/ppt/demo_final.PNG" width="500" /></p>
+
+<br>
+</br>
+
 <h2 align="center">키오스크 게임 최종 화면</h2>
 <p align="center"><img src="./readme_img/final.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 잔여 시간과 달성률을 기반으로 미션 수행도를 평가하고, 일정 점수에 따라 평가 코멘트를 작성합니다.</h4>
@@ -67,8 +84,10 @@
 <br>
 </br>
 
-<p align="center"><img src="./readme_img/ppt/index_update.PNG"/></p>
-<p align="center"><img src="./readme_img/ppt/index_effect.PNG"/></p>
+<p align="center"><img src="./readme_img/ppt/index_update.PNG" width="800"/></p>
+<p align="center"><img src="./readme_img/ppt/update.PNG" width="800"/></p>
+<p align="center"><img src="./readme_img/ppt/index_effect.PNG" width="800"/></p>
+<p align="center"><img src="./readme_img/ppt/effect.PNG" width="800"/></p>
 
 # 🔧Tech
 자바 스크립트 활용
