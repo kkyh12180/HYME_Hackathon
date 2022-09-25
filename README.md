@@ -23,10 +23,13 @@
 # 💡Explain
 ### 메인 메뉴 선택 화면
 <img src="./readme_img/menu.png" width="200" height="450"/> 
+
 ### 키오스크 브랜드 선택 화면
 <img src="./readme_img/brand.png" width="200" height="450"/> 
+
 ### 🎮 Game Mode - 미션 안내
 <img src="./readme_img/mission.png" width="200"/>
+
 ### 키오스크 미션 화면
 <img src="./readme_img/select.png" width="200" height="450"/> 
 
