@@ -11,6 +11,7 @@
 
 
 # 📚 Theme
+![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=📚 Theme&fontAlign=80&fontAlignY=40&color=gradient)
 🌟 특별 세션 - 스마트 기술 교육 부재
 
 <br>
