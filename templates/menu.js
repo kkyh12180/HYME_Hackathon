@@ -232,7 +232,7 @@ var setMission = function() {
     var is_set = -1;
     var drink_selector = -1;
     var place_num = Math.floor(Math.random() * 2);
-    var value = 1;
+    var value = Math.floor(Math.random() * 3) + 1;
     
     // If hamburger, collect set
     if (mission_item_selector < 6) {
@@ -247,20 +247,21 @@ var setMission = function() {
     // Create mission
     var mission = "";
 
-    // var basket = function(item, name, set, side, drink, price)
+    // var basket = function(item, name, set, side, drink, count, price)
+    // mission_item = [item, name, set, value]
     var mission_item = [];
     mission_item.push(place_num);
     if (mission_item_selector < 6) {
         mission = menuVar["hamburger"][mission_item_selector][is_set]["name"] + "를 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
-        mission_item.push(['hamburger', mission_item_selector, is_set, -1, -1, menuVar["hamburger"][mission_item_selector][is_set]["price"]]);
-        mission_item.push(['drink', drink_selector, -1, -1, -1 , menuVar["drink"][drink_selector]["price"]]);
+        mission_item.push(['hamburger', mission_item_selector, is_set, value]);
+        mission_item.push(['drink', drink_selector, -1, 1]);
     } else if ((mission_item_selector >= 6) && (mission_item_selector < 10)) {
         mission = menuVar["side"][mission_item_selector - 6]["name"] + "을 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
-        mission_item.push(['side', mission_item_selector - 6, -1, -1, -1, menuVar["side"][mission_item_selector - 6]["price"]]);
-        mission_item.push(['drink', drink_selector, -1, -1, -1 , menuVar["drink"][drink_selector]["price"]]);
+        mission_item.push(['side', mission_item_selector - 6, -1, value]);
+        mission_item.push(['drink', drink_selector, -1, 1]);
     } else if ((mission_item_selector >= 10) && (mission_item_selector < 17)) {
         mission = menuVar["drink"][mission_item_selector - 10]["name"] + "를 " + value + "개 주문하기";
-        mission_item.push(['drink', mission_item_selector - 10, -1, -1, -1 , menuVar["drink"][mission_item_selector - 10]["price"]]);
+        mission_item.push(['drink', mission_item_selector - 10, -1, 1]);
     } else if ((mission_item_selector >= 17) && (mission_item_selector < 22)) {
         mission = menuVar["dessert"][mission_item_selector - 17]["name"] + "를 " + value + "개 주문하기";
     } else if ((mission_item_selector >= 22) && (mission_item_selector < 25)) {
@@ -414,10 +415,13 @@ var basket = function(item, name, set, side, drink, count, price) {
         basket_item.push([item, name, set, side, drink, count, price]);
     } else {
         basket_item = JSON.parse(sessionStorage.getItem('basket'));
+        // console.log(basket_item[0][0]);
         for (it in basket_item){
-            if (basket_item[it].toString() != [item, name, set, side, drink, count, price].toString()){
-                cnt++;
+            if ((basket_item[it][0] == item) && (basket_item[it][1] == name) && (basket_item[it][2] == set) && (basket_item[it][3] == side) && (basket_item[it][4] == drink)) {
+                basket_item[it][5]++;
+                break;
             }
+            cnt++;
         }
         if(cnt==basket_item.length){
           basket_item.push([item, name, set, side, drink, count, price]);
@@ -472,8 +476,13 @@ var save_single = function() {
 };
 
 var change_count = function() {
+    var cnt = 0;
+    basket_item = JSON.parse(sessionStorage.getItem("basket"));
+    for (it in basket_item) {
+        cnt += basket_item[it][5];
+    }
     if (sessionStorage.getItem("basket") != null) {
-        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: " + JSON.parse(sessionStorage.getItem("basket")).length;
+        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: " + cnt;
     }
 };
 
