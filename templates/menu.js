@@ -206,6 +206,11 @@ var place = [
     {"mis" : "테이크 아웃"},
 ];
 
+var service = [
+    {"mis" : "테이블 서비스"},
+    {"mis" : "셀프 서비스"},
+];
+
 var sideVar = [
     {"img" : "../static/media/sidebar/mac_allday.png", "name" : "맥올데이 세트"},
     {"img" : "../static/media/sidebar/drink.png", "name" : "음료 & 커피"},
@@ -215,6 +220,10 @@ var sideVar = [
     {"img" : "../static/media/sidebar/mac_morning.png", "name" : "맥모닝"},
     {"img" : "../static/media/sidebar/side.png", "name" : "사이드"},
 ];
+
+var burger_side_var = [
+    "후렌치 후라이 - 미디엄", "후렌치 후라이 M + 골든 모짜렐라 치즈스틱 2조각", "골든 모짜렐라 치즈스틱"
+]
 
 // console.log(menuVar["hamburger"][0][1]["name"]);
 
@@ -232,6 +241,12 @@ var setMission = function() {
     var is_set = -1;
     var drink_selector = -1;
     var place_num = Math.floor(Math.random() * 2);
+    var service_num = -1;
+
+    if (place_num == 0) {
+        service_num = Math.floor(Math.random() * 2);
+    }
+
     var value = Math.floor(Math.random() * 3) + 1;
     
     // If hamburger, collect set
@@ -250,7 +265,12 @@ var setMission = function() {
     // var basket = function(item, name, set, side, drink, count, price)
     // mission_item = [item, name, set, value]
     var mission_item = [];
+
+    // 0 : 매장, 1 : 테이크아웃
     mission_item.push(place_num);
+    if (place_num == 0) {
+        mission_item.push(service_num);
+    }
     if (mission_item_selector < 6) {
         mission = menuVar["hamburger"][mission_item_selector][is_set]["name"] + "를 " + value + "개 주문하기 (" + menuVar["drink"][drink_selector]["name"] + ")";
         mission_item.push(['hamburger', mission_item_selector, is_set, value]);
@@ -269,7 +289,7 @@ var setMission = function() {
     } else {
         console.log("Random Value Error.");
     }
-    mission = place[place_num]['mis'] + ", " + mission;
+    mission = place[place_num]['mis'] + ", " + service[service_num]['mis'] + ", " + mission;
     console.log(mission);
     document.querySelector('#mission').innerHTML = mission;
     localStorage.setItem("mission", mission);
