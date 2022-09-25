@@ -1,5 +1,9 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Smart%20Us&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Together%20Smart%20Team%20HYME!&descAlignY=51&descAlign=62)
 
+# 🌟 Product Link 
+
+## 🔥 모바일 웹앱입니다. 모바일로 접근해주세요. https://kkyh12180.github.io/HYME_Hackathon/
+
 
 # 👩🏻 Team Name
 
@@ -28,7 +32,7 @@
 <p align="center"><img src="./readme_img/ppt/index_problem.PNG" width="800"/></p>
 <br>
 </br>
-~~~
+
 <p align="center">대한민국 사회는 고령화 사회를 넘어 초고령화 사회를 바라보고 있습니다.<br/>
 또 코로나 19가 심화되는 과정에서 대면 접촉을 최소화하기 위해 대다수의 점원이 서있던 자리를 키오스크가 대신했습니다. <br/>
   이러한 이유로 셀프 키오스크 성장세가 12.2%에 도달할 동안, <br/>점원 대신 키오스크를 선호하는 사람은 고작 35% 에 머무르고 있다는 통계가 존재합니다. <br/>
@@ -44,7 +48,7 @@
 때문에 저희는 스마트 기기에 대한 부담감을 줄이고 재미있게 배워나갈 수 있는 서비스를 고안하고자 했고, <br/>
 목적에 가장 부합하는 서비스 형태로 ‘게임’을 차용했습니다.<br/></p>
 <br/>
-~~~
+
 <br>
 </br>
 
