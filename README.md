@@ -67,12 +67,8 @@
 <br>
 </br>
 
-<p align="center"><img src="./readme_img/ppt/demo_final.PNG" width="500" /></p>
-
-<br>
-</br>
-
 <h2>🎮 키오스크 게임 최종 화면</h2>
+<p align="center"><img src="./readme_img/ppt/demo_final.PNG" width="500" /></p>
 <p align="center"><img src="./readme_img/final.png" width="200" height="450"/></p>
 <h4 align="center">💡 - 잔여 시간과 달성률을 기반으로 미션 수행도를 평가하고, 일정 점수에 따라 평가 코멘트를 작성합니다.</h4>
   
@@ -93,14 +89,14 @@
 
 # 🔧Tech
 <h3>✦ 자바 스크립트 활용</h3>
-**- 배열 사용 , timer 사용한 시간 제한 기능**
+**- 배열 사용 , timer 사용한 시간 제한 기능
 
 <h3>✦ 배포 및 호스팅</h3>
-**- git.io 를 통한 배포로 모든 사람이 손쉽게 접근 가능한 프로덕트 구현**
+**- git.io 를 통한 배포로 모든 사람이 손쉽게 접근 가능한 프로덕트 구현
 
 <h3>✦ [추가예정]</h3>
-**- Apps Script 활용해 사용자의 기본 정보 체크**
-**- 업데이트 일괄 알림 (메일 or 전화번호로)**
+**- Apps Script 활용해 사용자의 기본 정보 체크
+**- 업데이트 일괄 알림 (메일 or 전화번호로)
 
 <br>
 </br>
@@ -109,46 +105,6 @@
 
 <br>
 </br>
-
-
-## Wave <a id="wave">
-![wave](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&text=WAVE)
-
-## Egg <a id="egg">
-![egg](https://capsule-render.vercel.app/api?type=egg&color=auto&height=210)
-
-## Shark <a id="shark">
-![shark](https://capsule-render.vercel.app/api?type=shark&color=gradient&height=140)
-
-## Slice <a id="slice">
-![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=70&rotate=13&fontAlignY=25&desc=desc%20function%20is%20also%20rotated.&descAlign=70.&descAlignY=44)
-  
-## Rect <a id="rect">
-![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=%20%20RECT%20%20&fontAlign=30&fontSize=30&textBg=true&desc=Use%20%27textBg%27%20to%20highlight%20%27text%27&descAlign=60&descAlignY=50)
-
-## Soft <a id="soft">
-![soft](https://capsule-render.vercel.app/api?type=soft&color=auto&text=Good%20to%20use%20with%20other%20readme&fontSize=40&animation=twinkling)
-
-## Rounded <a id="rounded">
-![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded%20with%20stroke&fontAlignY=50&fontSize=40&height=200&stroke=000000&strokeWidth=2)
-
-## Cylinder <a id="cylinder">
-![cylinder](https://capsule-render.vercel.app/api?type=cylinder&color=auto&text=Cylinder&fontAlignY=45&fontSize=40&height=150&animation=blinking&desc=desc%20is%20also%20animated&descAlignY=70)
-
-## Waving <a id="waving">
-![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=Waving!&fontAlign=80&fontAlignY=40&color=gradient)
-
-## Transparent <a id="transparent">
-![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=Transparent&height=150&fontSize=60&desc=Only%20Use%20Text&descAlignY=75&descAlign=60)
-
-
-
-<hr/>
-
-# Things that helped contribute
-
-- SVG Path Easy Maker [Codepen](https://codepen.io/kyechan99/pen/yLeQVBa)
-- SVG Path draw [mavo.io](https://mavo.io/demos/svgpath/)
 
 
 ![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Now%20Use%20me!&fontSize=90)
