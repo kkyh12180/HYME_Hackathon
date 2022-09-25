@@ -227,6 +227,12 @@
         getMission();
         timer();
 
+        if(JSON.parse(sessionStorage.getItem("basket")).length >=12){
+          document.getElementsByClassName("order_btn_container")[0].style.position = "relative";
+        }else{
+          document.getElementsByClassName("order_btn_container")[0].style.position = "absolute";
+
+        }
         
         // recommend_func();
         // side_func();

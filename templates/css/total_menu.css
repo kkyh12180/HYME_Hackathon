@@ -189,11 +189,10 @@ input[type="number"] {
 
 
 .order_btn_container{
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: #eeeeee;
-  bottom: 0;
 }
 .order_bottom{
   display: flex;
