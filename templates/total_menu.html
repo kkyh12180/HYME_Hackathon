@@ -74,25 +74,47 @@
         // item, name, set, side, drink, count, price
         console.log(menu[basket[0][0]][basket[0][1]][basket[0][2]]);
         for (i = 0; i < basket.length; i++) {
-        document.write('<div class="menu_item">'+
-            '<button type="button" class="btn btn-light menu_cancel_btn">취소</button>'+
-            '<img class="menu_img" src="'+menu[basket[i][0]][basket[i][1]][basket[i][2]]["img"]+'" alt="메뉴">'+
-            '<div class="menu_title">'+menu[basket[i][0]][basket[i][1]][basket[i][2]]["name"]+'</div>'+
-            '<div class="input-group">'+
-                '<span class="input-group-btn">'+
-                    '<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">'+
-                        '<span class="glyphicon glyphicon-minus"></span>'+
-                    '</button>'+
-                '</span>'+
-                '<input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">'+
-                '<span class="input-group-btn">'+
-                    '<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">'+
-                        '<span class="glyphicon glyphicon-plus"></span>'+
-                    '</button>'+
-                '</span>'+
-            '</div>'+
-            '<div class="menu_price">'+menu[basket[i][0]][basket[i][1]][basket[i][2]]["price"]+'</div>'+
-        '</div>');
+            if (basket[i][0] == 'hamburger') {
+                document.write('<div class="menu_item">'+
+                    '<button type="button" class="btn btn-light menu_cancel_btn">취소</button>'+
+                    '<img class="menu_img" src="'+menu[basket[i][0]][basket[i][1]][basket[i][2]]["img"]+'" alt="메뉴">'+
+                    '<div class="menu_title">'+menu[basket[i][0]][basket[i][1]][basket[i][2]]["name"]+'</div>'+
+                    '<div class="input-group">'+
+                        '<span class="input-group-btn">'+
+                            '<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">'+
+                                '<span class="glyphicon glyphicon-minus"></span>'+
+                            '</button>'+
+                        '</span>'+
+                        '<input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">'+
+                        '<span class="input-group-btn">'+
+                            '<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">'+
+                                '<span class="glyphicon glyphicon-plus"></span>'+
+                            '</button>'+
+                        '</span>'+
+                    '</div>'+
+                    '<div class="menu_price">'+basket[i][5] * basket[i][6]+'</div>'+
+                '</div>');
+            } else {
+                document.write('<div class="menu_item">'+
+                    '<button type="button" class="btn btn-light menu_cancel_btn">취소</button>'+
+                    '<img class="menu_img" src="'+menu[basket[i][0]][basket[i][1]]["img"]+'" alt="메뉴">'+
+                    '<div class="menu_title">'+menu[basket[i][0]][basket[i][1]]["name"]+'</div>'+
+                    '<div class="input-group">'+
+                        '<span class="input-group-btn">'+
+                            '<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">'+
+                                '<span class="glyphicon glyphicon-minus"></span>'+
+                            '</button>'+
+                        '</span>'+
+                        '<input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">'+
+                        '<span class="input-group-btn">'+
+                            '<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">'+
+                                '<span class="glyphicon glyphicon-plus"></span>'+
+                            '</button>'+
+                        '</span>'+
+                    '</div>'+
+                    '<div class="menu_price">'+menu[basket[i][0]][basket[i][1]]["price"]+'</div>'+
+                '</div>');
+            }
         }
       
       </script>
