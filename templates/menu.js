@@ -537,12 +537,14 @@ var save_single = function() {
 // var total_count = 0;
 var change_count = function() {
     var cnt = 0;
+    var price = 0;
     basket_item = JSON.parse(sessionStorage.getItem("basket"));
     for (it in basket_item) {
       cnt += basket_item[it][5];
+      price += basket_item[it][6];
     }
     if (sessionStorage.getItem("basket") != null) {
-        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: " + cnt;
+        document.getElementsByClassName("total_price")[0].innerHTML = "합계: "+price+" | 담은 개수: " + cnt;
     }
 };
 
