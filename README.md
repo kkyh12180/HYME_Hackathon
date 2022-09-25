@@ -31,7 +31,7 @@
 <br>
 </br>
 
-<p align="center"><img src="./readme_img/ppt/demo_main.PNG" width="200" /></p>
+<p align="center"><img src="./readme_img/ppt/demo_main.PNG" width="500" /></p>
 
 <br>
 </br>
@@ -64,7 +64,7 @@
 <br>
 </br>
 
-<p align="center"><img src="./readme_img/ppt/demo_final.PNG" width="200" /></p>
+<p align="center"><img src="./readme_img/ppt/demo_final.PNG" width="500" /></p>
 
 <br>
 </br>
