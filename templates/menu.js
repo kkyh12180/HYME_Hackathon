@@ -475,14 +475,15 @@ var save_single = function() {
     basket('hamburger', burger_num, 0, -1, -1 , 1, menuVar['hamburger'][burger_num][0]['price']);
 };
 
+var total_count = 0;
 var change_count = function() {
-    var cnt = 0;
+    // var cnt = 0;
     basket_item = JSON.parse(sessionStorage.getItem("basket"));
     for (it in basket_item) {
-        cnt += basket_item[it][5];
+        total_count += basket_item[it][5];
     }
     if (sessionStorage.getItem("basket") != null) {
-        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: " + cnt;
+        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: " + total_count;
     }
 };
 

@@ -69,7 +69,7 @@
         // console.log(menu);
         console.log(sessionStorage.getItem("basket"));
         var basket = JSON.parse(sessionStorage.getItem("basket"));
-        console.log(basket[0]);
+        // console.log(basket[0]);
         // item, name, set, side, drink, count, price
         console.log(menu[basket[0][0]][basket[0][1]][basket[0][2]]);
         for (i = 0; i < basket.length; i++) {
@@ -84,7 +84,7 @@
                                 '<span class="glyphicon glyphicon-minus"></span>'+
                             '</button>'+
                         '</span>'+
-                        '<input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">'+
+                        '<input type="text" name="quant[1]" class="form-control input-number" value="'+basket[i][5]+'" min="1" max="10">'+
                         '<span class="input-group-btn">'+
                             '<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">'+
                                 '<span class="glyphicon glyphicon-plus"></span>'+
@@ -104,7 +104,7 @@
                                 '<span class="glyphicon glyphicon-minus"></span>'+
                             '</button>'+
                         '</span>'+
-                        '<input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">'+
+                        '<input type="text" name="quant[1]" class="form-control input-number" value="'+basket[i][5]+'" min="1" max="10">'+
                         '<span class="input-group-btn">'+
                             '<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">'+
                                 '<span class="glyphicon glyphicon-plus"></span>'+

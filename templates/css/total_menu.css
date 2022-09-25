@@ -156,20 +156,24 @@ input[type="number"] {
 .menu_item{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   margin-top:1vh;
 }
 
 .menu_cancel_btn{
   font-size: 14px;
   padding: 0.3vh 2vw;
+  margin-left: 1vw;
 }
 
 .menu_img{
   width: 17vw;
 }
 .menu_title{
-  width: 33vw;
+  width: 35vw;
+}
+.menu_price{
+  margin-left: 1vw;
 }
 
 .input-group{
