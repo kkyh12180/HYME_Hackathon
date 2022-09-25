@@ -304,6 +304,7 @@ nav {
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 13vw;
+    column-gap: 1vw;
     place-items: center;
     padding-top: 10vw;
 }
