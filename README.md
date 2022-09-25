@@ -2,9 +2,7 @@
 
 # 🌟 Product Link 
 
-### 🔥 모바일 웹앱입니다. 모바일로 접근하거나 , PC 접속후 f12 > iphone 12 모드로 보시면 완전한 SMARTUS 를 즐기실 수 있습니다. 
-<br/>
-### https://kkyh12180.github.io/HYME_Hackathon/
+### 🔥 모바일 웹앱입니다. <br/> 모바일로 접근하거나 , <br/>PC 접속후 f12 > iphone 12 모드로 보시면 완전한 SMARTUS 를 즐기실 수 있습니다. <br/>https://kkyh12180.github.io/HYME_Hackathon/
 
 <br/>
 <br/>
