@@ -169,12 +169,23 @@
     </div>
     <script>
         function backToStart(){
-            Swal.fire({
-                // icon: 'warning',                         // Alert 타입
-                title: '준비 중',         // Alert 제목
-                text: '해당 서비스는 준비 중입니다 :)',  // Alert 내용
-            });
+          Swal.fire({
+                    title: '배우기 모드가 모두 끝났습니다',
+                    text: "연습하기 모드에서 연습해봐요!",
+                    icon: 'success',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: '확인',
+                    cancelButtonText: '취소'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.href="kiosk_menu.html";
+                    }
+                });
         }
+
+
         function openImg(burger) {
             select_set(burger)
             document.getElementById('open-sheet').click();
@@ -197,6 +208,8 @@
         setTimeout(function() {
             backToStart();
         }, 2000);
+
+
     </script>
 </body>
 

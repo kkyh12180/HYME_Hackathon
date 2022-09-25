@@ -386,3 +386,7 @@ button{
     height: 3.5vh;
     text-align: center;
 }
+.swal2-styled{
+    padding:0;
+    width:30vw;
+}
