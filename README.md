@@ -35,14 +35,15 @@
   이런 사실을 바탕으로 팀 HYME은, 초고령화 사회로 달려가는 대한민국의 ‘디지털 문맹’들을 위한 교육 서비스의 필요성에 주목했습니다.</p>
 <br>
 </br>
+<p align="center"><img src="./readme_img/ppt/problem.PNG" width="800"/></p>
+<p align="center"><img src="./readme_img/ppt/solution.PNG" width="800"/></p>
+<br/>
 <p align="center">이 중에서 저희가 특히 집중하고자 했던 부분은 평가항목과 방법의 개발입니다. 
 이 솔루션에 가장 포커스를 맞춘 이유로 하나의 격언을 인용할 수 있을 것 같습니다. 
 ‘너 자신을 알라.’입니다. 내가 무엇을 모르는지 알아야 새로운 것을 배워나갈 수 있고, 배워나가는 자세가 되어 야 익숙해지고 즐길 수 있을 것입니다.
 때문에 저희는 스마트 기기에 대한 부담감을 줄이고 재미있게 배워나갈 수 있는 서비스를 고안하고자 했고, 
 목적에 가장 부합하는 서비스 형태로 ‘게임’을 차용했습니다.</p>
 <br/>
-<p align="center"><img src="./readme_img/ppt/problem.PNG" width="800"/></p>
-<p align="center"><img src="./readme_img/ppt/solution.PNG" width="800"/></p>
 
 <br>
 </br>
