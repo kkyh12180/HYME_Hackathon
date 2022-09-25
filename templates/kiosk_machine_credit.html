@@ -101,7 +101,7 @@
         }
     </style>
     <script>
-        setMission();
+        getMission();
         timer();
         ball = document.getElementById("ball");
         
@@ -157,7 +157,7 @@
         function enterDroppable(elem) {
             elem.style.background = 'pink';
             setTimeout(function() {
-                var link = 'menu.html';
+                var link = 'final.html';
                 location.href = link;
             }, 1000);
         }

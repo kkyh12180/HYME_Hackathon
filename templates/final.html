@@ -50,9 +50,9 @@
         
         // 시간 정보 가져오기
         minus_time = sessionStorage.getItem('excess_time');
-        if (minus_time >= 70) {
+
+        if (minus_time >= 70)
             minus_time = 70;
-        }
 
         // 미션 체크
         // var basket = function(item, name, set, side, drink, count, price)
@@ -62,7 +62,8 @@
         if (is_take_out == 0) {
             is_table_service = localStorage.getItem('is_table_service'); // 1일 경우 테이블 서비스
         }
-        var mission_item = localStorage.getItem('mission_item');
+        var mission_item = JSON.parse(localStorage.getItem('mission_item'));
+        console.log(mission_item);
 
         // 테이크 아웃, 테이블 서비스 체크
         if (mission_item[0] != is_take_out) {
@@ -76,40 +77,49 @@
             }
         }
 
-        var need_item_cnt = -1
+        var need_item_cnt = -1;
+        var save_cnt = 0;
         var cnt = 0;
         var basket_item = JSON.parse(sessionStorage.getItem("basket"));
+        console.log(basket_item);
 
-        if (mission_item[2][0] == 'hambureger') {
+        if (mission_item[2][0] == 'hamburger') {
+            save_cnt = mission_item[2][3] + mission_item[3][3];
             need_item_cnt = mission_item[2][3] + mission_item[3][3];
             for (i = 0; i < basket_item.length; i++) {
                 if((basket_item[i][0] == mission_item[2][0]) && (basket_item[i][1] == mission_item[2][1]) && (basket_item[i][2] == mission_item[2][2]))
-                    need_item_cnt -= basket_item[i][4];
+                    need_item_cnt -= basket_item[i][5];
                 if((basket_item[i][0] == mission_item[3][0]) && (basket_item[i][1] == mission_item[3][1]) && (basket_item[i][2] == mission_item[3][2]))
-                    need_item_cnt -= basket_item[i][4];
+                    need_item_cnt -= basket_item[i][5];
+                cnt += basket_item[i][5];
             }
-            cnt += basket_item[i][4];
         } else if (mission_item[2][0] == 'side') {
+            save_cnt = mission_item[2][3] + mission_item[3][3];
             need_item_cnt = mission_item[2][3] + mission_item[3][3];
             for (i = 0; i < basket_item.length; i++) {
                 if((basket_item[i][0] == mission_item[2][0]) && (basket_item[i][1] == mission_item[2][1]) && (basket_item[i][2] == mission_item[2][2]))
-                    need_item_cnt -= basket_item[i][4];
+                    need_item_cnt -= basket_item[i][5];
                 if((basket_item[i][0] == mission_item[3][0]) && (basket_item[i][1] == mission_item[3][1]) && (basket_item[i][2] == mission_item[3][2]))
-                    need_item_cnt -= basket_item[i][4];
+                    need_item_cnt -= basket_item[i][5];
+                cnt += basket_item[i][5];
             }
-            cnt += basket_item[i][4];
         } else {
             // mission_item[2] == 'drink'
+            save_cnt = mission_item[2][3];
             need_item_cnt = mission_item[2][3];
             for (i = 0; i < basket_item.length; i++) {
                 if((basket_item[i][0] == mission_item[2][0]) && (basket_item[i][1] == mission_item[2][1]) && (basket_item[i][2] == mission_item[2][2]))
-                    need_item_cnt -= basket_item[i][4];
+                    need_item_cnt -= basket_item[i][5];
+                cnt += basket_item[i][5];
             }
-            cnt += basket_item[i][4];
         }
 
+        console.log(need_item_cnt);
+        console.log(save_cnt);
+        console.log(cnt);
+
         // 아이템이 다를 다양한 경우 10점 감점
-        if (need_item_cnt != 0)
+        if ((need_item_cnt != 0) || (cnt != save_cnt))
             minus_mis += 10;
 
         score = score - minus_time - minus_mis;
@@ -118,13 +128,11 @@
         var time_ment = "";
         var score_ment = score + "점입니다!";
         var last_ment = "";
-        
-        if (need_item_cnt > 0)
-            item_ment = "너무 많은 상품을 담았습니다...";
-        else if (need_item_cnt < 0)
-            item_ment = "너무 적은 상품을 담았습니다...";
-        else 
+
+        if ((need_item_cnt == 0) && (cnt == save_cnt))
             item_ment = "주어진 미션 성공!";
+        else 
+            item_ment = "미션 실패...";
 
         if (minus_time == 0)
             time_ment = "시간 내에 성공!";
@@ -140,6 +148,8 @@
         document.getElementById('time_ment').innerHTML = time_ment;
         document.getElementById('item_ment').innerHTML = item_ment;
         document.getElementById('last_ment').innerHTML = last_ment;
+
+        localStorage.clear();
     </script>
 
 </body>
