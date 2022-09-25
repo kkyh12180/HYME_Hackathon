@@ -164,4 +164,6 @@
 <br/>
 <h2> 🥰 Team Member - 컴퓨터학부 20학번 이은지 </h2>
 <br/>
+
+
 ![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Now%20Use%20me!&fontSize=90)
