@@ -21,7 +21,7 @@
 각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
 
 # 💡Explain
-
+![ex_screenshot](./readme_img/menu.png)
 
 # 🔧Tech
 자바 스크립트 활용
