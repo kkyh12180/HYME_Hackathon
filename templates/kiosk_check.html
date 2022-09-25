@@ -78,7 +78,7 @@
                             '<span>' + basket[0][5] + '</span> X <span>' + menu[basket[0][0]][basket[0][1]][basket[0][2]]["name"] + '</span>' +
                         '</p>' +
                         '<p id="receipt-price"> ' +
-                            Math.floor(basket[0][6] / 1000) + ',' + (basket[0][6] % 1000) + '원' +
+                            Math.floor(basket[0][5] * basket[0][6] / 1000) + ',' + (basket[0][5] * basket[0][6] % 1000) + '원' +
                         '</p>' +
                     '</div>' +
                     '<div class="receipt-2"><p>' + side[basket[0][3]] + '</p><p>음료 - ' + drink[basket[0][4]] + '</p></div>' +
@@ -94,7 +94,7 @@
                             '<span>' + basket[0][5] + '</span> X <span>' + menu[basket[0][0]][basket[0][1]]["name"] + '</span>' +
                         '</p>' +
                         '<p id="receipt-price"> ' +
-                            Math.floor(basket[0][6] / 1000) + ',' + (basket[0][6] % 1000) + '원' +
+                            Math.floor(basket[0][5] * basket[0][6] / 1000) + ',' + (basket[0][5] * basket[0][6] % 1000) + '원' +
                         '</p>' +
                     '</div>' +
                     '<div class="receipt-3">' +
@@ -126,7 +126,7 @@
                                 '<span>' + basket[i][5] + '</span> X <span>' + menu[basket[i][0]][basket[i][1]][basket[i][2]]["name"] + '</span>' +
                             '</p>' +
                             '<p id="receipt-price"> ' +
-                                Math.floor(basket[i][6] / 1000) + ',' + (basket[i][6] % 1000) + '원' +
+                                Math.floor(basket[i][5] * basket[i][6] / 1000) + ',' + (basket[i][5] * basket[i][6] % 1000) + '원' +
                             '</p>' +
                         '</div>' +
                         '<div class="receipt-2"><p>' + side[basket[i][3]] + '</p><p>' + drink[basket[i][4]] + '</p></div>' +
@@ -144,7 +144,7 @@
                                 '<span>' + basket[i][5] + '</span> X <span>' + menu[basket[i][0]][basket[i][1]]["name"] + '</span>' +
                             '</p>' +
                             '<p id="receipt-price"> ' +
-                                Math.floor(basket[i][6] / 1000) + ',' + (basket[i][6] % 1000) + '원' +
+                                Math.floor(basket[i][5] * basket[i][6] / 1000) + ',' + (basket[i][5] * basket[i][6] % 1000) + '원' +
                             '</p>' +
                         '</div>' +
                         '<div class="receipt-3">' +
