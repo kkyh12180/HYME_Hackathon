@@ -1,18 +1,14 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Smart%20Us&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Together%20Smart%20Team%20HYME!&descAlignY=51&descAlign=62)
 <p align='center'> SmartUs </p>
-<p align='center'>
-  <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
-    <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
-  </a>
-  <a href="#demo">
-    <img src="https://img.shields.io/badge/DEMO%20-%234FC08D.svg?&style=for-the-badge&&logoColor=white"/>
-  </a>
-</p>
 
 
 # 👩🏻 Team Name
 
 ![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=HYME&height=150&fontSize=60&desc=To%20Live%20Well%20Together&descAlignY=75&descAlign=60)
+
+
+<p align="center"><img src="./readme_img/ppt/index.png"/></p>
+
 
 # 📚 Theme
 🌟 특별 세션 - 스마트 기술 교육 부재
@@ -22,6 +18,8 @@
 
 # 💡Intro
 각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
+
+<p align="center"><img src="./readme_img/ppt/intro.png"/></p>
 
 <br>
 </br>
@@ -68,6 +66,9 @@
 
 <br>
 </br>
+
+<p align="center"><img src="./readme_img/ppt/index_update.png"/></p>
+<p align="center"><img src="./readme_img/ppt/index_effect.png"/></p>
 
 # 🔧Tech
 자바 스크립트 활용
