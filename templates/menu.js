@@ -502,7 +502,7 @@ var change_count = function() {
         cnt += basket_item[it][5];
     }
     if (sessionStorage.getItem("basket") != null) {
-        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 제품: " + cnt;
+        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: " + cnt;
     }
 };
 
