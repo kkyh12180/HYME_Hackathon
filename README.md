@@ -21,7 +21,7 @@
 각종 스마트 기기의 UI/UX 데이터 활용, 미션을 수행하는 교육용 게임 웹앱
 
 # 💡Explain
-<img src="./readme_img/menu.png" width="200" height="400"/>
+<img src="./readme_img/menu.png" width="200" height="500"/>
 
 # 🔧Tech
 자바 스크립트 활용
