@@ -371,8 +371,6 @@ var happy_meal_func = function() {
         document.querySelector(item_id).innerHTML = menuVar['happy_meal'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['happy_meal'][i]['price']/1000)) + "," + (menuVar['happy_meal'][i]['price'] % 1000);
     }
 
-    document.getElementById("image_8").src = "../static/media/mac_food/blank.png";
-    document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
 }
 
 var mac_morning_func = function() {
@@ -382,9 +380,12 @@ var mac_morning_func = function() {
         
         document.getElementById(image_id).src = menuVar['mac_morning'][i]['img'];
         document.querySelector(item_id).innerHTML = menuVar['mac_morning'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['mac_morning'][i]['price']/1000)) + "," + (menuVar['mac_morning'][i]['price'] % 1000);
+        if(menuVar['mac_morning'][i]['price'] % 1000==0){
+          document.querySelector(item_id).innerHTML = menuVar['mac_morning'][i]['name'] + "<br><p class='price'>&#8361;" + (Math.floor(menuVar['mac_morning'][i]['price']/1000)) + ",000";
+        }
+
     }
     
-    document.getElementById("image_9").src = "../static/media/mac_food/blank.png";  
 }
 
 var side_item_func = function() {
@@ -458,6 +459,9 @@ var basket = function(item, name, set, side, drink, count, price) {
         }
     }
     sessionStorage.setItem('basket', JSON.stringify(basket_item));
+    if(item!='hamburger'){
+      location.reload();
+    }
 };
 
 var send_burger_info = function(type) {
@@ -485,6 +489,30 @@ var send_burger_info = function(type) {
 
 };
 
+var guide_send_burger_info = function(type) {
+  var name = "";
+  var price = 0;
+  var price_text = "";
+  if (type == 'single') {
+      name = document.getElementById('menu_name_single').innerText;
+      price_text = document.getElementById('menu_price_single').innerText;
+      sessionStorage.setItem("set", 0)
+  } else if (type == 'set') {
+      name = document.getElementById('menu_name_set').innerText;
+      price_text = document.getElementById('menu_price_set').innerText;
+      sessionStorage.setItem("set", 1)
+  } else {
+      name = document.getElementById('menu_name_large').innerText;
+      price_text = document.getElementById('menu_price_large').innerText;
+      sessionStorage.setItem("set", 2)
+  }
+  // console.log(name);
+  price = price_text[1] * 1000 + price_text[3] * 100;
+  sessionStorage.setItem('selected_item', name);
+  sessionStorage.setItem('selected_item_price', price);
+  location.href="guide_side_select.html"
+};
+
 var save_single = function() {
     var name = document.getElementById('menu_name_single').innerText;
     var burger_num = -1;
@@ -509,12 +537,14 @@ var save_single = function() {
 // var total_count = 0;
 var change_count = function() {
     var cnt = 0;
+    var price = 0;
     basket_item = JSON.parse(sessionStorage.getItem("basket"));
     for (it in basket_item) {
       cnt += basket_item[it][5];
+      price += basket_item[it][6];
     }
     if (sessionStorage.getItem("basket") != null) {
-        document.getElementsByClassName("total_price")[0].innerHTML = "합계: (가격) | 담은 개수: " + cnt;
+        document.getElementsByClassName("total_price")[0].innerHTML = "합계: "+price+" | 담은 개수: " + cnt;
     }
 };
 

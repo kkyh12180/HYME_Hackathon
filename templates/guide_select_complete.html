@@ -69,7 +69,7 @@
     <div class="explanation pulse" style="background-color: white; font-size: 14px; position: absolute; bottom:40vw;">
         <span style="color:red;">선택한 메뉴가 맞는지 확인하는 화면이예요.</span><br>
         알맞게 골랐다면 우측 하단의 <span style="color:red;">"주문완료"</span> 버튼을 눌러 장바구니에 담을 수 있고,
-         좌측 하단의 <span style="color:red;">"주문 취소"</span> 버튼을 누르면 이전의 메뉴 선택 화면으로 돌아가요.
+          좌측 하단의 <span style="color:red;">"주문 취소"</span> 버튼을 누르면 이전의 메뉴 선택 화면으로 돌아가요.
       </div>
 
     <div class="order_btn_container">
@@ -118,12 +118,11 @@
             var drink = sessionStorage.getItem("drink");
             var price = sessionStorage.getItem("selected_item_price");
 
-            basket(item, name, set, side, drink, price);
-            location.href='guide_burger_set.html';
+            basket(item, parseInt(name), parseInt(set), parseInt(side), parseInt(drink), 1, parseInt(price));
+            location.href='guide_complete.html';
             
         }
         getMission();
-        timer();
         // recommend_func();
         // side_func();
     </script>

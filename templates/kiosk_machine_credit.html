@@ -45,7 +45,7 @@
                 <img class="credit" src="../static/media/kiosk/credit.png">
             </div>
             <div style="position: absolute;">
-                <img class="droppable" id="gate" src="https://en.js.cx/clipart/soccer-gate.svg" style=" width: 100px; margin-bottom: 5vw;">
+                <img class="droppable" id="gate" src="../static/media/red.png" style=" width: 100px; margin-bottom: 5vw;">
             </div>
         </div>
     </div>
@@ -156,10 +156,12 @@
         
         function enterDroppable(elem) {
             elem.style.background = 'pink';
+            var audio = new Audio('../static/media/audio/button-21.mp3');
+            audio.play();
             setTimeout(function() {
                 var link = 'final.html';
                 location.href = link;
-            }, 1000);
+            }, 1500);
         }
         
         function leaveDroppable(elem) {
