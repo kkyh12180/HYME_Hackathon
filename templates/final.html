@@ -18,28 +18,23 @@
     </div>
 
     <div class="score">
-        <span class="score-text">95점입니다!</span>
+        <span class="score-text" id="score_ment">95점입니다!</span>
     </div>
 
     <div class="standard-parent">
         <div class="standard">
             <img class="standard-img" src="../static/media/logo/Vector.png">
-            <span class="standard-text">95점입니다!</span>
+            <span class="standard-text" id="time_ment">95점입니다!</span>
         </div>
     
         <div class="standard">
             <img class="standard-img" src="../static/media/logo/Vector.png">
-            <span class="standard-text">95점입니다!</span>
-        </div>
-    
-        <div class="standard">
-            <img class="standard-img" src="../static/media/logo/Vector.png">
-            <span class="standard-text">95점입니다!</span>
+            <span class="standard-text" id="item_ment">95점입니다!</span>
         </div>
     </div>
 
     <div class="ment">
-        <span class="ment-text">95점입니다!</span>
+        <span class="ment-text" id="last_ment">95점입니다!</span>
     </div>
 
     <div class="btn_container">
@@ -118,6 +113,34 @@
             minus_mis += 10;
 
         score = score - minus_time - minus_mis;
+        
+        var item_ment = "";
+        var time_ment = "";
+        var score_ment = score + "점입니다!";
+        var last_ment = "";
+        
+        if (need_item_cnt > 0)
+            item_ment = "너무 많은 상품을 담았습니다...";
+        else if (need_item_cnt < 0)
+            item_ment = "너무 적은 상품을 담았습니다...";
+        else 
+            item_ment = "주어진 미션 성공!";
+
+        if (minus_time == 0)
+            time_ment = "시간 내에 성공!";
+        else 
+            time_ment = "제한 시간 초과..."
+
+        if (score >= 70) 
+            last_ment = "실제 키오스크를 이용해보세요!";
+        else 
+            last_ment = "더 연습해 보세요!"
+
+        document.getElementById('score_ment').innerHTML = score_ment;
+        document.getElementById('time_ment').innerHTML = time_ment;
+        document.getElementById('item_ment').innerHTML = item_ment;
+        document.getElementById('last_ment').innerHTML = last_ment;
     </script>
+
 </body>
 </html>
